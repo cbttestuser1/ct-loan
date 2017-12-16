@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)   // Please do not make changes to cucumber options without devUp's notice
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
         tags = "@SmokeTest", 
