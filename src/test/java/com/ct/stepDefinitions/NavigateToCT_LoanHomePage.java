@@ -14,7 +14,7 @@ public class NavigateToCT_LoanHomePage {
 
 	@Given("^I am on the home page of CT-Loan home page$")
 	public void i_am_on_the_home_page_of_CT_Loan_home_page() throws Throwable {
-		Driver.getInstance().get(CTContstants.URL);
+		Driver.getInstance().get(CTContstants.QA_URL);
 	}
 
 	@When("^I scroll down the page$")
