@@ -13,14 +13,26 @@ private static WebDriver driver;
 	
 
 	public static WebDriver getInstance() {
+		
+		boolean windows =  System.getProperty("os.name").toLowerCase().startsWith("w");
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
 			switch (ConfigurationReader.getProperty("browser")) {
 			case "firefox":
-				System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("gecko.driver.path"));
+				if (windows) {
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("firefox.driver.windows"));
+				} else{
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("firefox.driver.mac"));
+	
+				}
 				driver = new FirefoxDriver();
 				break;
 			case "chrome":
-				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chrome.driver.path"));
+				if (windows) {
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.windows"));
+				} else{
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.mac"));
+	
+				}	
 				driver = new ChromeDriver();
 				break;
 			case "ie":
@@ -31,7 +43,12 @@ private static WebDriver driver;
 				driver = new SafariDriver();
 				break;
 			default:
-				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chrome.driver.path"));
+				if (windows) {
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.windows"));
+				} else{
+					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.mac"));
+	
+				}	
 				driver = new ChromeDriver();
 			}
 		}
