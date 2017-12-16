@@ -16,11 +16,11 @@ private static WebDriver driver;
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
 			switch (ConfigurationReader.getProperty("browser")) {
 			case "firefox":
-				System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("geckoDriverPath"));
+				System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("gecko.driver.path"));
 				driver = new FirefoxDriver();
 				break;
 			case "chrome":
-				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chromeDriverPath"));
+				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chrome.driver.path"));
 				driver = new ChromeDriver();
 				break;
 			case "ie":
@@ -31,7 +31,7 @@ private static WebDriver driver;
 				driver = new SafariDriver();
 				break;
 			default:
-				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chromeDriverPath"));
+				System.setProperty("webdriver.chrome.driver", ConfigurationReader.getProperty("chrome.driver.path"));
 				driver = new ChromeDriver();
 			}
 		}
