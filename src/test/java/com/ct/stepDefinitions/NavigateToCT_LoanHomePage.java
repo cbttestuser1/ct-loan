@@ -14,10 +14,10 @@ public class NavigateToCT_LoanHomePage {
 
 	
 	
-//	@Given("^I go to CT-Loan web page$")
-//	public void i_go_to_CT_Loan_web_page() throws Throwable {
-//	   Driver.getInstance().get(CTContstants.URL);
-//	}
+	@Given("^I go to CT-Loan web page$")
+	public void i_go_to_CT_Loan_web_page() throws Throwable {
+	   
+	}
 
 	@When("^I navigate to \"([^\"]*)\"$")
 	public void i_navigate_to(String arg1) throws Throwable {
