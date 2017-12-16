@@ -2,10 +2,15 @@ package com.ct.runners;
 
 import org.junit.runner.RunWith;
 
+   /*
+    * Please do not make changes to cucumber options without devUp's notice
+    * Please follow naming convention
+    */
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-@RunWith(Cucumber.class)   // Please do not make changes to cucumber options without devUp's notice
+@RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
         tags = "@SmokeTest", 
