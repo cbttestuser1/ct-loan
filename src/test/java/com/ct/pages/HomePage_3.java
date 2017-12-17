@@ -42,6 +42,10 @@ public class HomePage_3 {
 	@FindBy(xpath = "//p[@id='error-Dropdown4']")
 	public WebElement supervizorError;
 
-	@FindBy(xpath = "//p[@id='error-Dropdown4']")
+	@FindBy(xpath = "(//button[@elname='next'])[3]")
 	public WebElement nextButton;
+
+	// @FindBy(xpath = "(//button[@elname='back'])[3]")
+	// public WebElement backButton;
+	// public WebElement back;
 }
