@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
 
-public class CT_HomePage {
-	public CT_HomePage() {
+public class CT_HomePage2 {
+	public CT_HomePage2() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 
