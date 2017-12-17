@@ -11,7 +11,7 @@ private static Properties configFile;
 	static{
 		
 	
-	String path= "./src/test/resources/testData/configuration.properties";
+	String path= "./ct_loan.properties";
 	
 	try {
 		FileInputStream input=new FileInputStream(path);
