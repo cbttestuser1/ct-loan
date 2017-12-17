@@ -19,7 +19,6 @@ public class Driver {
 		if (browser == null) {
 			browser = ConfigurationReader.getProperty("browser");
 		}
-
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
 			switch (browser) {
 			case "firefox":
