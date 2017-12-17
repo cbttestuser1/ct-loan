@@ -7,48 +7,35 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
+import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
+
 public class Driver {
-private static WebDriver driver;
-	
-	
+	private static WebDriver driver;
 
 	public static WebDriver getInstance() {
-		
-		boolean windows =  System.getProperty("os.name").toLowerCase().startsWith("w");
+		String browser = System.getProperty("browser");
+		if (browser == null) {
+			browser = ConfigurationReader.getProperty("browser");
+		}
+
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
-			switch (ConfigurationReader.getProperty("browser")) {
+			switch (browser) {
 			case "firefox":
-				if (windows) {
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("firefox.driver.windows"));
-				} else{
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("firefox.driver.mac"));
-	
-				}
+				FirefoxDriverManager.getInstance().setup();
 				driver = new FirefoxDriver();
 				break;
-			case "chrome":
-				if (windows) {
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.windows"));
-				} else{
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.mac"));
-	
-				}	
-				driver = new ChromeDriver();
-				break;
 			case "ie":
-				System.setProperty("webdriver.iexplorer.driver", ConfigurationReader.getProperty("ie.driver.path"));
+				InternetExplorerDriverManager.getInstance().setup();
 				driver = new InternetExplorerDriver();
 				break;
 			case "safari":
 				driver = new SafariDriver();
 				break;
+			case "chrome":
 			default:
-				if (windows) {
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.windows"));
-				} else{
-					System.setProperty("webdriver.gecko.driver", ConfigurationReader.getProperty("chrome.driver.mac"));
-	
-				}	
+				ChromeDriverManager.getInstance().setup();
 				driver = new ChromeDriver();
 			}
 		}
@@ -58,10 +45,9 @@ private static WebDriver driver;
 	public static void closeDriver() {
 		if (driver != null) {
 			driver.quit();
-			driver=null;
+			driver = null;
 		}
 
 	}
-	
 
 }
