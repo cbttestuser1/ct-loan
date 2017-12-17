@@ -24,7 +24,7 @@ public class Hook {
 			
 			scenario.embed(screenshot, "image/png");
 		}
-		Driver.closeDriver();
+		//Driver.closeDriver();
 	}
 	
 }
