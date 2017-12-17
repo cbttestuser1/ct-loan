@@ -11,6 +11,7 @@ public class ContactInfoPage {
 	public ContactInfoPage() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
+	// added new code
 
 	@FindBy(name = "Address_AddressLine1")
 	public WebElement streetAddress;
