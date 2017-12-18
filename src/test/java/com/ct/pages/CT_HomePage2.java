@@ -14,7 +14,8 @@ public class CT_HomePage2 {
 	@FindBy(css = "input[name='Address_AddressLine1']")
 	public WebElement streetAddress;
 
-	@FindBy(css = "input[name='Address_AddressLine1']")
+	// correct Element Locator (RuslanK)
+	@FindBy(css = "input[name='Address_AddressLine2']")
 	public WebElement addressLine2;
 
 	@FindBy(css = "input[name='Address_City']")
