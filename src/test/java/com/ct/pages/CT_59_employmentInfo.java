@@ -28,5 +28,8 @@ public class CT_59_employmentInfo {
 	
 	@FindBy(name="Dropdown4")
 	public WebElement superviseSelect;
+			
+	@FindBy(xpath="(//button[@class='fmSmtButton next_previous'])[5]")
+	public WebElement nextButton;		
 
 }
