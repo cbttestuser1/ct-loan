@@ -8,10 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ct.utilities.Driver;
 
-public class CTeckLoan_37Home {
-	
-
-	
+public class CTeckLoan_37Home {	
 
 	public static String errorMesage="Select any choice for this field";
 	
