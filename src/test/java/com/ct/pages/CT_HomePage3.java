@@ -1,20 +1,20 @@
 package com.ct.pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-
 import com.ct.utilities.Driver;
 
-public class CT_HomePage {
-	
+public class CT_HomePage3 {
 
-	public CT_HomePage() {
+	public CT_HomePage3() {
 		PageFactory.initElements(Driver.getInstance(), this);
 
 	}
-//================1 selector========================================
+
+	// ================1 selector========================================
 	@FindBy(xpath = "//select[@name='Dropdown']")
 	public static WebElement title;
 	private static Select titleNames = new Select(title);
@@ -41,32 +41,33 @@ public class CT_HomePage {
 			titleNames.selectByValue("Instructor");
 			break;
 		case DevOps:
-		    titleNames.selectByValue("DevOps");
-		    break;
+			titleNames.selectByValue("DevOps");
+			break;
 		case Analyst:
 			titleNames.selectByValue("Analyst");
 			break;
 		case DB_Admin:
 			titleNames.selectByValue("DB_Admin");
 			break;
-	
+
 		}
-		
-		}
-//error message for title
+
+	}
+
+	// error message for title
 	@FindBy(xpath = "//p[@id='error-Dropdown']")
 	public WebElement titleError;
-	
-	
-	
-//===========================2 selector==========================================
+
+	// ===========================2
+	// selector==========================================
 	@FindBy(xpath = "//select[@name='Dropdown1']")
 	public static WebElement department;
 	private static Select departmentNames = new Select(department);
-	
-	public static enum selectDepartName{
-		HR,Development,Tech_Support,Fuculty
+
+	public static enum selectDepartName {
+		HR, Development, Tech_Support, Fuculty
 	}
+
 	public static void selectNameByValue(selectDepartName type) {
 		switch (type) {
 		case HR:
@@ -81,49 +82,38 @@ public class CT_HomePage {
 		case Fuculty:
 			departmentNames.selectByValue("Fuculty");
 			break;
-		
+
 		}
-		}
-	
-//department error message
+	}
+
+	// department error message
 	@FindBy(xpath = "//p[@id='error-Dropdown1']")
 	public WebElement departmentError;
-	
-	
-	
-//================================3 selector=======================================================
+
+	// ================================3
+	// selector=======================================================
 	@FindBy(xpath = "//select[@name='Dropdown2']")
 	public static WebElement durationOfElement;
-	
-	@FindBy(xpath="/option[@id='Dropdown2-li']/div[1]/div[1]/select/option")
+
+	@FindBy(xpath = "/option[@id='Dropdown2-li']/div[1]/div[1]/select/option")
 	public static WebElement durationOfElemForIndex;
-	
+
 	private static Select numOfElem = new Select(durationOfElement);
-	
-//	public static enum selectDurationOfElement{
-//		
-//	}
-//	public static void selectElementByIndex(selectDurationOfElement type) {
-//		switch (type) {
-//		
-//		}
-//		
-//	}
-//durationOfElementError
+
 	@FindBy(xpath = "//p[@id='error-Dropdown2']")
 	public WebElement durationOfElementError;
-	
-	
-	
-//========================4 selector=========================================
+
+	// ========================4
+	// selector=========================================
 	@FindBy(xpath = "//select[@name='Dropdown3']")
 	public static WebElement purposeOfLoan;
-private static Select numOfPurpose = new Select(purposeOfLoan);
-	
-	public static enum elementOfPurpose{
-		Personal,Education,Health,Mortgage,Travel,Auto,Other
-		
+	private static Select numOfPurpose = new Select(purposeOfLoan);
+
+	public static enum elementOfPurpose {
+		Personal, Education, Health, Mortgage, Travel, Auto, Other
+
 	}
+
 	public static void selestOfPurpose(elementOfPurpose type) {
 		switch (type) {
 		case Personal:
@@ -147,25 +137,25 @@ private static Select numOfPurpose = new Select(purposeOfLoan);
 		case Other:
 			numOfPurpose.selectByValue("Other");
 			break;
-			
+
 		}
-		}
-		
-//purposeOfLoanError
+	}
+
+	// purposeOfLoanError
 	@FindBy(xpath = "//p[@id='error-Dropdown3']")
 	public WebElement purposeOfLoanError;
-	
-	
-	
-//====================5 selector=============================================================
+
+	// ====================5
+	// selector=============================================================
 	@FindBy(xpath = "//select[@name='Dropdown4']")
 	public static WebElement supervizor;
-	private static Select selectSupervizor=new Select(supervizor);
-	
-	public static enum numOfSupervizor{
-		Zachary_Taylor,Kimberly_Ann_Hart,William_Cranston,Katherine_Hillard
+	private static Select selectSupervizor = new Select(supervizor);
+
+	public static enum numOfSupervizor {
+		Zachary_Taylor, Kimberly_Ann_Hart, William_Cranston, Katherine_Hillard
 	}
-	public static void selestOfSupervizor( numOfSupervizor type) {
+
+	public static void selestOfSupervizor(numOfSupervizor type) {
 		switch (type) {
 		case Zachary_Taylor:
 			selectSupervizor.selectByValue("Zachary_Taylo");
@@ -179,11 +169,11 @@ private static Select numOfPurpose = new Select(purposeOfLoan);
 		case Katherine_Hillard:
 			selectSupervizor.selectByValue("Katherine_Hillard");
 			break;
-			
+
 		}
-		}
-	
-    //supervizorError
+	}
+
+	// supervizorError
 	@FindBy(xpath = "//p[@id='error-Dropdown4']")
 	public WebElement supervizorError;
 
