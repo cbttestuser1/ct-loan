@@ -15,28 +15,28 @@ public class CLoanPersonalInfoPage {
 	
 
 	@FindBy (xpath="//input[@name='SingleLine']")
-	public static WebElement firstNameBox;
+	public  WebElement firstNameBox;
 	
 	@FindBy (xpath="//input[@name='SingleLine1']")
-	public static WebElement middleNameBox;
+	public  WebElement middleNameBox;
 	
 	@FindBy (xpath="//input[@name='SingleLine2']")
-	public static WebElement lastNameBox;
+	public  WebElement lastNameBox;
 	
 	@FindBy (id="Date-date")
-	public static WebElement dateOfBirthBox;
+	public  WebElement dateOfBirthBox;
 	
 	@FindBy (xpath="//input[@name='Number']")
-	public static WebElement personalFileIdBox;
+	public  WebElement personalFileIdBox;
 	
 	@FindBy (xpath="//*[@id='Radio_1']")
-	public static WebElement maleBtn;
+	public  WebElement maleBtn;
 	
 	@FindBy (xpath="//*[@id='Radio_2']")
-	public static WebElement femaleBtn;
+	public  WebElement femaleBtn;
 	
 	@FindBy (xpath="(//div/button[@elname='next'])[1]")
-	public static WebElement nextBtnP1; 
+	public  WebElement nextBtnP1; 
 	
 	
 	public void fillOutTheForm(String firstName, String middleName, String lastName, String dateOfBirth, String idNum ) {
