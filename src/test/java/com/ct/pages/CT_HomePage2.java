@@ -30,6 +30,10 @@ public class CT_HomePage2 {
 	@FindBy(id = "Address_Country")
 	public WebElement country;
 
+	// Updated Error Msg Element
+	@FindBy(id = "error-Address")
+	public WebElement errorAddress;
+
 	@FindBy(xpath = "(//span/input[@name='countrycode'])[1]")
 	public WebElement personalNum1;
 
@@ -38,6 +42,10 @@ public class CT_HomePage2 {
 
 	@FindBy(xpath = "(//span/input[@name='second'])[1]")
 	public WebElement personalNum3;
+
+	// Updated Error msg element
+	@FindBy(id = "error-PhoneNumber")
+	public WebElement errorPersonalNum;
 
 	@FindBy(xpath = "(//span/input[@name='countrycode'])[2]")
 	public WebElement workNum1;
@@ -48,14 +56,30 @@ public class CT_HomePage2 {
 	@FindBy(xpath = "(//span/input[@name='second'])[2]")
 	public WebElement workNum3;
 
+	// Updated Error Msg element
+	@FindBy(id = "error-PhoneNumber1")
+	public WebElement errorWorkNum1;
+
 	@FindBy(css = "input[name='Number1']")
 	public WebElement extension;
+
+	// Updater Error msg element
+	@FindBy(id = "error-Number1")
+	public WebElement extendNum;
 
 	@FindBy(css = "input[name='Email']")
 	public WebElement personalEmail;
 
+	// Updated Error Msg element
+	@FindBy(id = "error-Email")
+	public WebElement errorPersonalEmail;
+
 	@FindBy(css = "input[name='Email1']")
 	public WebElement workEmail;
+
+	// Updated Erorr Msg element
+	@FindBy(id = "error-Email1")
+	public WebElement errorWorkEmail;
 
 	@FindBy(xpath = "(//div/button[@elname='next'])[2]")
 	public WebElement next;
