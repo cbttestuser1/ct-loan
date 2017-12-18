@@ -16,6 +16,7 @@ public class CTeckLoan_37Home {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 	
+	// checking
 	
 	public void selectDropDown(WebElement element, String str){
 		Select selection = new Select(element);
