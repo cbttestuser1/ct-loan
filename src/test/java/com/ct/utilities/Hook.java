@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 
@@ -24,7 +25,7 @@ public class Hook {
 			
 			scenario.embed(screenshot, "image/png");
 		}
-		Driver.closeDriver();
+		//Driver.closeDriver();
 	}
 	
 }
