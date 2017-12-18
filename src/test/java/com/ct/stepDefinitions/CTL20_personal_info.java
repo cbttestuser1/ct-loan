@@ -1,5 +1,7 @@
 package com.ct.stepDefinitions;
 
+import org.junit.Assert;
+
 import com.ct.pages.CT_HomePage_Pesonal_info;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
@@ -9,6 +11,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
 
 public class CTL20_personal_info {
 	CT_HomePage_Pesonal_info personalInfo = new CT_HomePage_Pesonal_info();
@@ -60,6 +63,7 @@ public class CTL20_personal_info {
 
 	@Then("^I have to end up in contact information page\\.$")
 	public void i_have_to_end_up_in_contact_information_page() throws Throwable {
+		Assert.assertTrue(personalInfo.contactInfoTitle.getText().equals("Contact Information"));
 
 	}
 

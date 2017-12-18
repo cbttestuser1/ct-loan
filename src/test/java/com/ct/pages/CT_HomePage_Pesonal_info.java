@@ -12,28 +12,19 @@ public class CT_HomePage_Pesonal_info {
 	}
 	
 	@FindBy(xpath="//*[@id='SingleLine-li']/div[1]/span/input")
-	
 	public WebElement nameField;
-	
-	
 	
 	@FindBy(xpath="//*[@id='SingleLine2-li']/div[1]/span/input")
 	public WebElement lastNameField;
 	
-	
-	
 	@FindBy(xpath="//*[@id='SingleLine1-li']/div[1]/span/input")
 	public WebElement middleNameField;
-	
-	
 	
 	@FindBy(xpath ="//*[@id='Number-li']/div[1]/span/input")
 	public WebElement SSNField;
 	
-	
 	@FindBy(id="Radio_1")
 	public WebElement genderMale;
-	
 	
 	@FindBy(id="Radio_2")
 	public WebElement genderFemale;
@@ -43,4 +34,10 @@ public class CT_HomePage_Pesonal_info {
 	
 	@FindBy(xpath="//*[@id='formAccess']/div[1]/div/div/button")
 	public WebElement nextButton;
+	
+	@FindBy(xpath="//*[@id='navigBar']/tbody/tr[2]/td[2]")
+	public WebElement contactInfoTitle;
+	
+	@FindBy(xpath="//*[@id='navigBar']/tbody/tr[2]/td[1]")
+	public WebElement personlaInfoTitle;
 }
