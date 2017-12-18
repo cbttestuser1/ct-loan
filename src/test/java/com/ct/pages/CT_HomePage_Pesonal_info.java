@@ -12,6 +12,7 @@ public class CT_HomePage_Pesonal_info {
 	}
 	
 	@FindBy(xpath="//*[@id='SingleLine-li']/div[1]/span/input")
+	
 	public WebElement nameField;
 	
 	
