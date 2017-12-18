@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ct.pages.CT_HomePage2;
@@ -12,7 +13,6 @@ import com.ct.utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.runtime.junit.Assertions;
 
 public class CT_Loan_CTL44_stepDefenition {
 
@@ -86,9 +86,17 @@ public class CT_Loan_CTL44_stepDefenition {
 		page2.zipCode.sendKeys(zipCode);
 	}
 
+	// rESUABLE METHOD FOR SELECTING COUNTRY
 	@When("^I amd Enter Country as \"([^\"]*)\"$")
 	public void i_amd_Enter_Country_as(String country) throws Throwable {
 		page2.country.sendKeys(country);
+		CT_HomePage2 home = new CT_HomePage2();
+		Select coun = new Select(home.country);
+		int size = home.countryOptions.size();
+		for (int i = 0; i < size; i++) {
+			coun.selectByIndex(i);
+		}
+
 	}
 
 	@When("^I amd Enter Personal Phone Number as \"([^\"]*)\"$")
@@ -132,14 +140,16 @@ public class CT_Loan_CTL44_stepDefenition {
 
 	@Then("^I am verified that empty Street Address input box shows Error$")
 	public void i_am_verified_that_empty_Street_Address_input_box_shows_Error() throws Throwable {
-		WebElement error = driver.findElement(By.xpath("//*[@name='Address_AddressLine1']/parent::*[@class='addOne error1']"));
+		WebElement error = driver
+				.findElement(By.xpath("//*[@name='Address_AddressLine1']/parent::*[@class='addOne error1']"));
 		Assert.assertTrue(error.isDisplayed());
 
 	}
-	
+
 	@Then("^I am verified that empty Street AddressTwo input box shows Error$")
 	public void i_am_verified_that_empty_Street_AddressTwo_input_box_shows_Error() throws Throwable {
-		WebElement error = driver.findElement(By.xpath("//*[@name='Address_AddressLine2']/parent::*[@class='addOne error1']"));
+		WebElement error = driver
+				.findElement(By.xpath("//*[@name='Address_AddressLine2']/parent::*[@class='addOne error1']"));
 		Assert.assertTrue(error.isDisplayed());
 	}
 

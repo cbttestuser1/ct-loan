@@ -1,5 +1,7 @@
 package com.ct.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -29,6 +31,10 @@ public class CT_HomePage2 {
 
 	@FindBy(id = "Address_Country")
 	public WebElement country;
+
+	// updated xpath for country dd
+	@FindBy(xpath = "//select[@name='Address_Country']//option")
+	public List<WebElement> countryOptions;
 
 	// Updated Error Msg Element
 	@FindBy(id = "error-Address")
