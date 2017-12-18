@@ -201,7 +201,7 @@ public class CT_Loan_Reg_P4_POM {
 	private static Select DesiredLoanTerm = new Select(DesiredLoanTermSelector);
 
 	public static enum DesiredLoanType {
-		Months_12, Months_18, Months_24, Months_36
+		Months_12, Months_18, Months_24, Months_36,
 	}
 
 	// Method for working with 'Desired Loan Term' Selector

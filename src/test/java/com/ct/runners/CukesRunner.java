@@ -13,10 +13,16 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
+<<<<<<< HEAD
         tags = "@Length", 
         //glue = "com.ct.stepDefinitions", 
+=======
+        //tags = {"~@PositiveTesting", "@NegativeTesting"},
+		tags = "@NegativeAndPostivieTesting",
+        glue = "com.ct.stepDefinitions", 
+>>>>>>> branch 'CLoan' of https://github.com/cbttestuser1/ct-loan.git
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
-        dryRun = false
+        dryRun = true
         )
 
 public class CukesRunner {
