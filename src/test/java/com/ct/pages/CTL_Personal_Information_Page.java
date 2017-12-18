@@ -21,7 +21,7 @@ public class CTL_Personal_Information_Page {
 	@FindBy(css = "input[name='SingleLine2']")
 	public WebElement lastName;
 
-	@FindBy(id = "#Radio_1")
+	@FindBy(css="label[for='Radio_1']")
 	public WebElement gender;
 
 	@FindBy(css = "input[name='date']")

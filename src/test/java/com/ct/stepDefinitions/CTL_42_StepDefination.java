@@ -1,9 +1,6 @@
 package com.ct.stepDefinitions;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ct.pages.CTL_Personal_Information_Page;
@@ -23,17 +20,7 @@ public class CTL_42_StepDefination {
 	@Given("^I filled the Personal Information with valid data$")
 	public void i_filled_the_Personal_Information_with_valid_data() throws Throwable {
 
-		// WebElement ctLoanText =
-		// Driver.getInstance().findElement(By.xpath("//span[contains(text(),'CT
-		// Loan')]"));
-		// wait.until(ExpectedConditions.visibilityOf(ctLoanText));
-
-		// WebElement
-		// pi=driver.findElement(By.className("fusion-pulse-circles"));
-		// wait.until(ExpectedConditions.invisibilityOf(pi));
-		
-		
-		
+		driver.switchTo().frame(1);
 
 		personalInfo.firstName.sendKeys("Huseyin");
 		personalInfo.midleName.sendKeys("");
@@ -41,13 +28,14 @@ public class CTL_42_StepDefination {
 		personalInfo.gender.click();
 		personalInfo.dob.sendKeys("1/1/1990");
 		personalInfo.id.sendKeys("12345");
+		personalInfo.nextIp.click();
 
 	}
 
 	@When("^I do not fill the Contact Information fields with acceptable data type$")
 	public void i_do_not_fill_the_Contact_Information_fields_with_acceptable_data_type() throws Throwable {
 
-		personalInfo.nextIp.click();
+		
 
 	}
 
