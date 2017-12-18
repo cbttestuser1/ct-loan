@@ -22,7 +22,7 @@ public class CLoanPersonalInfo {
 		driver.get(CTContstants.QA_URL); // https://forms.zohopublic.com/murodil/form/CTLoanDev/formperma/A15bE69hh9AF89HBgK050159C
 
 		int size = driver.findElements(By.tagName("iframe")).size();
-		System.out.println(size);
+		//System.out.println(size);
 
 		driver.switchTo().frame(1);
 
@@ -35,7 +35,7 @@ public class CLoanPersonalInfo {
 			String idNum) throws Throwable {
 
 		cLoanPersonalInfoPage.fillOutTheForm(firstName, middleName, lastName, dateOfBirth, idNum);
-
+		Thread.sleep(2000);
 	}
 
 	@Given("^the customer selects the gender$")
@@ -48,9 +48,15 @@ public class CLoanPersonalInfo {
 		} else {
 			System.out.println("Gender option is already selected");
 		}
+		
+		
+	}
 
-		cLoanPersonalInfoPage.nextBtnP1.click();
-
+		@Given("^the customer clicks on the next button$")
+		public void the_customer_clicks_on_the_next_button() throws Throwable {
+			
+			cLoanPersonalInfoPage.nextBtnP1.click();
+		
 	}
 
 }
