@@ -45,6 +45,10 @@ public class CT_Loan_Reg_P4_POM {
 		}
 	}
 
+	// Element for error First Application
+	public static final String expErrorFirstApplicationCTLoanText = "Select any choice for this field.";
+	@FindBy(css = "#error-Radio1")
+
 	/*
 	 * Check text for "What is your annual income?" and input box Element for
 	 * this
@@ -57,6 +61,11 @@ public class CT_Loan_Reg_P4_POM {
 
 	@FindBy(xpath = "//*[@name='SingleLine3']")
 	public static WebElement annualIncomeIputBox;
+
+	// Element for ERROR Annual Income Input box
+	public static final String errorAnnualIncomeText = "Enter a value for this field.";
+	@FindBy(css = "#error-SingleLine3")
+	public static WebElement errorAnnualIncome;
 
 	/*
 	 * Check text for "Income type" and element for Selection and method for
@@ -92,6 +101,10 @@ public class CT_Loan_Reg_P4_POM {
 		}
 	}
 
+	// Element for ERROR of Income Type
+	public static final String errorIncomeTypeText = "Select any choice for this field.";
+	@FindBy(css = "#error-Dropdown5")
+	public static WebElement errorIncomeType;
 	/*
 	 * Check text for 'Do you own a house or rent?'* and radio buttons for this
 	 * question
@@ -132,6 +145,11 @@ public class CT_Loan_Reg_P4_POM {
 	@FindBy(xpath = "//li[@id='Number3-li']//*[@name='Number3']")
 	public static WebElement SpendingInMonthInputBox;
 
+	// Element for ERROR Spending in One Month
+	public static final String errorSpendingInMonthText = "Enter a value for this field.";
+	@FindBy(css = "#error-Number3")
+	public static WebElement errorSpendingInMonth;
+
 	/*
 	 * Check Text for question: 'How many dependents do you have?' and input box
 	 * for text
@@ -145,6 +163,11 @@ public class CT_Loan_Reg_P4_POM {
 	@FindBy(xpath = "//li[@id='Number4-li']//*[@name='Number4']")
 	public static WebElement DependentsInputBox;
 
+	// Element for ERROR Dependents do you have
+	public static final String errorDependentsText = "Enter a value for this field.";
+	@FindBy(css = "#error-Number4")
+	public static WebElement errorDependents;
+
 	/*
 	 * Check Text for question: 'How much savings do you have?' and input box
 	 * for text
@@ -157,6 +180,11 @@ public class CT_Loan_Reg_P4_POM {
 
 	@FindBy(xpath = "//li[@id='Number5-li']//*[@name='Number5']")
 	public static WebElement SavingInputBox;
+
+	// Element for ERROR Saving do you have
+	public static final String errorSavingText = "Enter a value for this field.";
+	@FindBy(css = "#error-Number5")
+	public static WebElement errorSaving;
 
 	/*
 	 * Check text for "Desired Loan Term?" and element for Selection and method
@@ -195,6 +223,11 @@ public class CT_Loan_Reg_P4_POM {
 		}
 	}
 
+	// Element for ERROR "Desired Loan Term?
+	public static final String errorDesiredLoanTermText = "Select any choice for this field.";
+	@FindBy(css = "#error-Dropdown6")
+	public static WebElement errorDesiredLoanTerm;
+
 	/*
 	 * Check "Term Agreement" Text and CheckBox Element
 	 */
@@ -206,6 +239,13 @@ public class CT_Loan_Reg_P4_POM {
 
 	@FindBy(css = "DecisionBox")
 	public static WebElement TermAgreemenCheckBox;
+
+	// Element for ERROR TermAgreement Check
+	public static final String errorTermAgreementText = "Check this field.";
+	@FindBy(css = "#error-DecisionBox")
+	public static WebElement errorTermAgreement;
+	
+	
 
 	/*
 	 * Input box for 'Single Line"
