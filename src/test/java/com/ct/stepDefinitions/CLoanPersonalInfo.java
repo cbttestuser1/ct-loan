@@ -29,7 +29,7 @@ public class CLoanPersonalInfo {
 		js.executeScript("window.scrollBy(0, 700);");
 
 	}
-	// text
+	
 
 	@Given("^the customer enters \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
 	public void the_customer_enters(String firstName, String middleName, String lastName, String dateOfBirth,
