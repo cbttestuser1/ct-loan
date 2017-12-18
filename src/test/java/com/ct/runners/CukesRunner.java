@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
-        tags = "@CTL-52",  //"@CTL-55,
+        tags = "@CTeckLoan37",  
         glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
         dryRun = false
