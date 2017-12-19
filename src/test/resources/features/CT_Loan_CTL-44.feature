@@ -1,6 +1,5 @@
 @Smoke @RuskK 
-Feature:
-Create and automateTest scenarios for the following fields in order to test fields pattern(acceptable data type) for Registration Page 2; 
+Feature: Create and automateTest scenarios for the following fields in order to test fields pattern(acceptable data type) for Registration Page 2; 
 
 Background: All this steps are same for all scenarios on this feature file 
 	Given I am on the home page of CT-Loan home page 
