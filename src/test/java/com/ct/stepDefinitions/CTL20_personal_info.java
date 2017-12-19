@@ -31,9 +31,8 @@ public class CTL20_personal_info {
 
 	@Then("^I add middle name \"([^\"]*)\"$")
 	public void i_add_middle_name(String MiddleName) throws Throwable {
-		Thread.sleep(3000);
 		personalInfo.nameField.sendKeys(MiddleName);
-		Thread.sleep(3000);
+	
 	}
 
 	@Then("^I add last name \"([^\"]*)\"$")
