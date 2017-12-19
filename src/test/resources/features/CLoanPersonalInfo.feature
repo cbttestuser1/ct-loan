@@ -7,8 +7,8 @@ Background:
 	
 
 
-@PositiveTesting
-Scenario Outline: Customer fills out the personal information form for valid credentials
+#@PositiveTesting
+Scenario Outline: Customer fills out the personal information form with valid credentials
 	And the customer selects the gender
 	And the customer enters "<firstName>" "<middleName>" "<lastName>" "<dateOfBirth>" "<personalFileID>"
 	
@@ -26,8 +26,8 @@ Scenario Outline: Customer fills out the personal information form for valid cre
 	
 	
 	
-@NegativeTesting
-Scenario Outline: Customer fills out the personal information form for invalid credentials
+#@NegativeTesting 
+Scenario Outline: Customer fills out the personal information form with invalid credentials
 	And the customer enters "<firstName>" "<middleName>" "<lastName>" "<dateOfBirth>" "<personalFileID>"
 	And the customer clicks on the next button
 	

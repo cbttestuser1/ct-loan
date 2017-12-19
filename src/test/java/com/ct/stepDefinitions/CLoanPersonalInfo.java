@@ -1,7 +1,5 @@
 package com.ct.stepDefinitions;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -52,7 +50,6 @@ public class CLoanPersonalInfo {
 		} else {
 			System.out.println("Gender option is already selected");
 		}
-
 		
 
 	}
@@ -60,28 +57,9 @@ public class CLoanPersonalInfo {
 	@Given("^the customer clicks on the next button$")
 	public void the_customer_clicks_on_the_next_button() throws Throwable {
 
-		cLoanPersonalInfoPage.nextBtnP1.click();
+		cLoanPersonalInfoPage.errorMessage();
 
-		String errorForFirstName = cLoanPersonalInfoPage.errorForFirstName.getText();
-		// System.out.println(errorForFirstName);
-		assertEquals(errorForFirstName, "Enter a value for this field.");
-
-		String errorForLastName = cLoanPersonalInfoPage.errorForLastName.getText();
-		// System.out.println(errorForLastName);
-		assertEquals(errorForLastName, "Enter a value for this field.");
-
-		String errorForRadioBtn = cLoanPersonalInfoPage.errorForRadioBtn.getText();
-		// System.out.println(errorForRadioBtn);
-		assertEquals(errorForRadioBtn, "Select any choice for this field.");
-
-		String errorForBirthDate = cLoanPersonalInfoPage.errorForBirthDate.getText();
-		// System.out.println(errorForBirthDate);
-		assertEquals(errorForBirthDate, "Select a date for this field.");
-
-		String errorForPersonalFileID = cLoanPersonalInfoPage.errorForPersonalFileID.getText();
-		// System.out.println(errorForPersonalFileID);
-		assertEquals(errorForPersonalFileID, "Enter a value for this field.");
-
+		
 	}
 
 }

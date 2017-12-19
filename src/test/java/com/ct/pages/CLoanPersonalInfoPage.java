@@ -41,19 +41,19 @@ public class CLoanPersonalInfoPage {
 	public  WebElement nextBtnP1; 
 	
 	@FindBy (xpath="//p[@id='error-SingleLine']")
-	public  WebElement errorForFirstName; 
+	public  WebElement errorForFirstNameVariable; 
 	
 	@FindBy (xpath="//p[@id='error-SingleLine2']")
-	public  WebElement errorForLastName; 
+	public  WebElement errorForLastNameVariable; 
 	
 	@FindBy (xpath="//p[@id='error-Date']")
-	public  WebElement errorForBirthDate; 
+	public  WebElement errorForBirthDateVariable; 
 	
 	@FindBy (xpath="//p[@id='error-Number']")
-	public  WebElement errorForPersonalFileID; 
+	public  WebElement errorForPersonalFileIDVariable; 
 	
 	@FindBy (xpath="//p[@id='error-Radio']")
-	public  WebElement errorForRadioBtn; 
+	public  WebElement errorForRadioBtnVariable; 
 	
 	
 	
@@ -71,5 +71,30 @@ public class CLoanPersonalInfoPage {
 		
 	}
 
+	public void errorMessage() {
+		
+		nextBtnP1.click();
+
+		String errorForFirstName = errorForFirstNameVariable.getText();
+		// System.out.println(errorForFirstName);
+		assertEquals(errorForFirstName, "Enter a value for this field.");
+
+		String errorForLastName = errorForLastNameVariable.getText();
+		// System.out.println(errorForLastName);
+		assertEquals(errorForLastName, "Enter a value for this field.");
+
+		String errorForRadioBtn = errorForRadioBtnVariable.getText();
+		// System.out.println(errorForRadioBtn);
+		assertEquals(errorForRadioBtn, "Select any choice for this field.");
+
+		String errorForBirthDate = errorForBirthDateVariable.getText();
+		// System.out.println(errorForBirthDate);
+		assertEquals(errorForBirthDate, "Select a date for this field.");
+
+		String errorForPersonalFileID = errorForPersonalFileIDVariable.getText();
+		// System.out.println(errorForPersonalFileID);
+		assertEquals(errorForPersonalFileID, "Enter a value for this field.");
+		
+	}
 	
 	}
