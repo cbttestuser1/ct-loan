@@ -28,6 +28,7 @@ public class PersonaInfoBoundryTest {
 		Driver.getInstance().switchTo().defaultContent();
 		Driver.getInstance().switchTo().parentFrame();
 		Driver.getInstance().switchTo().frame(0);
+		homePage.firstName.sendKeys("toCheckCharactersDoNotExceedTheBoundryLimit");
 		homePage.middleName.sendKeys("ShouldNotExceedMoreThanThirtyFiveCharacters");
 		homePage.lastName.sendKeys("ThisIsTheLastBoundryTest");
 	}
