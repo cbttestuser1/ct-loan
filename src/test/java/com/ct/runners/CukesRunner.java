@@ -13,10 +13,10 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
-        tags = "@CTeckLoan37",  
+        tags = "@CteckLoan40",  
         glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
-        dryRun = false
+        dryRun = true
        // dryRun=true
         )
 

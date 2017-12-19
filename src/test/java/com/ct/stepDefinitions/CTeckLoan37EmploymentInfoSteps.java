@@ -2,6 +2,7 @@ package com.ct.stepDefinitions;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -21,14 +22,16 @@ public class CTeckLoan37EmploymentInfoSteps {
 		WebElement frameElement=Driver.getInstance().
 				findElement(By.xpath("//div[@class='qodef-content']//iframe"));
 		Driver.getInstance().switchTo().frame(frameElement);
-	
-		
+			
 	Assert.assertTrue(Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek"));  
 	}
 
 	@Given("^the user select field Title \"([^\"]*)\"$")
 	public void the_user_select_field_Title(String title) throws Throwable {
 	   user.selectDropDown(user.titleDropDown, title);
+	   JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+		js.executeScript("window.scrollBy(0,200)");
+	   
 	}
 
 	@Given("^the user selects field Department \"([^\"]*)\"$")
@@ -39,6 +42,8 @@ public class CTeckLoan37EmploymentInfoSteps {
 	@Given("^the user selects field Duration of Employment \"([^\"]*)\"$")
 	public void the_user_selects_field_Duration_of_Employment(String duration) throws Throwable {
 	  user.selectDropDown(user.durationOfEmploymentDropDown, duration);
+	  JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+		js.executeScript("window.scrollBy(0,200)");
 	}
 
 	@Given("^the user selects field purpose of Loan of \"([^\"]*)\"$")
