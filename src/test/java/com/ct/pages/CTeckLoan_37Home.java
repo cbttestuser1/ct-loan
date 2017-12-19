@@ -1,6 +1,12 @@
 package com.ct.pages;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +17,7 @@ import com.ct.utilities.Driver;
 public class CTeckLoan_37Home {	
 
 	public static String errorMesage="Select any choice for this field";
+	public static String message="Dropbox in alphabetical order";
 	
 	public CTeckLoan_37Home(){
 		PageFactory.initElements(Driver.getInstance(), this);
@@ -32,13 +39,14 @@ public class CTeckLoan_37Home {
 		    } else {
 		    	Assert.assertTrue(errorMesage, false);
 		    }
-		   return true;
+		   return true ;
 
 	}
 	
 		
+		
 	@FindBy(xpath="//select [@name='Dropdown']")
-	public WebElement titleDropDown;
+	public  WebElement titleDropDown;
 		
 	@FindBy(xpath="//select [@name='Dropdown1']")
 	public WebElement departmentDropDown;
@@ -71,11 +79,36 @@ public class CTeckLoan_37Home {
 	public  WebElement errorUnderTitle;
 	
 	
+	public boolean comparison(By element){
+		List<WebElement> dropDown= Driver.getInstance().findElements(element);
+		ArrayList <String> list= new ArrayList<>();
+		for(WebElement e : dropDown){
+		    list.add(e.getText());
+		}
+		List<String> clonelist= (ArrayList<String>)list.clone();
+			Collections.sort(list);
+			if(list.equals(clonelist)){
+				Assert.assertTrue(message, true);		
+			}else{
+				Assert.assertTrue(message, false);
+			}
+			return true;
+			}
 	
 	
 	
+	public static void elementIsClickable(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        if (element.isDisplayed() && element.isEnabled()) {
+            element.click();
+        }
+	
+	
+	
+	
+  }
 }
-
 	
 
 
