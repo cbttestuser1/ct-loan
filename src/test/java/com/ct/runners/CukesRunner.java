@@ -14,8 +14,17 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
+
 		tags="@SmokeTest",
 		glue = "com.ct.stepDefinitions", 
+
+        //tags = "@Length", 
+        //glue = "com.ct.stepDefinitions",
+        //tags = {"~@PositiveTesting", "@NegativeTesting"},
+		//tags = "@NegativeAndPostivieTesting",
+       // glue = "com.ct.stepDefinitions", 
+//github.com/cbttestuser1/ct-loan.git
+//github.com/cbttestuser1/ct-loan.git
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
         dryRun = false
         )
