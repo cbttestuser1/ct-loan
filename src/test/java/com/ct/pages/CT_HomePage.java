@@ -14,6 +14,12 @@ public class CT_HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	
+	public String initialsErrorText = "Enter a value for this field.";
+	public String dateOfBirthErrorMsg = "Select a date for this field.";
+	public String genderErrorText = "Select any choice for this field.";
+	
+	
 	/**
 	 * Personal Information Page WebElements.
 	 */
