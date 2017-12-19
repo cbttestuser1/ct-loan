@@ -1,6 +1,8 @@
 package com.ct.stepDefinitions;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ct.pages.CTeckLoan_37Home;
@@ -11,11 +13,16 @@ import cucumber.api.java.en.Then;
 
 public class CTeckLoan37EmploymentInfoSteps {
 	
-	// checking
+	
 	CTeckLoan_37Home user = new CTeckLoan_37Home();	
 
 	@Given("^User is on the Employment Information Page$")
 	public void user_is_on_the_Employment_Information_Page() throws Throwable {
+		WebElement frameElement=Driver.getInstance().
+				findElement(By.xpath("//div[@class='qodef-content']//iframe"));
+		Driver.getInstance().switchTo().frame(frameElement);
+	
+		
 	Assert.assertTrue(Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek"));  
 	}
 
