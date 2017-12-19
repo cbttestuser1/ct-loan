@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-
 import com.ct.pages.CTeckLoan_37Home;
+import com.ct.utilities.CTContstants;
+import com.ct.utilities.ConfigurationReader;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
@@ -16,21 +16,21 @@ public class CTeckLoan37EmploymentInfoSteps {
 	
 	
 	CTeckLoan_37Home user = new CTeckLoan_37Home();	
+	
 
 	@Given("^User is on the Employment Information Page$")
 	public void user_is_on_the_Employment_Information_Page() throws Throwable {
-		WebElement frameElement=Driver.getInstance().
-				findElement(By.xpath("//div[@class='qodef-content']//iframe"));
-		Driver.getInstance().switchTo().frame(frameElement);
-			
-	Assert.assertTrue(Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek"));  
+		Driver.getInstance().get(ConfigurationReader.getProperty(CTContstants.QA_URL));
+		WebElement iframe = Driver.getInstance().findElement(By.xpath("//div[@class='qodef-content']//iframe"));
+		Driver.getInstance().switchTo().frame(iframe);
+		Assert.assertTrue(Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek"));  
 	}
 
 	@Given("^the user select field Title \"([^\"]*)\"$")
 	public void the_user_select_field_Title(String title) throws Throwable {
 	   user.selectDropDown(user.titleDropDown, title);
 	   JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
-		js.executeScript("window.scrollBy(0,200)");
+	   js.executeScript("window.scrollBy(0,300)");
 	   
 	}
 
@@ -41,29 +41,29 @@ public class CTeckLoan37EmploymentInfoSteps {
 
 	@Given("^the user selects field Duration of Employment \"([^\"]*)\"$")
 	public void the_user_selects_field_Duration_of_Employment(String duration) throws Throwable {
-	  user.selectDropDown(user.durationOfEmploymentDropDown, duration);
-	  JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+	    user.selectDropDown(user.durationOfEmploymentDropDown, duration);
+	    JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
 		js.executeScript("window.scrollBy(0,200)");
 	}
 
 	@Given("^the user selects field purpose of Loan of \"([^\"]*)\"$")
 	public void the_user_selects_field_purpose_of_Loan_of(String purpose_of_loan) throws Throwable {
-	   user.selectDropDown(user.PurposeOfLoanDropDown, purpose_of_loan);
+	    user.selectDropDown(user.PurposeOfLoanDropDown, purpose_of_loan);
 	}
 
 	@Given("^the user selects field Supervisor \"([^\"]*)\"$")
 	public void the_user_selects_field_Supervisor(String supervisor) throws Throwable {
-	   user.selectDropDown(user.SupervisorDropDown, supervisor);
+	    user.selectDropDown(user.SupervisorDropDown, supervisor);
 	}
 
 	@Given("^the user clicks on the next button$")
 	public void the_user_clicks_on_the_next_button() throws Throwable {
-	   user.nextButton.click();
+	    user.nextButton.click();
 	}
 
 	@Then("^the financial information shud be display$")
 	public void the_financial_information_shud_be_display() throws Throwable {
-		Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek");
+		 Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek");
 	}
 
 	@Then("^Error message under Title box should be displayed \"([^\"]*)\"$")

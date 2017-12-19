@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -38,10 +39,11 @@ public class CTeckLoan_37Home {
 		    } else {
 		    	Assert.assertTrue(errorMesage, false);
 		    }
-		   return true;
+		   return true ;
 
 	}
 	
+		
 		
 	@FindBy(xpath="//select [@name='Dropdown']")
 	public  WebElement titleDropDown;
@@ -80,32 +82,33 @@ public class CTeckLoan_37Home {
 	public boolean comparison(By element){
 		List<WebElement> dropDown= Driver.getInstance().findElements(element);
 		ArrayList <String> list= new ArrayList<>();
-				
 		for(WebElement e : dropDown){
 		    list.add(e.getText());
 		}
-			Object clonelist= list.clone();
+		List<String> clonelist= (ArrayList<String>)list.clone();
 			Collections.sort(list);
-			
 			if(list.equals(clonelist)){
 				Assert.assertTrue(message, true);		
-				
 			}else{
 				Assert.assertTrue(message, false);
 			}
 			return true;
-			
-			
-		
-	}
+			}
+	
+	
+	
+	public static void elementIsClickable(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        if (element.isDisplayed() && element.isEnabled()) {
+            element.click();
+        }
 	
 	
 	
 	
-	
-	
+  }
 }
-
 	
 
 
