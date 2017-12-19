@@ -13,11 +13,12 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
-        //tags = {"~@PositiveTesting", "@NegativeTesting"},
-		tags = "@NegativeAndPostivieTesting",
-        glue = "com.ct.stepDefinitions", 
+        //tags = {"@PositiveTesting", "~@NegativeTesting"},
+		tags = "~@PositiveTesting, @NegativeAndPostivieTesting",
+		//tags="@NegativeTesting",
+		glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
-        dryRun = true
+        dryRun = false
         )
 
 public class CukesRunner {
