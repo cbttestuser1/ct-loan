@@ -1,12 +1,8 @@
 package com.ct.stepDefinitions;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import com.ct.pages.CTeckLoan_37Home;
-import com.ct.utilities.CTContstants;
-import com.ct.utilities.ConfigurationReader;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
@@ -18,13 +14,6 @@ public class CTeckLoan37EmploymentInfoSteps {
 	CTeckLoan_37Home user = new CTeckLoan_37Home();	
 	
 
-	@Given("^User is on the Employment Information Page$")
-	public void user_is_on_the_Employment_Information_Page() throws Throwable {
-		Driver.getInstance().get(ConfigurationReader.getProperty(CTContstants.QA_URL));
-		WebElement iframe = Driver.getInstance().findElement(By.xpath("//div[@class='qodef-content']//iframe"));
-		Driver.getInstance().switchTo().frame(iframe);
-		Assert.assertTrue(Driver.getInstance().getCurrentUrl().equals("CT Loan – Cybertek"));  
-	}
 
 	@Given("^the user select field Title \"([^\"]*)\"$")
 	public void the_user_select_field_Title(String title) throws Throwable {

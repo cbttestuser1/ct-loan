@@ -18,6 +18,7 @@ public class CTeckLoan_37Home {
 
 	public static String errorMesage="Select any choice for this field";
 	public static String message="Dropbox in alphabetical order";
+	public static String mesageNextPage="Financial Information";
 	
 	public CTeckLoan_37Home(){
 		PageFactory.initElements(Driver.getInstance(), this);
@@ -77,6 +78,9 @@ public class CTeckLoan_37Home {
 	
 	@FindBy(xpath="//p[@id='error-Dropdown']")
 	public  WebElement errorUnderTitle;
+	
+	@FindBy(xpath="Section3-li")
+	public WebElement mesageNexPage;
 	
 	
 	public boolean comparison(By element){
