@@ -2,6 +2,7 @@ package com.ct.stepDefinitions;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -90,12 +91,16 @@ public class CT_Loan_CTL44_stepDefenition {
 	@When("^I amd Enter Country as \"([^\"]*)\"$")
 	public void i_amd_Enter_Country_as(String country) throws Throwable {
 		page2.country.sendKeys(country);
-		CT_HomePage2 home = new CT_HomePage2();
-		Select coun = new Select(home.country);
-		int size = home.countryOptions.size();
-		for (int i = 0; i < size; i++) {
-			coun.selectByIndex(i);
-		}
+
+		/*
+		 * WHO write those line here? why???????????? (RK)
+		 */
+		// CT_HomePage2 home = new CT_HomePage2();
+		// Select coun = new Select(home.country);
+		// int size = home.countryOptions.size();
+		// for (int i = 0; i < size; i++) {
+		// coun.selectByIndex(i);
+		// }
 
 	}
 
@@ -133,9 +138,9 @@ public class CT_Loan_CTL44_stepDefenition {
 
 	@Then("^I am Click Next Button and verify switch to Employment Information Page$")
 	public void i_am_Click_Next_Button_and_verify_switch_to_Employment_Information_Page() throws Throwable {
+//		elementIsClickable(page2.next);
 		page2.next.click();
-		Thread.sleep(5000);
-
+//		driver.findElement(By.xpath("//ul[@page_no='2']//button[@class='fmSmtButton next_previous']//em[contains(text(), 'Next')]"));
 	}
 
 	@Then("^I am verified that empty Street Address input box shows Error$")
@@ -152,5 +157,46 @@ public class CT_Loan_CTL44_stepDefenition {
 				.findElement(By.xpath("//*[@name='Address_AddressLine2']/parent::*[@class='addOne error1']"));
 		Assert.assertTrue(error.isDisplayed());
 	}
+
+	@Then("^I am verified that empty Street AddressTwo input box shows$")
+	public void i_am_verified_that_empty_Street_AddressTwo_input_box_shows() throws Throwable {
+		Assert.assertTrue(page2.errorAddress.isDisplayed());
+	}
+
+	@Then("^I am verified that Empty Address Field Error is appers$")
+	public void i_am_verified_that_Empty_Address_Field_Error_is_appers() throws Throwable {
+		Assert.assertTrue(page2.errorAddress.isDisplayed());
+	}
+	
+	@Then("^I am verified that Error of Empty Personal Phone number is appers$")
+	public void i_am_verified_that_Error_of_Empty_Personal_Phone_number_is_appers() throws Throwable {
+		Assert.assertTrue(page2.errorPersonalNum.isDisplayed());
+	}
+
+	@Then("^I am verified that Error of Empty Work Phone number is appers$")
+	public void i_am_verified_that_Error_of_Empty_Work_Phone_number_is_appers() throws Throwable {
+		Assert.assertTrue(page2.errorWorkNum1.isDisplayed());
+	}
+	
+	@Then("^I am verified that Error of Person Email is appers$")
+	public void i_am_verified_that_Error_of_Person_Email_is_appers() throws Throwable {
+		Assert.assertTrue(page2.errorPersonalEmail.isDisplayed());
+	}
+
+	@Then("^I am verified that Error of Work Email is appers$")
+	public void i_am_verified_that_Error_of_Work_Email_is_appers() throws Throwable {
+		System.out.println(page2.errorWorkEmail.getText());
+		Assert.assertTrue(page2.errorWorkEmail.isDisplayed());
+	}
+	
+	public static void elementIsClickable(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        if (element.isDisplayed() && element.isEnabled()) {
+            element.click();
+        }
+    }
+
+
 
 }
