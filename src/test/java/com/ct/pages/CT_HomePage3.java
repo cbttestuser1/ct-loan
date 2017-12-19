@@ -85,4 +85,8 @@ public class CT_HomePage3 {
 
 	@FindBy(xpath = "//*[@id='navigBar']/tbody/tr[2]/td[4]")
 	public WebElement FinancialInformation;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch 'CLoan' of https://github.com/cbttestuser1/ct-loan.git
