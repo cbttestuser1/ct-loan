@@ -13,7 +13,7 @@ public class Hook {
 	
 	@Before
 	public void setUp(){
-		Driver.getInstance().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Driver.getInstance().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@After
@@ -24,7 +24,7 @@ public class Hook {
 			
 			scenario.embed(screenshot, "image/png");
 		}
-		Driver.closeDriver();
+		//Driver.closeDriver();
 	}
 	
 }
