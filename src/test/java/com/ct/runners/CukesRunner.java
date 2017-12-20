@@ -10,9 +10,24 @@ import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
+<<<<<<< HEAD
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/resources/features/", tags = "@Bibek", glue = "com.ct.stepDefinitions", plugin = {
 		"html:target/cucumber-reports", "json:target/cucumber.json" }, dryRun = false)
+=======
+
+
+@RunWith(Cucumber.class)   
+@CucumberOptions(
+		features = "./src/test/resources/features/", 
+		//tags = {"~@PositiveTesting", "@NegativeTesting"},
+		//tags = "@NegativeAndPostivieTesting",
+        glue = "com.ct.stepDefinitions", 
+        plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
+        dryRun = false
+        )
+>>>>>>> branch 'CLoan' of https://github.com/cbttestuser1/ct-loan.git
+
 
 public class CukesRunner {
 

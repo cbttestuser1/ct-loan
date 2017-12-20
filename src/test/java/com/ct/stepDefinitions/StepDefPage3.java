@@ -43,6 +43,7 @@ public class StepDefPage3 {
 			dd.selectByIndex(i);
 
 		}
+		System.out.println(homePage_3.titleSel);
 	}
 
 	//
