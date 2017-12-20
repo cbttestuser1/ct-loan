@@ -6,30 +6,33 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
 
-
-
 public class CT_59_employmentInfo {
-	
+
 	public CT_59_employmentInfo() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 
-	@FindBy (name="Dropdown")
+	@FindBy(name = "Dropdown")
 	public WebElement titleSelect;
-	
-	@FindBy(name="Dropdown1")
+
+	@FindBy(name = "Dropdown1")
 	public WebElement departSelect;
-	
-	@FindBy(name="Dropdown2")
+
+	@FindBy(name = "Dropdown2")
 	public WebElement durationSelect;
-	
-	@FindBy(name="Dropdown3")
+
+	@FindBy(name = "Dropdown3")
 	public WebElement purposeSelect;
-	
-	@FindBy(name="Dropdown4")
+
+	@FindBy(name = "Dropdown4")
 	public WebElement superviseSelect;
-			
-	@FindBy(xpath="(//button[@class='fmSmtButton next_previous'])[5]")
-	public WebElement nextButton;		
+
+	@FindBy(xpath = "(//button[@class='fmSmtButton next_previous'])[5]")
+	public WebElement nextButton;
+	
+	@FindBy(xpath = "//h2[.='Financial Information']")
+	public WebElement financialInfo;
+	
+	
 
 }
