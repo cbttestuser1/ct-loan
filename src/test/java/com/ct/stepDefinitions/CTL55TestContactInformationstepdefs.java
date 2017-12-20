@@ -2,7 +2,6 @@ package com.ct.stepDefinitions;
 
 import com.ct.pages.CTL55_HomePage;
 import com.ct.utilities.CTContstants;
-import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,15 +10,9 @@ public class CTL55TestContactInformationstepdefs {
 	CTL55_HomePage homePage = new CTL55_HomePage();
 	CTContstants url = new CTContstants();
 
-	@Given("^the user is on the CT-Loan home page$")
-	public void the_user_is_on_the_CT_Loan_home_page() throws Throwable {
-		Driver.getInstance().get(url.QA_URL);
-		Thread.sleep(30000);
-	}
-
 	@Given("^the user enters acceptable streetAddress \"([^\"]*)\"$")
 	public void the_user_enters_acceptable_streetAddress(String address1) throws Throwable {
-		homePage.switchToIframe(homePage.frame);
+		// homePage.switchToIframe(homePage.frame);
 		homePage.address.sendKeys(address1);
 
 	}

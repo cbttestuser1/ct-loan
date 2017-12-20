@@ -1,9 +1,9 @@
-@CTL-31
+@CTL-31	
 Feature: 1 Test Personal Information fields pattern(acceptable data type)  
 
 Background:
 			Given User is on homepage
-	
+
 Scenario Outline: 
 	And users adds "<firstName>","<Middle Initial>","<lastName>"
 	And user picks a Gender

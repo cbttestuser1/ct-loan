@@ -6,8 +6,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ct.pages.CT_HomePage;
-import com.ct.utilities.ConfigurationReader;
+import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -15,10 +16,11 @@ public class CTL31StepDefs {
 
 	CT_HomePage homePage = new CT_HomePage(Driver.getInstance());
 	WebDriverWait wait = new WebDriverWait(Driver.getInstance(), 10);
+	CTContstants url = new CTContstants();
 
 	@Given("^User is on homepage$")
 	public void user_is_on_homepage() throws Throwable {
-		Driver.getInstance().get(ConfigurationReader.getProperty("url"));
+		Driver.getInstance().get(url.QA_URL);
 		WebElement iframe = Driver.getInstance().findElement(By.xpath("//div[@class='qodef-content']//iframe"));
 		Driver.getInstance().switchTo().frame(iframe);
 	}
@@ -45,13 +47,11 @@ public class CTL31StepDefs {
 		homePage.SSN_Field.sendKeys(ssn);
 	}
 
-	
 	@Given("^user should click on Next button$")
 	public void user_should_click_on_Next_button() throws Throwable {
 		homePage.clickOnNextButton();
 	}
-	
-	
+
 	@Then("^user need to assert that he is in Contact Information Page$")
 	public void user_need_to_assert_that_he_is_in_Contact_Information_Page() throws Throwable {
 		wait.until(ExpectedConditions.visibilityOf(homePage.personalText));

@@ -1,7 +1,19 @@
 @adress
 Feature: Test Contact Information fields pattern
-Scenario: Automamation Test for contact information  
-Given the user is on the CT-Loan home page
+Background:
+#==== here Adam's code for firts page CTL-31 =============
+
+  Given User is on homepage
+  
+  
+	
+Scenario Outline: Automamation Test for contact information  
+And users adds "<firstName>","<Middle Initial>","<lastName>"
+	And user picks a Gender
+	And user enters date of birth "<MM/DD/YYYY>"
+	And user enters SSN/Personal File ID "<0123456789>" 
+	And user should click on Next button
+	Then user need to assert that he is in Contact Information Page
 And the user enters acceptable streetAddress "1723 Seminary rd apt 135"
 And the user enters  addressLinetwo "507 Emma str"
 And the user enters  city "Alexandria"
@@ -19,3 +31,9 @@ And the user enters  workEmail "user1@mail.com"
 And the user enters  personalEmail "user2@gmail.com"
 And the user click on the next button 
 Then the employment information should be displayed "Employment Information"
+Examples: personal
+	| firstName	| Middle Initial	| lastName    | MM/DD/YYYY |  0123456789 |
+	|	Beilul	| 			J		| 	Samsung	  | 12/24/1974 |   123456789 |
+	
+
+	

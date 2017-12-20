@@ -1,6 +1,7 @@
 package com.ct.pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -82,6 +83,11 @@ public class CTL55_HomePage {
 	public static boolean textIsPresent(WebElement element, String expected) {
 		Assert.assertEquals(expected, element.getText());
 		return true;
+	}
+
+	public static void moveToElement(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
 }
