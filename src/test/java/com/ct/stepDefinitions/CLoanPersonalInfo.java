@@ -10,6 +10,7 @@ import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 
+//Testing the updates
 public class CLoanPersonalInfo {
 
 	CLoanPersonalInfoPage cLoanPersonalInfoPage = new CLoanPersonalInfoPage();

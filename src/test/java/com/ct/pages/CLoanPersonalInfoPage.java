@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
 
+//Testing the updates
 public class CLoanPersonalInfoPage {
 
 	public CLoanPersonalInfoPage() {
