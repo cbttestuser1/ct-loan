@@ -33,6 +33,7 @@ public class CT_Loan_CTL41_stepDefinition {
 		for (WebElement e : dropDown) {
 			list.add(e.getText());
 		}
+		// Second list
 		String temp = list.get(0);
 		// System.out.println("OriginalList\n" + list);
 		List<String> originalList = new ArrayList<String>(Arrays.asList(temp.split("\n")));
