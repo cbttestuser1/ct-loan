@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ct.utilities.Driver;
 
-public class CT_Loan_Reg_P4_POM {
+public class CT_CloanHomePage_4 {
 
-	public CT_Loan_Reg_P4_POM() {
+	public CT_CloanHomePage_4() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 
@@ -50,8 +50,7 @@ public class CT_Loan_Reg_P4_POM {
 	@FindBy(css = "#error-Radio1")
 
 	/*
-	 * Check text for "What is your annual income?" and input box Element for
-	 * this
+	 * Check text for "What is your annual income?" and input box Element for this
 	 */
 
 	public static final String expAnnualIncomeText = "What is your annual income?";
@@ -133,8 +132,8 @@ public class CT_Loan_Reg_P4_POM {
 	}
 
 	/*
-	 * Check Text for question: 'How much do you spent in one month?' and input
-	 * box for text
+	 * Check Text for question: 'How much do you spent in one month?' and input box
+	 * for text
 	 */
 
 	public static final String expSpendingInMonthText = "How much do you spent in one month?";
@@ -151,8 +150,8 @@ public class CT_Loan_Reg_P4_POM {
 	public static WebElement errorSpendingInMonth;
 
 	/*
-	 * Check Text for question: 'How many dependents do you have?' and input box
-	 * for text
+	 * Check Text for question: 'How many dependents do you have?' and input box for
+	 * text
 	 */
 
 	public static final String expDependentsText = "How many dependents do you have?";
@@ -169,8 +168,8 @@ public class CT_Loan_Reg_P4_POM {
 	public static WebElement errorDependents;
 
 	/*
-	 * Check Text for question: 'How much savings do you have?' and input box
-	 * for text
+	 * Check Text for question: 'How much savings do you have?' and input box for
+	 * text
 	 */
 
 	public static final String expSavingText = "How much savings do you have?";
@@ -187,8 +186,8 @@ public class CT_Loan_Reg_P4_POM {
 	public static WebElement errorSaving;
 
 	/*
-	 * Check text for "Desired Loan Term?" and element for Selection and method
-	 * for selection
+	 * Check text for "Desired Loan Term?" and element for Selection and method for
+	 * selection
 	 */
 
 	public static final String expDesiredLoanTermText = "Income type";
@@ -244,8 +243,6 @@ public class CT_Loan_Reg_P4_POM {
 	public static final String errorTermAgreementText = "Check this field.";
 	@FindBy(css = "#error-DecisionBox")
 	public static WebElement errorTermAgreement;
-	
-	
 
 	/*
 	 * Input box for 'Single Line"

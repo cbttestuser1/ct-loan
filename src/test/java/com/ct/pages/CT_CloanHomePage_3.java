@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
 
-public class CT_HomePage3 {
+public class CT_CloanHomePage_3 {
 
-	public CT_HomePage3() {
+	public CT_CloanHomePage_3() {
 		PageFactory.initElements(Driver.getInstance(), this);
 
 	}

@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
 
-public class CT_HomePage2 {
-	public CT_HomePage2() {
+public class CT_CloanHomePage_2 {
+	public CT_CloanHomePage_2() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 
