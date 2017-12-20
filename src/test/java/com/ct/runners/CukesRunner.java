@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
         tags = "@positiveInfoTest", 
-        glue = "com/ct/stepDefinitions", 
+        glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
         dryRun = false
         
