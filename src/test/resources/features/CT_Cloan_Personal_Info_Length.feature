@@ -8,7 +8,7 @@ Scenario Outline: Testing the length of Personal Information Page
 	Examples:
 	
 	|firstName									|middleName									|lastName											|dateOfBirth		|personalFileID			|
-	|qwertyuiopasdfghjklmnbvcxzasdfghjkaslouy	|N/A										|Bibek												|12/20/1999			|123456789				|
+	|											|N/A										|Bibek												|12/20/1999			|123456789				|
 	|Serdar										|qwertyuiopasdfghjklmnbvcxzasdfghjkllouywa	|Bibek												|12/20/1999			|123456789				|
 	|Serdar 									|N/A										|qwertyuiopasdfghjklmnbvcxzasdfghjkllouywa			|12/20/1999			|123456789		 		|
 	|Serdar										|N/A										|Bibek												|127/20/1999		|123456789		 		|

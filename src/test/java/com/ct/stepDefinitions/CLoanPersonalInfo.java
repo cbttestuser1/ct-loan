@@ -30,28 +30,26 @@ public class CLoanPersonalInfo {
 
 	}
 
-	
 	@Given("^the customer enters \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
 	public void the_customer_enters(String firstName, String middleName, String lastName, String dateOfBirth,
 			String personalFileID) throws Throwable {
 
 		cLoanPersonalInfoPage.fillOutTheForm(firstName, middleName, lastName, dateOfBirth, personalFileID);
 		Thread.sleep(1000);
-		
+
 	}
 
 	@Given("^the customer selects the gender$")
 	public void the_customer_selects_the_gender() throws Throwable {
 
 		boolean isChecked = cLoanPersonalInfoPage.maleBtn.isSelected();
-		
+
 		Thread.sleep(1000);
 		if (!isChecked) {
 			cLoanPersonalInfoPage.maleBtn.click();
 		} else {
 			System.out.println("Gender option is already selected");
 		}
-		
 
 	}
 
@@ -60,7 +58,6 @@ public class CLoanPersonalInfo {
 
 		cLoanPersonalInfoPage.errorMessage();
 
-		
 	}
 
 }
