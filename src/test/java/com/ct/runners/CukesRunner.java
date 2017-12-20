@@ -26,7 +26,7 @@ import cucumber.api.junit.Cucumber;
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
         dryRun = false
         )
->>>>>>> branch 'CLoan' of https://github.com/cbttestuser1/ct-loan.git
+//github.com/cbttestuser1/ct-loan.git
 
 
 public class CukesRunner {
