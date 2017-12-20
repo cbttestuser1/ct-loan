@@ -1,5 +1,5 @@
+@positiveInfoTest
 Feature: Positive test 
-@positiveInfoTest 
 Scenario: 
 
 	Given User navigates to the following url: "http://cybertekschool.com/ctl.qa"
