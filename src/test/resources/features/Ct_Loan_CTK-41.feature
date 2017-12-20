@@ -50,13 +50,8 @@ Background: All this steps are same for all scenarios on this feature file
 Scenario: Test for content inside dropdown menu 
 
 	Given I click select Title option and see content inside the titleOption 
-	
 	And I click select Department option and see content inside Department 
-	
 	And I click select Duration of Employment and see content inside it 
-	
 	And I click Purpose of Loan and see content inside it 
-	
 	And I click Supervisor and see content inside it 
-	
 	Then I click on next option 
