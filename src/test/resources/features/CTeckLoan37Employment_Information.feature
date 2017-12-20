@@ -2,10 +2,10 @@
 Feature:  Test Employment Information mandatory fields
 
 Background:
+#==== here Adam's code for firts page CTL-31 =============
+
   Given User is on homepage
-  
-#==== here Adam's code for firts page CTL-31 
-  Scenario Outline: 
+   Scenario Outline: 
 	And users adds "<firstName>","<Middle Initial>","<lastName>"
 	And user picks a Gender
 	And user enters date of birth "<MM/DD/YYYY>"
@@ -17,9 +17,31 @@ Background:
 	| firstName	| Middle Initial	| lastName    | MM/DD/YYYY |  0123456789 |
 	|	Beilul	| 			J		| 	Samsung	  | 12/24/1974 |   123456789 |
 	
-#=== here my code starts
+#============Darya code	for second page===========
+	Scenario:
+	
+And the user enters acceptable streetAddress "1723 Seminary rd apt 135"
+And the user enters  addressLinetwo "507 Emma str"
+And the user enters  city "Alexandria"
+And the user enters  state "VA"
+And the user enters country "United States"
+And the user enters  zipCode "22315"
+And the user enters  personalPhonePartOne "843"
+And the user enters  personalPhonePartTwo "297"
+And the user enters  personalPhonePartthree "4523"
+And the user enters  workPhonePartOne "703"
+And the user enters  workPhonePartTwo "546"
+And the user enters  workPhonePartThree "5412"
+And the user enters  extension "567"
+And the user enters  workEmail "user1@mail.com"
+And the user enters  personalEmail "user2@gmail.com"
+And the user click on the next button 
+Then the employment information should be displayed "Employment Information"
 	
 	
+	
+#=== here is  my code starts==============
+		
 	Scenario Outline: Testing Title field	
 	And the user selects field Department "<department>"
     And the user selects field Duration of Employment "<duration>"
