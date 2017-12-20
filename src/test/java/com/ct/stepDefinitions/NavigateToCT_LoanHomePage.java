@@ -23,7 +23,7 @@ public class NavigateToCT_LoanHomePage {
 		   jse.executeScript("window.scrollBy(0, 400)");
 		   Thread.sleep(2000);
 		   jse.executeScript("window.scrollBy(0, 0)");
-		  
+		   
 	}
 
 	@Then("^I should be able to see text CT-Loan and user information boxes$")

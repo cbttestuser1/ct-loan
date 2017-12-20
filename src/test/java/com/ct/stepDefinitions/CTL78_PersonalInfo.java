@@ -55,7 +55,7 @@ public class CTL78_PersonalInfo {
 
 	@And("^User enters SSN as (\\d+)$")
 	public void user_enters_SSN_as(int arg1) throws Throwable {
-	   cthome.PersonalFileID.sendKeys("123456789");
+	   cthome.PersonalFileID.sendKeys("123456789"); 
 	  
 	}
 

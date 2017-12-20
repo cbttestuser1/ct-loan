@@ -33,6 +33,10 @@ public class CT_HomePage_Personal_Information {
 
     @FindBy(name = "Number")
     public WebElement PersonalFileID;
+    
+    
+    @FindBy(xpath="(//button[@class='fmSmtButton next_previous'])[1]")
+    public WebElement NextButton;
 
 
 }
