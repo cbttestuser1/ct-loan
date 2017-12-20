@@ -11,8 +11,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/features/CTL-51_personal_info.feature",
-		// tags = "@PersonalInfoPositive",
+@CucumberOptions(features = "./src/test/resources/features",
+		tags = "@CTL-48",
 		glue = "com.ct.stepDefinitions", plugin = { "html:target/cucumber-reports",
 				"json:target/cucumber.json" }, dryRun = false)
 
