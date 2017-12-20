@@ -33,7 +33,6 @@ And the user click on the next button 
 Then the employment information should be displayed "Employment Information"
 Examples: personal
 	| firstName	| Middle Initial	| lastName    | MM/DD/YYYY |  0123456789 |
-	|	Beilul	| 			J		| 	Samsung	  | 12/24/1974 |   123456789 |
+	|	Beilul	| 			J   | 	Samsung	  | 12/24/1974 |   123456789 |
 	
 
-	

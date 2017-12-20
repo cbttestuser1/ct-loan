@@ -1,5 +1,7 @@
 package com.ct.pages;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -68,6 +70,12 @@ public class CTL55_HomePage {
 
 	@FindBy(id = "Section2-li")
 	public WebElement employmentInfo;
+
+	@FindBy(xpath = "//div[@elname='phoneFormatElem']//input")
+	public List<WebElement> contactPhones;
+
+	@FindBy(id = "error-Address")
+	public WebElement errorPartOne;
 
 	public void switchToIframe(WebElement frame) {
 		Driver.getInstance().switchTo().frame(frame);
