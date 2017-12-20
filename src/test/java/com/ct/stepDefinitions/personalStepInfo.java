@@ -19,6 +19,9 @@ import cucumber.api.java.en.Then;
 public class personalStepInfo {
 	CT_HomePage homePage = new CT_HomePage();
 	WebDriver driver = Driver.getInstance();
+	String[] chars=
+		{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
+				"p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
 	@Given("^User navigates to the following url: \"([^\"]*)\"$")
 	public void user_navigates_to_the_following_url(String arg1) throws Throwable {
@@ -38,17 +41,47 @@ public class personalStepInfo {
 
 	@Then("^Verify Data type: String characters a-Z$")
 	public void verify_Data_type_String_characters_a_Z() throws Throwable {
+		homePage.firstName.clear();
+		homePage.lastName.clear();
+		Thread.sleep(5000);
+		homePage.firstName.sendKeys(chars);
+		
+		if(chars.equals(chars)){
+		for(int i=0; i<chars.length; i++){
+			System.out.print(chars[i].toString());
+			
+		}
+		}else{
+			System.out.println("Did NOT enter the charackters from A-Z");
+		}
+		
+		homePage.lastName.sendKeys(chars);
+		
+		
 
 	}
 
 	@Then("^Field type: text box$")
 	public void field_type_text_box() throws Throwable {
-
+		String textBox1=homePage.firstName.getAttribute("type");
+		System.out.println(textBox1);
+		Assert.assertTrue(textBox1.equals("text"));
+		
+		String textBox2=homePage.middleName.getAttribute("type");
+		Assert.assertTrue(textBox2.equals("text"));
+		
+		
+		String textBox3=homePage.lastName.getAttribute("type");
+		Assert.assertTrue(textBox3.equals("text"));
+		
+		
+		
 	}
 
 	@Then("^Accepted special characters \\(apostrophe, hyphen\\)$")
 	public void accepted_special_characters_apostrophe_hyphen() throws Throwable {
-
+		homePage.firstName.sendKeys("'"+"-");
+		homePage.lastName.sendKeys("'"+"-");
 	}
 
 	@Then("^User selects the gender$")
@@ -100,9 +133,6 @@ public class personalStepInfo {
 		homePage.DateOfBirth.click();
 		List <WebElement> nomericList= 
 				driver.findElements(By.xpath("//div[@id='ui-datepicker-div']/table/tbody/tr/td"));
-		String[] chars=
-			{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
-					"p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 		
 		Object[] i=nomericList.toArray();
 		if(Arrays.equals(i, chars)){
