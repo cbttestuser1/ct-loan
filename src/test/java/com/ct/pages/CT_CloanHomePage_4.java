@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ct.utilities.Driver;
 
-public class CT_Loan_Reg_P4_POM {
+public class CT_CloanHomePage_4 {
 
-	public CT_Loan_Reg_P4_POM() {
+	public CT_CloanHomePage_4() {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 
