@@ -4,16 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.ct.pages.CLoanPersonalInfoPage;
+import com.ct.pages.CT_CloanHomePage_1;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 
-//Testing the updates
-public class CLoanPersonalInfo {
+public class CT_CloanStepDefs_1 {
 
-	CLoanPersonalInfoPage cLoanPersonalInfoPage = new CLoanPersonalInfoPage();
+	CT_CloanHomePage_1 cLoanPersonalInfoPage = new CT_CloanHomePage_1();
 	WebDriver driver = Driver.getInstance();
 	private JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -42,6 +41,25 @@ public class CLoanPersonalInfo {
 	@Given("^the customer selects the gender$")
 	public void the_customer_selects_the_gender() throws Throwable {
 
+		
+//		boolean isChecked = false;
+//		int size = cLoanPersonalInfoPage.maleBtn.size();
+//		System.out.println("Size of the list: " + size);
+//
+//		for (int i = 0; i < size; i++) {
+//
+//			isChecked = cLoanPersonalInfoPage.maleBtn.get(i).isSelected();
+//
+//			if (!isChecked) {
+//
+//				cLoanPersonalInfoPage.maleBtn.get(i).click();
+//				Thread.sleep(2000);
+//
+//			}
+//		}
+		
+		
+		
 		boolean isChecked = cLoanPersonalInfoPage.maleBtn.isSelected();
 
 		Thread.sleep(1000);

@@ -4,7 +4,7 @@ package com.ct.stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.ct.pages.CT_HomePage3;
+import com.ct.pages.CT_CloanHomePage_3;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
@@ -12,12 +12,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 //github.com/cbttestuser1/ct-loan.git
-public class StepDefPage3 {
+public class CT_CloanStepDefs_3a {
 
 	
 
 	WebDriver driver = Driver.getInstance();
-	CT_HomePage3 homePage_3 = new CT_HomePage3();
+	CT_CloanHomePage_3 homePage_3 = new CT_CloanHomePage_3();
 	Select dd;
 
 	@Given("^I click on title and select \"([^\"]*)\"$")

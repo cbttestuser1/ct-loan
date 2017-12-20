@@ -8,19 +8,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.ct.pages.CT_HomePage2;
+import com.ct.pages.CT_CloanHomePage_2;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class CT_Loan_CTL44_stepDefenition {
+public class CT_CloanStepDefs_2 {
 
 	// private WebDriver driver = Driver.getInstance();
 	private WebDriver driver = Driver.getInstance();
 	private WebElement iframe = driver.findElement(By.cssSelector(".wpb_text_column.wpb_content_element iframe"));
-	private CT_HomePage2 page2 = new CT_HomePage2();
+	private CT_CloanHomePage_2 page2 = new CT_CloanHomePage_2();
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	@When("^I am Enter Personal Information First Name as \"([^\"]*)\"$")

@@ -9,13 +9,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.ct.pages.CT_HomePage3;
+import com.ct.pages.CT_CloanHomePage_3;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class CT_Loan_CTL41_stepDefinition {
+public class CT_CloanStepDefs_3b {
 
 	private WebDriver driver = Driver.getInstance();
 	// CT_HomePage3 page3 = new CT_HomePage3();
@@ -156,7 +156,7 @@ public class CT_Loan_CTL41_stepDefinition {
 	@Then("^I click on next option$")
 	public void i_click_on_next_option() throws Throwable {
 		List<WebElement> dropDown = Driver.getInstance().findElements(By.xpath("(//div/button[@elname='next'])[3]"));
-		CT_HomePage3 page3 = new CT_HomePage3();
+		CT_CloanHomePage_3 page3 = new CT_CloanHomePage_3();
 		page3.nextButton.click();
 	}
 
