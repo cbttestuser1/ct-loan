@@ -1,7 +1,6 @@
 package com.ct.stepDefinitions;
 
 import org.junit.Assert;
-
 import com.ct.pages.CTL_Employment_info_page;
 import com.ct.pages.CTL_FinancialInfoPage;
 import com.ct.utilities.Driver;

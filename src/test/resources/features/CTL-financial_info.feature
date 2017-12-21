@@ -2,7 +2,7 @@ Feature: Financail Information-Positive Testing
 @Test1 
 Scenario: Fill up the form and submit successfully 
 	Given I am on the home page of CT-Loan 
-	Then I add first name  "William545" 
+	Then I add first name  "William" 
 	And I add middle name "Sam" 
 	And I add last name "Jones" 
 	And I choose my gender 
@@ -39,11 +39,11 @@ Scenario: Fill up the form and submit successfully
 	And user enter a data into saving field 
 	And user selects desired loan term 
 	And user checks the button to confirm about all information above 
-	And user enters full name "John Jones"
-	And user enters single line "__________________"
+	And user enters full name "John Jones" 
+	And user enters single line "__________________" 
 	And user enters the date in mm/dd/yyyy format 
 	Then user clicks on submit button 
-	Then you should see succesfull message "Your application was successfully submitted!"
+	Then you should see succesfull message "Your application was successfully submitted!" 
 	
 	
 	

@@ -7,7 +7,6 @@ import static com.ct.utilities.Driver.unHighLightElement;
 import com.ct.pages.CTL_Contact_InfoPage;
 import com.ct.pages.CTL_Employment_info_page;
 import com.ct.utilities.Driver;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -18,8 +17,6 @@ public class CTL26_contact_info {
 	
 	@Then("^I add Address Line first  \"([^\"]*)\"$")
 	public void i_add_Address_Line_first(String addressOne) throws Throwable {
-//		WebElement n=Driver.getInstance().findElement(By.xpath("(//iframe)[2]"));
-//		Driver.getInstance().switchTo().frame(n);
 		highLightElement(Driver.driver, contactInfo.StreetAddressField);
 		contactInfo.StreetAddressField.sendKeys(addressOne);
 		unHighLightElement(Driver.driver, contactInfo.StreetAddressField);

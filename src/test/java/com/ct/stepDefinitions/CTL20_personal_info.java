@@ -2,13 +2,12 @@ package com.ct.stepDefinitions;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import static com.ct.utilities.Driver.highLightElement;
 import static com.ct.utilities.Driver.unHighLightElement;
 import com.ct.pages.CTL_Contact_InfoPage;
 import com.ct.pages.CT_HomePage_Pesonal_info;
+import com.ct.utilities.BrowserUtilities;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
 import cucumber.api.java.en.Given;
@@ -31,7 +30,7 @@ public class CTL20_personal_info {
 	@Then("^I add first name  \"([^\"]*)\"$")
 	public void i_add_first_name(String FirstName) throws Throwable {
 	highLightElement(Driver.driver, personalInfo.firstNameField);
-		personalInfo.firstNameField.sendKeys(FirstName);
+		personalInfo.firstNameField.sendKeys(FirstName+" "+BrowserUtilities.getCurrentTime());
 		unHighLightElement(Driver.driver, personalInfo.firstNameField);
 	}
 

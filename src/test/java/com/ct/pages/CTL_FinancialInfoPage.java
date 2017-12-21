@@ -51,7 +51,7 @@ public class CTL_FinancialInfoPage {
 	@FindBy(xpath = "//input[@id='Date1-date']")
 	public WebElement date;
 
-	@FindBy(css = ".formRelative.inlineBlock.submitWrapper")
+	@FindBy(xpath = "//button[@value='submit'][1]")
 	public WebElement submitButton;
 
 	@FindBy(xpath = "//input[@name='SingleLine4']")
