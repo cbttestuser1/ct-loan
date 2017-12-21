@@ -3,6 +3,7 @@ package com.ct.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.ct.utilities.Driver;
 
@@ -26,7 +27,7 @@ public class CTeckLoan43ContatInfoHome {
 	@FindBy(id = "error-Address")
 	public WebElement ErrorMassage;
 
-	@FindBy(css = "#Section1-li")
+	@FindBy(css = "#Section2-li")
 	public WebElement ContactText;
 
 	@FindBy(name = "Address_City")
@@ -82,8 +83,9 @@ public class CTeckLoan43ContatInfoHome {
 		return false;
 	}
 
-	public void chooseCountry() {
-		// TODO Auto-generated method stub
+	public void selectFromDropDown(WebElement country, String value) {
+		Select dropdown = new Select(country);
+		dropdown.selectByVisibleText(value);
 
 	}
 

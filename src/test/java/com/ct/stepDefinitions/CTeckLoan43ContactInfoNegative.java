@@ -40,8 +40,9 @@ public class CTeckLoan43ContactInfoNegative {
 	}
 
 	@Given("^user picks a Country$")
-	public void user_picks_a_Country() throws Throwable {
-		pages.chooseCountry();
+	public void user_picks_a_Country(String country) throws Throwable {
+		pages.selectFromDropDown(pages.Country, country);
+
 	}
 
 	@Given("^user enters Personal Phone Number \"([^\"]*)\"$")
