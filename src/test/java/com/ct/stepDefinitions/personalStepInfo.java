@@ -19,9 +19,8 @@ import cucumber.api.java.en.Then;
 public class personalStepInfo {
 	CT_HomePage homePage = new CT_HomePage();
 	WebDriver driver = Driver.getInstance();
-	String[] chars=
-		{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
-				"p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+	String[] chars = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+			"t", "u", "v", "w", "x", "y", "z" };
 
 	@Given("^User navigates to the following url: \"([^\"]*)\"$")
 	public void user_navigates_to_the_following_url(String arg1) throws Throwable {
@@ -45,43 +44,38 @@ public class personalStepInfo {
 		homePage.lastName.clear();
 		Thread.sleep(5000);
 		homePage.firstName.sendKeys(chars);
-		
-		if(chars.equals(chars)){
-		for(int i=0; i<chars.length; i++){
-			System.out.print(chars[i].toString());
-			
-		}
-		}else{
+
+		if (chars.equals(chars)) {
+			for (int i = 0; i < chars.length; i++) {
+				System.out.print(chars[i].toString());
+
+			}
+		} else {
 			System.out.println("Did NOT enter the charackters from A-Z");
 		}
-		
+
 		homePage.lastName.sendKeys(chars);
-		
-		
 
 	}
 
 	@Then("^Field type: text box$")
 	public void field_type_text_box() throws Throwable {
-		String textBox1=homePage.firstName.getAttribute("type");
+		String textBox1 = homePage.firstName.getAttribute("type");
 		System.out.println(textBox1);
 		Assert.assertTrue(textBox1.equals("text"));
-		
-		String textBox2=homePage.middleName.getAttribute("type");
+
+		String textBox2 = homePage.middleName.getAttribute("type");
 		Assert.assertTrue(textBox2.equals("text"));
-		
-		
-		String textBox3=homePage.lastName.getAttribute("type");
+
+		String textBox3 = homePage.lastName.getAttribute("type");
 		Assert.assertTrue(textBox3.equals("text"));
-		
-		
-		
+
 	}
 
 	@Then("^Accepted special characters \\(apostrophe, hyphen\\)$")
 	public void accepted_special_characters_apostrophe_hyphen() throws Throwable {
-		homePage.firstName.sendKeys("'"+"-");
-		homePage.lastName.sendKeys("'"+"-");
+		homePage.firstName.sendKeys("'" + "-");
+		homePage.lastName.sendKeys("'" + "-");
 	}
 
 	@Then("^User selects the gender$")
@@ -131,23 +125,23 @@ public class personalStepInfo {
 	@Then("^Data type: integer$")
 	public void data_type_integer() throws Throwable {
 		homePage.DateOfBirth.click();
-		List <WebElement> nomericList= 
-				driver.findElements(By.xpath("//div[@id='ui-datepicker-div']/table/tbody/tr/td"));
-		
-		Object[] i=nomericList.toArray();
-		if(Arrays.equals(i, chars)){
+		List<WebElement> nomericList = driver
+				.findElements(By.xpath("//div[@id='ui-datepicker-div']/table/tbody/tr/td"));
+
+		Object[] i = nomericList.toArray();
+		if (Arrays.equals(i, chars)) {
 			System.out.println("Arrays are equals");
-		}else{
+		} else {
 			System.out.println("calendar of date anly integer format");
 		}
 
-		for(WebElement list:nomericList){
+		for (WebElement list : nomericList) {
 			System.out.print(list.getText());
-			if(i.equals(chars)){
+			if (i.equals(chars)) {
 				System.out.println("Exception! The nomeric list of date format DID NOT match the requirement!!!");
 			}
 		}
-		 Assert.assertFalse(chars.equals(i));
+		Assert.assertFalse(chars.equals(i));
 	}
 
 	@Then("^User enters SSN$")
@@ -160,11 +154,11 @@ public class personalStepInfo {
 		homePage.PersonalFileID.clear();
 		homePage.PersonalFileID.sendKeys("hello world!");
 		homePage.NextButton.click();
-		WebElement a=driver.findElement(By.xpath("//div/p[@id='error-Number']"));
+		WebElement a = driver.findElement(By.xpath("//div/p[@id='error-Number']"));
 		System.out.println(a.getText());
-		String ErrorMessage=a.getText();
-		
-		if(ErrorMessage.equals("Enter a valid number.")){
+		String ErrorMessage = a.getText();
+
+		if (ErrorMessage.equals("Enter a valid number.")) {
 			System.out.println("Success! SSN integer format was verified!");
 		}
 	}
@@ -174,26 +168,63 @@ public class personalStepInfo {
 		homePage.PersonalFileID.clear();
 		homePage.PersonalFileID.sendKeys("hello world!");
 		homePage.NextButton.click();
-//		homePage.PersonalFileID.sendKeys(arg1);
-//		homePage.NextButton.click();
-		
-		WebElement a=driver.findElement(By.xpath("//div/p[@id='error-Number']"));
+		// homePage.PersonalFileID.sendKeys(arg1);
+		// homePage.NextButton.click();
+
+		WebElement a = driver.findElement(By.xpath("//div/p[@id='error-Number']"));
 		a.isDisplayed();
-		String ErrorMessage=a.getText();
+		String ErrorMessage = a.getText();
 		System.out.println(ErrorMessage);
-		if(a.isDisplayed()){
+		if (a.isDisplayed()) {
 			System.out.println("Success!!! The ID input box Did not accept the string type!");
 			homePage.PersonalFileID.clear();
 			homePage.PersonalFileID.sendKeys(arg1);
 			homePage.NextButton.click();
-			
-		}else{
+
+		} else {
 			System.out.println("The ID input box DID NOT match the requirement!!!");
 		}
-		//Assert.assertTrue(ErrorMessage.equalsIgnoreCase("Enter a valid number."));
-//		homePage.PersonalFileID.clear();
-//		homePage.PersonalFileID.sendKeys(arg1);
-//		homePage.NextButton.click();
+		// Assert.assertTrue(ErrorMessage.equalsIgnoreCase("Enter a valid
+		// number."));
+		// homePage.PersonalFileID.clear();
+		// homePage.PersonalFileID.sendKeys(arg1);
+		// homePage.NextButton.click();
+
+	}
+
+	@Given("^User is on Contact Information Page$")
+	public void user_is_on_Contact_Information_Page() throws Throwable {
+		
+	
+	}
+
+	@Given("^User enters Work Phone number$")
+	public void user_enters_Work_Phone_number() throws Throwable {
+	
+	}
+
+	@Then("^Verify the Size:(\\d+) digits$")
+	public void verify_the_Size_digits(int arg1) throws Throwable {
+	
+	}
+
+	@Then("^User enters Extension$")
+	public void user_enters_Extension() throws Throwable {
+
+	}
+
+	@Then("^User enters Email \\(work\\)$")
+	public void user_enters_Email_work() throws Throwable {
+	
+	}
+
+	@Then("^Verify Size:(\\d+)-(\\d+) digits$")
+	public void verify_Size_digits(int arg1, int arg2) throws Throwable {
+		
+	}
+
+	@Then("^User enters Personal \\(email\\)$")
+	public void user_enters_Personal_email() throws Throwable {
 		
 	}
 
