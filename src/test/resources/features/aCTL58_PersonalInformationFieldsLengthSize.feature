@@ -3,12 +3,12 @@ Feature: Test Personal Information fields Length/size
 @SmokeTest
 Scenario: verify with min length 
 	Given I am on the personal information page of CT-Loan 
-	When I enter first name "a" 
+	When I enter first name "addd" 
 	And I enter middle name "" 
 	And I enter last name "b" 
 	And I select male 
-	And I enter date of birth "1/1/1900" 
-	And I enter personal file id "0" 
+	And I enter date of birth "01/01/1975" 
+	And I enter personal file id "212345678" 
 	And I click the next button 
 	Then I should be able to see contact information page 
 	
