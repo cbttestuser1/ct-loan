@@ -14,45 +14,48 @@ public class ContactInfoPage {
 	// added new code
 
 	@FindBy(name = "Address_AddressLine1")
-	public WebElement streetAddress;
+	public WebElement Address1;
 
 	@FindBy(name = "Address_AddressLine2")
-	public WebElement addressLine2;
+	public WebElement Address2;
 
 	@FindBy(name = "Address_City")
-	public WebElement city;
+	public WebElement City;
 
 	@FindBy(name = "Address_Region")
-	public WebElement region;
+	public WebElement Region;
 
 	@FindBy(name = "Address_ZipCode")
-	public WebElement zipCode;
+	public WebElement ZipCode;
+	
+	@FindBy(xpath = "//select[@name='Address_Country']")
+	public WebElement Country;
 
 	@FindBy(name = "countrycode")
-	public WebElement personalPhoneNum1;
+	public WebElement Cell1;
 
 	@FindBy(name = "first")
-	public WebElement personalPhoneNum2;
+	public WebElement Cell2;
 
 	@FindBy(name = "second")
-	public WebElement phoneNum3;
+	public WebElement Cell3;//changed from phoneNum3
 
-	@FindBy(name = "countrycode")
-	public WebElement workPhoneNum1;
+	@FindBy(xpath = "(//input[@name='countrycode'])[2]")
+	public WebElement WorkNum1;//changed from name to xpath
 
-	@FindBy(name = "first")
-	public WebElement workPhoneNum2;
+	@FindBy(xpath = "(//input[@name='first'])[2]")
+	public WebElement WorkNum2;//changed from name to xpath
 
-	@FindBy(name = "second")
-	public WebElement workPhoneNum3;
+	@FindBy(xpath = "(//input[@name='second'])[2]")
+	public WebElement WorkNum3;//changed from name to xpath
 
 	@FindBy(name = "Number1")
-	public WebElement extension;
+	public WebElement Extension;
 
 	@FindBy(name = "Email")
-	public WebElement personalEmail;
+	public WebElement Email;
 
 	@FindBy(name = "Email1")
-	public WebElement workEmail;
+	public WebElement WorkEmail;
 
 }

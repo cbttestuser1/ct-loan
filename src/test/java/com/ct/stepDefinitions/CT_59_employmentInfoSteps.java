@@ -16,14 +16,15 @@ import cucumber.api.java.en.When;
 
 public class CT_59_employmentInfoSteps {
 
-	WebDriver driver = Driver.getInstance();
+//	WebDriver driver = Driver.getInstance();
 
 	CT_59_employmentInfo empInfo = new CT_59_employmentInfo();
 
 	@Given("^I am on the home page of CT-Loan employment page$")
 	public void i_am_on_the_home_page_of_CT_Loan_employment_page() throws Throwable {
 
-		driver.get(ConfigurationReader.getProperty("url"));
+		//Driver.getInstance().get(ConfigurationReader.getProperty("url"));
+		//Driver.getInstance().switchTo().frame(1);
 	}
 
 	@Given("^I am choosing Title as a QA$")
@@ -31,7 +32,7 @@ public class CT_59_employmentInfoSteps {
 
 		WebElement list = empInfo.titleSelect;
 		Select dropdownList = new Select(list);
-		dropdownList.selectByValue("QA");
+		dropdownList.selectByVisibleText("QA");
 
 	}
 

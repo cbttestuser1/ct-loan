@@ -22,7 +22,7 @@ public class Ctl58_PersonalInformationFileldsLength {
 @Given("^I am on the personal information page of CT-Loan$")
 public void i_am_on_the_personal_information_page_of_CT_Loan() throws Throwable {
 	Driver.getInstance().get(CTContstants.QA_URL);
-	 Driver.getInstance().switchTo().frame(1);
+	Driver.getInstance().switchTo().frame(1);
 }
 
 @When("^I enter first name \"([^\"]*)\"$")
