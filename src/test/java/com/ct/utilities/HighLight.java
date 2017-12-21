@@ -11,4 +11,5 @@ public class HighLight {
         Thread.sleep(1000);
         js.executeScript("arguments[0].setAttribute('style',arguments[1]);", element, "");
     }
+
 }
