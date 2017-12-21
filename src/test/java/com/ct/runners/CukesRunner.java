@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/resources/features",
-		tags = "@CTL-48",
+//tags = "@SmokeTest", //
+tags = "@CTL_30", 
 		glue = "com.ct.stepDefinitions", plugin = { "html:target/cucumber-reports",
 				"json:target/cucumber.json" }, dryRun = false)
 
