@@ -94,6 +94,7 @@ public class FinancialInfoStepDefs {
 
 	@When("^I clicked on the submit button$")
 	public void i_clicked_on_the_submit_button() throws Throwable {
+		Thread.sleep(10000);
 		finance.submitButton.click();
 	}
 

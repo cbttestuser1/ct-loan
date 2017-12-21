@@ -58,6 +58,7 @@ public class ExcelUtils {
 			} else {
 				cell.setCellValue(value);
 			}
+
 			// Constant variables Test Data path and Test Data file name
 			FileOutputStream fileOut = new FileOutputStream(excelFilePath);
 			excelWBook.write(fileOut);
