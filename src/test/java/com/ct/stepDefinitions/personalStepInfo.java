@@ -180,6 +180,7 @@ public class personalStepInfo {
 		WebElement a=driver.findElement(By.xpath("//div/p[@id='error-Number']"));
 		a.isDisplayed();
 		String ErrorMessage=a.getText();
+		System.out.println(ErrorMessage);
 		if(a.isDisplayed()){
 			System.out.println("Success!!! The ID input box Did not accept the string type!");
 			homePage.PersonalFileID.clear();
