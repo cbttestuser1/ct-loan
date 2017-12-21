@@ -11,7 +11,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/features",
+@CucumberOptions(features = "./src/test/resources/features", 
 //tags = "@SmokeTest", //
 tags = "@CTL_30", 
 		glue = "com.ct.stepDefinitions", plugin = { "html:target/cucumber-reports",
