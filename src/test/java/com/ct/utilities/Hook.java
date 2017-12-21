@@ -19,6 +19,7 @@ public class Hook {
 	@After
 	public void tearDown(Scenario scenario){
 		if (scenario.isFailed()) {
+			Screen2image.takeScreenShotNewReport();
 			final byte[] screenshot = ((TakesScreenshot) 
 					Driver.getInstance()).getScreenshotAs(OutputType.BYTES);
 			

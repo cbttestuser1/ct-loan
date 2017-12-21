@@ -99,6 +99,7 @@ public class CTL26_contact_info {
 
 	@Then("^I have to end up in employment information page\\.$")
 	public void i_have_to_end_up_in_employment_information_page() throws Throwable {
+		
 		Assert.assertTrue(employmentPage.employmentInformationSign.getText().equals("Employment Information"));
 	}
 

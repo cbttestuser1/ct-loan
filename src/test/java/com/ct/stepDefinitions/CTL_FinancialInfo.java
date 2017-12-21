@@ -23,7 +23,7 @@ public class CTL_FinancialInfo {
 
 	@When("^user is on the last financial info page$")
 	public void user_is_on_the_last_financial_info_page() throws Throwable {
-		Thread.sleep(5000);
+		
 	}
 
 	@And("^user checks the button for loan application$")

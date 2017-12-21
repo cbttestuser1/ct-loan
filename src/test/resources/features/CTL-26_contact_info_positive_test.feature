@@ -1,6 +1,6 @@
 Feature: As a user, when I go to CT-Loan page, 
 	I should able to add contact information into all fields
-@Test 
+@Test1
 Scenario Outline: Test Contact Information fields pattern 
 	Given I am on the home page of CT-Loan 
 	Then I add first name  "<FirstName>" 
@@ -24,7 +24,7 @@ Scenario Outline: Test Contact Information fields pattern
 	When I click on Next button contact page 
 	Then I have to end up in employment information page.
 	Examples: 
-		|AddressLine1 | AddressLine2   |City       |State    |Zipcode  |   Work Phone     |PersonalPhone| Ext.  | EmailWork             |EmailPersonal     | FirstName |MiddleName  |LastName    | DateOfBirth       |  SSN           |
+		|AddressLine1 | AddressLine2   |City       |State    |Zipcode  |   WorkPhone     |PersonalPhone| Ext.  | EmailWork               |EmailPersonal     | FirstName |MiddleName  |LastName    | DateOfBirth       |  SSN           |
 		|51 Main st   |	apt 3          |New York   |New York |11107    |   5564567898     |4566574637   | 23334   | MarkJones@cybertek.com|MJones@gmail.com  | Mark	    |	Sam      |Jones	     |10/18/1984          |   234346980    |
 		
 		

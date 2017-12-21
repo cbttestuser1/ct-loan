@@ -1,6 +1,6 @@
 Feature: As a user, when I go to CT-Loan page, 
 	I should able to add information into all fields.		
-@Test2
+@Test1
 Scenario Outline: Test Personal Information fields pattern 
 	Given I am on the home page of CT-Loan 
 	Then I add first name  "<FirstName>" 

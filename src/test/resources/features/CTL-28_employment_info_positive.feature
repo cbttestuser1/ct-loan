@@ -1,6 +1,6 @@
 Feature: As a user, when I go to CT-Loan page, 
 	I should able to add employment information into all fields
-@Test 
+@Test1
 Scenario Outline: Test Employment Information fields pattern 
 	Given I am on the home page of CT-Loan 
 	Then I add first name  "<FirstName>" 
