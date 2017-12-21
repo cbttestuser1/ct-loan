@@ -2,7 +2,7 @@ Feature: Financail Information-Positive Testing
 @Test1 
 Scenario: Fill up the form and submit successfully 
 	Given I am on the home page of CT-Loan 
-	Then I add first name  "William" 
+	Then I add first name  "William545" 
 	And I add middle name "Sam" 
 	And I add last name "Jones" 
 	And I choose my gender 
@@ -18,8 +18,8 @@ Scenario: Fill up the form and submit successfully
 	And I  add Personal Phone "4566574637" 
 	And I  add Work Phone "5564567898" 
 	And I add an Ext. "23312" 
-	And I  add Email_Work "MarkJones@cybertek.com" 
 	And I  add Email_Personal "MJones@gmail.com" 
+	And I  add Email_Work "MarkJones@cybertek.com" 
 	When I click on Next button contact page 
 	Then I have to end up in employment information page. 
 	Then I select title 
