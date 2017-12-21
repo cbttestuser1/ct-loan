@@ -40,26 +40,26 @@ public class CT_CloanHomePage_2 {
 	@FindBy(id = "error-Address")
 	public WebElement errorAddress;
 
-	@FindBy(xpath = "(//span/input[@name='countrycode'])[1]")
+	@FindBy(xpath = "(//span/input[@name='countrycode'])[2]")
 	public WebElement personalNum1;
 
-	@FindBy(xpath = "(//span/input[@name='first'])[1]")
+	@FindBy(xpath = "(//span/input[@name='first'])[2]")
 	public WebElement personalNum2;
 
-	@FindBy(xpath = "(//span/input[@name='second'])[1]")
+	@FindBy(xpath = "(//span/input[@name='second'])[2]")
 	public WebElement personalNum3;
 
 	// Updated Error msg element
 	@FindBy(id = "error-PhoneNumber")
 	public WebElement errorPersonalNum;
 
-	@FindBy(xpath = "(//span/input[@name='countrycode'])[2]")
+	@FindBy(xpath = "(//span/input[@name='countrycode'])[1]")
 	public WebElement workNum1;
 
-	@FindBy(xpath = "(//span/input[@name='first'])[2]")
+	@FindBy(xpath = "(//span/input[@name='first'])[1]")
 	public WebElement workNum2;
 
-	@FindBy(xpath = "(//span/input[@name='second'])[2]")
+	@FindBy(xpath = "(//span/input[@name='second'])[1]")
 	public WebElement workNum3;
 
 	// Updated Error Msg element

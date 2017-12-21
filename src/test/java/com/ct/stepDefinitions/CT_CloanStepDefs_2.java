@@ -106,6 +106,7 @@ public class CT_CloanStepDefs_2 {
 
 	@When("^I amd Enter Personal Phone Number as \"([^\"]*)\"$")
 	public void i_amd_Enter_Personal_Phone_Number_as(String personalPhone) throws Throwable {
+		
 		String[] numbers = personalPhone.split("-");
 		page2.personalNum1.sendKeys(numbers[0]);
 		page2.personalNum2.sendKeys(numbers[1]);
@@ -114,6 +115,7 @@ public class CT_CloanStepDefs_2 {
 
 	@When("^I amd Enter Work Phone Number as \"([^\"]*)\"$")
 	public void i_amd_Enter_Work_Phone_Number_as(String workPhone) throws Throwable {
+		
 		String[] numbers = workPhone.split("-");
 
 		page2.workNum1.sendKeys(numbers[0]);

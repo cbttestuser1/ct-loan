@@ -12,10 +12,11 @@ import cucumber.api.java.en.Given;
 
 public class CT_CloanStepDefs_1 {
 
-	CT_CloanHomePage_1 cLoanPersonalInfoPage = new CT_CloanHomePage_1();
+	CT_CloanHomePage_1 page1 = new CT_CloanHomePage_1();
 	WebDriver driver = Driver.getInstance();
 	private JavascriptExecutor js = (JavascriptExecutor) driver;
 
+	
 	@Given("^the customer is on the personal information form$")
 	public void the_customer_is_on_the_personal_information_form() throws Throwable {
 
@@ -33,7 +34,7 @@ public class CT_CloanStepDefs_1 {
 	public void the_customer_enters(String firstName, String middleName, String lastName, String dateOfBirth,
 			String personalFileID) throws Throwable {
 
-		cLoanPersonalInfoPage.fillOutTheForm(firstName, middleName, lastName, dateOfBirth, personalFileID);
+		page1.fillOutTheForm(firstName, middleName, lastName, dateOfBirth, personalFileID);
 		Thread.sleep(1000);
 
 	}
@@ -42,29 +43,12 @@ public class CT_CloanStepDefs_1 {
 	public void the_customer_selects_the_gender() throws Throwable {
 
 		
-//		boolean isChecked = false;
-//		int size = cLoanPersonalInfoPage.maleBtn.size();
-//		System.out.println("Size of the list: " + size);
-//
-//		for (int i = 0; i < size; i++) {
-//
-//			isChecked = cLoanPersonalInfoPage.maleBtn.get(i).isSelected();
-//
-//			if (!isChecked) {
-//
-//				cLoanPersonalInfoPage.maleBtn.get(i).click();
-//				Thread.sleep(2000);
-//
-//			}
-//		}
 		
-		
-		
-		boolean isChecked = cLoanPersonalInfoPage.maleBtn.isSelected();
+		boolean isChecked = page1.maleBtn.isSelected();
 
 		Thread.sleep(1000);
 		if (!isChecked) {
-			cLoanPersonalInfoPage.maleBtn.click();
+			page1.maleBtn.click();
 		} else {
 			System.out.println("Gender option is already selected");
 		}
@@ -74,7 +58,7 @@ public class CT_CloanStepDefs_1 {
 	@Given("^the customer clicks on the next button$")
 	public void the_customer_clicks_on_the_next_button() throws Throwable {
 
-		cLoanPersonalInfoPage.errorMessage();
+		page1.errorMessage();
 
 	}
 
