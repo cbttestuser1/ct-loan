@@ -172,11 +172,23 @@ public class personalStepInfo {
 	@Then("^Watermark format \"([^\"]*)\" \\.$")
 	public void watermark_format(String arg1) throws Throwable {
 		homePage.PersonalFileID.clear();
-		homePage.PersonalFileID.sendKeys(arg1);
+		homePage.PersonalFileID.sendKeys("hello world!");
 		homePage.NextButton.click();
+//		homePage.PersonalFileID.sendKeys(arg1);
+//		homePage.NextButton.click();
+		
 		WebElement a=driver.findElement(By.xpath("//div/p[@id='error-Number']"));
 		String ErrorMessage=a.getText();
-		Assert.assertTrue(ErrorMessage.contains("Enter a valid number."));
+		if(a.equals("Enter a valid number.")){
+			System.out.println("Success!!! Did not eccept the string type!");
+			
+		}else{
+			System.out.println("The ID input box DID NOT match the requirement!!!");
+		}
+		//Assert.assertTrue(ErrorMessage.equalsIgnoreCase("Enter a valid number."));
+		homePage.PersonalFileID.clear();
+		homePage.PersonalFileID.sendKeys(arg1);
+		homePage.NextButton.click();
 		
 	}
 
