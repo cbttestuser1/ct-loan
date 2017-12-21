@@ -11,9 +11,12 @@ public class CT_HomePage_Pesonal_info {
 		PageFactory.initElements(Driver.getInstance(), this);
 	}
 	
-	@FindBy(xpath="//*[@id='SingleLine-li']/div[1]/span/input")
+	@FindBy(css=".tempContDiv>span>input")
 	public WebElement firstNameField;
 	
+//	@FindBy(xpath="//*[@id='SingleLine-li']/div[1]/span/input")
+//	public WebElement firstNameField;
+//	
 	@FindBy(xpath="//*[@id='SingleLine2-li']/div[1]/span/input")
 	public WebElement lastNameField;
 	
@@ -40,4 +43,8 @@ public class CT_HomePage_Pesonal_info {
 	
 	@FindBy(xpath="//*[@id='navigBar']/tbody/tr[2]/td[1]")
 	public WebElement personlaInfoTitle;
+	
+	@FindBy(xpath="//img[@class='calendarIcon']")
+	public WebElement calendarPic;
+	
 }
