@@ -2,14 +2,11 @@ package com.ct.pages;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ct.utilities.Driver;
-
 
 public class CT_CloanHomePage_1 {
 
@@ -35,7 +32,7 @@ public class CT_CloanHomePage_1 {
 	public  WebElement personalFileIdBox;
 	
 	@FindBy (xpath="//*[@id='Radio_1']")
-	public   WebElement maleBtn;
+	public  WebElement maleBtn;
 	
 	@FindBy (xpath="//*[@id='Radio_2']")
 	public  WebElement femaleBtn;
