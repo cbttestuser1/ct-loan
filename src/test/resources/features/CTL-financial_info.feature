@@ -2,7 +2,7 @@ Feature: Financail Information-Positive Testing
 @Test1 
 Scenario: Fill up the form and submit successfully 
 	Given I am on the home page of CT-Loan 
-	Then I add first name  "Jthfjhdfjrdjrd" 
+	Then I add first name  "William" 
 	And I add middle name "Sam" 
 	And I add last name "Jones" 
 	And I choose my gender 
