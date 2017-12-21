@@ -1,40 +1,36 @@
 @CTeckLoan-43 
-Feature: Test Contact Information negative 
+Feature: Test Contact Information fields pattern(acceptable data type) 
 Background: 
-	Given  I am on the home page of CT-Loan 
-Scenario: Testing Address field 
-	When user add his Address in CT-Loan having special characters 
-		|Street Address           |Address Line 2     |City       |State/Region/Province|Postal/Zip Code|Country      |
-		|5367 Crimson sky ct@@#@##|5367 crimson sky ct|Centreville|VA                   |20120          |United States|
-	And user click on the next page 
-	Then user should see the error pop up 
+	Given  user on the homepage of CT-Loan 
+Scenario Outline: 
+	And  users adds "<Street Address>","<Address Line2>","<City>","<State>","<Zip Code>" 
+	And  user picks a Country 
+	And  user enters Personal Phone Number "<###-###-####>" 
+	And  user enters Work Phone Number "<###-###-####>" 
+	And  user enters Extension "<#####>" 
+	And  user enters Personal Email "<Personal Email>" 
+	And  user enters Work Email "<Work Email>" 
+	And user should click on Next button 
+	Then user need to assert that he is in Employment Information Page 
 	
-Scenario: Testing Address Line 2 field 
-	When user add his Address Line 2 in CT-Loan having special characters 
-		|Street Address     |Address Line 2                  |City       |State/Region/Province|Postal/Zip Code|Country      |
-		|5367 Crimson sky ct|5367 Crimson sky ct@@#@!$^&*^%#@|Centreville|VA                   |20120          |United States|
+	Examples: 
+		|Street Address|Address Line 2|City   |State|Zip Code|Country      |PPNumber  |WPNumber  |Ext. |PEmail        |WEmail           |
+		|5367 Crimson  |@@#@! Crimson |Fairfax|VA   |20120   |United States|2023455566|2023333456|22222|mark@gmail.com|mark@cybertek.com|
 		
-	Then user should see the error pop up 
+
+		Scenario Outline: 
+	And  users adds "<Street Address>","<Address Line2>","<City>","<State>","<Zip Code>" 
+	And  user picks a Country 
+	And  user enters Personal Phone Number "<###-###-####>" 
+	And  user enters Work Phone Number "<###-###-####>" 
+	And  user enters Extension "<#####>" 
+	And  user enters Personal Email "<Personal Email>" 
+	And  user enters Work Email "<Work Email>" 
+	And user should click on Next button 
+	Then user need to assert that he is in Employment Information Page 
 	
-	
-Scenario: Testing City field 
-	When user add his City in CT-Loan having special characters 
-		|Street Address     |Address Line 2     |City              |State/Region/Province|Postal/Zip Code|Country      |
-		|5367 Crimson sky ct|5367 Crimson sky ct|CENTREVILLEeeeee@#|VA                   |20120          |United States|
+	Examples: 
+		|Street Address|Address Line 2|City   |State|Zip Code|Country      |PPNumber  |WPNumber  |Ext. |PEmail        |WEmail           |
+		|5367 Crimson  |              |Fairfax|VA   |20120   |United States|2023455566|2023333456|22222|mark@gmail.com|mark@cybertek.com|
 		
 		
-	Then user should see the error pop up 
-	
-Scenario: Testing City field 
-	When user add his City in CT-Loan having type String 
-		|Street Address     |Address Line 2     |City              |State/Region/Province|Postal/Zip Code|Country      |
-		|5367 Crimson sky ct|5367 Crimson sky ct|CENTREVILLEeeeee@#|323232               |20120          |United States|
-	And user click on the next page 
-	Then user should see the error pop up 
-	
-Scenario: Testing Zip Code field 
-	When user add his Zip Code in CT-Loan having type Integer 
-		|Street Address     |Address Line 2     |City              |State/Region/Province|Postal/Zip Code|Country      |
-		|5367 Crimson sky ct|5367 Crimson sky ct|CENTREVILLEeeeee@#|323232               |ABCDE         |United States|
-	And user click on the next page 
-	Then user should see the error pop up 
