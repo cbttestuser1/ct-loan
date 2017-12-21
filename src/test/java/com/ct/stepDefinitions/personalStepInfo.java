@@ -178,17 +178,21 @@ public class personalStepInfo {
 //		homePage.NextButton.click();
 		
 		WebElement a=driver.findElement(By.xpath("//div/p[@id='error-Number']"));
+		a.isDisplayed();
 		String ErrorMessage=a.getText();
-		if(a.equals("Enter a valid number.")){
-			System.out.println("Success!!! Did not eccept the string type!");
+		if(a.isDisplayed()){
+			System.out.println("Success!!! The ID input box Did not accept the string type!");
+			homePage.PersonalFileID.clear();
+			homePage.PersonalFileID.sendKeys(arg1);
+			homePage.NextButton.click();
 			
 		}else{
 			System.out.println("The ID input box DID NOT match the requirement!!!");
 		}
 		//Assert.assertTrue(ErrorMessage.equalsIgnoreCase("Enter a valid number."));
-		homePage.PersonalFileID.clear();
-		homePage.PersonalFileID.sendKeys(arg1);
-		homePage.NextButton.click();
+//		homePage.PersonalFileID.clear();
+//		homePage.PersonalFileID.sendKeys(arg1);
+//		homePage.NextButton.click();
 		
 	}
 
