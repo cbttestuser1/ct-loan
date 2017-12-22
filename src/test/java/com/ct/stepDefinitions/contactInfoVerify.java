@@ -83,7 +83,7 @@ public class contactInfoVerify {
 
 	@Then("^User enters Personal \\(email\\)$")
 	public void user_enters_Personal_email() throws Throwable {
-		contactInfo.nextButton.click();
+		//contactInfo.nextButton.click();
 		Thread.sleep(300);
 		if(contactInfo.emailErrorMPersonal.isDisplayed()){
 			System.out.println(contactInfo.emailErrorMPersonal.getText());
@@ -100,10 +100,10 @@ public class contactInfoVerify {
 	@Then("^verify one more time  Size:(\\d+)-(\\d+) digits$")
 	public void verify_one_more_time_Size_digits(int arg1, int arg2) throws Throwable {
 		Thread.sleep(300);
-		contactInfo.nextButton.click();
+		//contactInfo.nextButton.click();
 		final String _moreThen30="alemkadirqanurdemibelensenkelchimaga@gmail.com";
-		contactInfo.workEmail.clear();
-		contactInfo.workEmail.sendKeys(_moreThen30);
+		//contactInfo.workEmail.clear();
+		//contactInfo.workEmail.sendKeys(_moreThen30);
 //		final String _30="mibelensenkelchimaga@gmail.com";
 //		if(contactInfo.emailErrorMWork.isDisplayed()){
 //			contactInfo.workEmail.clear();
@@ -125,7 +125,7 @@ public class contactInfoVerify {
 	
 	@When("^the user clicks next$")
 	public void the_user_clicks_next() throws Throwable {
-		contactInfo.nextButton.click();
+		//contactInfo.nextButton.click();
 		Thread.sleep(300);
 //		WebElement pageLogo=driver.findElement(By.xpath("//*[@id='formBodyDiv']//*[@id='Section2-li']/"));
 //		if(pageLogo.isDisplayed()){
