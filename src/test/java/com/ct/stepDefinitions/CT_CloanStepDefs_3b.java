@@ -32,6 +32,7 @@ public class CT_CloanStepDefs_3b {
 		for (WebElement e : dropDown) {
 			list.add(e.getText());
 		}
+
 		// Second list
 		String temp = list.get(0);
 		// System.out.println("OriginalList\n" + list);
@@ -45,9 +46,13 @@ public class CT_CloanStepDefs_3b {
 		}
 		Collections.sort(duplicateList);
 		System.out.println("\nDuplicate Sorted List\n" + duplicateList);
-		// Assert.assertTrue(originalList.equals(duplicateList));
+		// Assert.assertNull(originalList.equals(duplicateList));
+		// System.out.println(originalList.equals(duplicateList));
+		// Assert.assertNotSame("It failed", originalList, duplicateList);
 		System.out.println(originalList.equals(duplicateList));
-		System.out.println();
+
+		// Assert.assertNotEquals(duplicateList, originalList);
+		// System.out.println();
 
 	}
 
@@ -69,10 +74,11 @@ public class CT_CloanStepDefs_3b {
 			duplicateList1.add(s);
 		}
 		Collections.sort(duplicateList1);
-		System.out.println("\nDuplicate Sorted List\n" + duplicateList1);
+		// System.out.println("\nDuplicate Sorted List\n" + duplicateList1);
 		// Assert.assertTrue(originalList1.equals(duplicateList1));
-
+		// Assert.assertNotSame("It failed", originalList1, duplicateList1);
 		System.out.println(originalList1.equals(duplicateList1));
+		// Assert.assertNotEquals(duplicateList1, originalList1);
 		System.out.println();
 	}
 
@@ -95,9 +101,9 @@ public class CT_CloanStepDefs_3b {
 			duplicateList2.add(s);
 		}
 		Collections.sort(duplicateList2);
-		System.out.println("\nDuplicate Sorted List\n" + duplicateList2);
+		// System.out.println("\nDuplicate Sorted List\n" + duplicateList2);
 
-		// Assert.assertTrue(originalList2.equals(duplicateList2));
+		// Assert.assertNotEquals(duplicateList2, originalList2);
 		System.out.println(originalList2.equals(duplicateList2));
 		System.out.println();
 
@@ -123,7 +129,7 @@ public class CT_CloanStepDefs_3b {
 		}
 		Collections.sort(duplicateList3);
 		System.out.println("\nDuplicate Sorted List\n" + duplicateList3);
-		// Assert.assertTrue(originalList3.equals(duplicateList3));
+		// Assert.assertNotEquals(duplicateList3, originalList3);
 		System.out.println(originalList3.equals(duplicateList3));
 		System.out.println();
 
@@ -147,8 +153,8 @@ public class CT_CloanStepDefs_3b {
 			duplicateList4.add(s);
 		}
 		Collections.sort(duplicateList4);
-		System.out.println("\nDuplicate Sorted List\n" + duplicateList4);
-		// Assert.assertTrue(originalList4.equals(duplicateList4));
+		// System.out.println("\nDuplicate Sorted List\n" + duplicateList4);
+		// Assert.assertNotEquals(duplicateList4, originalList4);
 		System.out.println(originalList4.equals(duplicateList4));
 		System.out.println();
 	}
