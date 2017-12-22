@@ -15,7 +15,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/features/", tags = "@Test1", glue = "com.ct.stepDefinitions", plugin = {
+@CucumberOptions(features = "./src/test/resources/features/", tags = "@Test112", glue = "com.ct.stepDefinitions", plugin = {
 		"html:target/cucumber-reports", "json:target/cucumber.json",
 		"com.cucumber.listener.ExtentCucumberFormatter:output/report.html" }, monochrome = true, dryRun = false)
 

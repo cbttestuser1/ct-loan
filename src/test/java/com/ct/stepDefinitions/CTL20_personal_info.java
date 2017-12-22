@@ -22,6 +22,7 @@ public class CTL20_personal_info {
 	@Given("^I am on the home page of CT-Loan$")
 	public void i_am_on_the_home_page_of_CT_Loan() throws Throwable {
 		Driver.getInstance().get(CTContstants.QA_URL);
+		Driver.getInstance().manage().window().maximize();
 		WebElement n = Driver.getInstance().findElement(By.xpath("(//iframe)[2]"));
 		Driver.getInstance().switchTo().frame(n);
 

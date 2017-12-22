@@ -133,11 +133,11 @@ public class CTL_FinancialInfo {
 	public void user_clicks_on_submit_button() throws Throwable {
 		highLightElement(Driver.driver, page.submitButton);
 		page.submitButton.click();
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.submitButton);
 	}
 	@Then("^you should see succesfull message \"([^\"]*)\"$")
 	public void you_should_see_succesfull_message(String successMessage) throws Throwable {
+		Screen2image.takeScreenShotNewReport();
 		WebDriverWait wait = new WebDriverWait(Driver.getInstance(),5);
 		wait.until(ExpectedConditions.visibilityOf(basePage.successMessage));
 		Assert.assertTrue(basePage.successMessage.getText().equals(successMessage));
