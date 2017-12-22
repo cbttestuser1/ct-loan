@@ -21,7 +21,7 @@ public class Hook {
 	}
 	
 	@After
-	public void tearDown(Scenario scenario){
+	public void tearDown(Scenario scenario) throws InterruptedException{
 		Screen2image.takeScreenShotNewReport();
 		if (scenario.isFailed()) {
 			final byte[] screenshot = ((TakesScreenshot) 
@@ -29,7 +29,7 @@ public class Hook {
 			
 			scenario.embed(screenshot, "image/png");
 		}
-		//Driver.closeDriver();
+		Driver.closeDriver();
 	}
 	
 }

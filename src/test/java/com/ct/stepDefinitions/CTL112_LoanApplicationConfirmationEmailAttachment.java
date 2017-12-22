@@ -58,7 +58,7 @@ public class CTL112_LoanApplicationConfirmationEmailAttachment {
 	@Then("^I open email from CT Loan from inbox folder$")
 	public void i_open_email_from_CT_Loan_from_inbox_folder() throws Throwable {
 		
-		Thread.sleep(2000);
+		
 		WebElement emailTable = Driver.getInstance().findElement(By.xpath("//*[@id=':34']"));
 		List<WebElement> emailList = (List<WebElement>) emailTable.findElement(By.tagName("tr"));
 		for (WebElement emails : emailList) {

@@ -44,7 +44,6 @@ public class CTL_FinancialInfo {
 		highLightElement(Driver.driver, page.IncomeTypeSelect);
 		Select select=new Select(page.IncomeTypeSelect);
 		select.selectByIndex(1);
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.IncomeTypeSelect);
 	}
 
@@ -52,7 +51,6 @@ public class CTL_FinancialInfo {
 	public void user_checks_button_about_rent_own_a_house() throws Throwable {
 		highLightElement(Driver.driver, page.HomeOwnButton);
 		page.HomeOwnButton.click();
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.HomeOwnButton);
 		
 	}
@@ -61,7 +59,6 @@ public class CTL_FinancialInfo {
 	public void user_enters_amount_about_monthly_expanse() throws Throwable {
 		highLightElement(Driver.driver, page.MonthlyExpanseField);
 		page.MonthlyExpanseField.sendKeys("300");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.MonthlyExpanseField);
 	}
 	
@@ -69,7 +66,6 @@ public class CTL_FinancialInfo {
 	public void user_enters_a_data_into_dependence_field() throws Throwable {
 		highLightElement(Driver.driver, page.dependenceField);
 		page.dependenceField.sendKeys("2");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.dependenceField);
 	}
 
@@ -77,7 +73,6 @@ public class CTL_FinancialInfo {
 	public void user_enter_a_data_into_saving_field() throws Throwable {
 		highLightElement(Driver.driver, page.savingField);
 		page.savingField.sendKeys("100");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.savingField);
 	}
 
@@ -86,7 +81,6 @@ public class CTL_FinancialInfo {
 		highLightElement(Driver.driver, page.desiredLoanTermSelect);
 		Select select=new Select(page.desiredLoanTermSelect);
 		select.selectByVisibleText("24 months");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.desiredLoanTermSelect);
 	}
 
@@ -94,7 +88,6 @@ public class CTL_FinancialInfo {
 	public void user_checks_the_button_to_confirm_about_all_information_above() throws Throwable {
 		highLightElement(Driver.driver, page.confirmDecisionCheckButton);
 		page.confirmDecisionCheckButton.click();
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.confirmDecisionCheckButton);
 	}
 	
@@ -102,14 +95,12 @@ public class CTL_FinancialInfo {
 	public void user_enters_full_name(String fullName) throws Throwable {
 		highLightElement(Driver.driver, page.fullName);
 		page.fullName.sendKeys(fullName); 
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.fullName);
 	}
 	@Then("^user enters single line \"([^\"]*)\"$")
 	public void user_enters_single_line(String singleLine) throws Throwable {
 		highLightElement(Driver.driver, page.singleLineField);
 		page.singleLineField.sendKeys(singleLine); 
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.singleLineField);
 	}
 
@@ -118,7 +109,6 @@ public class CTL_FinancialInfo {
 	public void user_enters_the_date_in_mm_dd_yyyy_format() throws Throwable {
 		highLightElement(Driver.driver, page.date);
 		page.date.sendKeys("12/25/2017");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.date);
 	}
 
@@ -130,11 +120,9 @@ public class CTL_FinancialInfo {
 	}
 	@Then("^you should see succesfull message \"([^\"]*)\"$")
 	public void you_should_see_succesfull_message(String successMessage) throws Throwable {
-		Screen2image.takeScreenShotNewReport();
 		WebDriverWait wait = new WebDriverWait(Driver.getInstance(),5);
 		wait.until(ExpectedConditions.visibilityOf(basePage.successMessage));
 		Assert.assertTrue(basePage.successMessage.getText().equals(successMessage));
-		Screen2image.takeScreenShotNewReport();
 	}
 	
 }

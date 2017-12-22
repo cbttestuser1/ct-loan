@@ -68,7 +68,8 @@ public class Screen2image {
 		}
 	}
 
-	public static void takeScreenShotNewReport() {
+	public static void takeScreenShotNewReport() throws InterruptedException {
+		Thread.sleep(1000);
 		try {
 			
 			Reporter.addScreenCaptureFromPath((createScreenShot()), Driver.getInstance().getTitle());
