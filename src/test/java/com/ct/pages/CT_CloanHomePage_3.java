@@ -17,7 +17,7 @@ public class CT_CloanHomePage_3 {
 
 	// ================1 selector========================================
 	@FindBy(xpath = "//select[@name='Dropdown']")
-	public static WebElement title;
+	public static WebElement title1;
 
 	@FindBy(xpath = "//select[@name='Dropdown']/option")
 	public static List<WebElement> titleSel;
@@ -31,7 +31,7 @@ public class CT_CloanHomePage_3 {
 	// ===========================2
 	// selector==========================================
 	@FindBy(xpath = "//select[@name='Dropdown1']")
-	public static WebElement department;
+	public static WebElement department1;
 	@FindBy(xpath = "//select[@name='Dropdown1']/option")
 	public static List<WebElement> departmentSel;
 
@@ -85,5 +85,16 @@ public class CT_CloanHomePage_3 {
 
 	@FindBy(xpath = "//*[@id='navigBar']/tbody/tr[2]/td[4]")
 	public WebElement FinancialInformation;
-
+	
+	
+	public void fillOutTheForm2(String title, String department, String doe, String pol, String supervisor){
+	
+		title1.sendKeys(title);
+		department1.sendKeys(department);
+		durationOfElement.sendKeys(doe);
+		purposeOfLoan.sendKeys(pol);
+		supervizor.sendKeys(supervisor);
+		
+		
+	}
 }

@@ -65,7 +65,7 @@ public class CT_CloanHomePage_1 {
 		lastNameBox.sendKeys(lastName);
 		dateOfBirthBox.sendKeys(dateOfBirth);
 		personalFileIdBox.sendKeys(personalFileID);
-		nextBtnP1.click();
+		//
 		Thread.sleep(2000);
 		
 		

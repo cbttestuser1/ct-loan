@@ -21,16 +21,16 @@ public class CT_CloanHomePage_2 {
 	public WebElement addressLine2;
 
 	@FindBy(css = "input[name='Address_City']")
-	public WebElement city;
+	public WebElement city1;
 
 	@FindBy(css = "input[name='Address_Region']")
-	public WebElement state;
+	public WebElement state1;
 
 	@FindBy(css = "input[name='Address_ZipCode']")
 	public WebElement zipCode;
 
 	@FindBy(id = "Address_Country")
-	public WebElement country;
+	public WebElement countryField;
 
 	// updated xpath for country dd
 	@FindBy(xpath = "//select[@name='Address_Country']//option")
@@ -67,7 +67,7 @@ public class CT_CloanHomePage_2 {
 	public WebElement errorWorkNum1;
 
 	@FindBy(css = "input[name='Number1']")
-	public WebElement extension;
+	public WebElement extension1;
 
 	// Updater Error msg element
 	@FindBy(id = "error-Number1")
@@ -92,5 +92,35 @@ public class CT_CloanHomePage_2 {
 
 	@FindBy(xpath = "(//div/button[@elname='back'])[1]")
 	public WebElement back;
+	
+	
+public void fillOutTheForm1(String address, String address1, String city, String state, String zipcode, String country, String ppnumber, String wpnumber, String extention, String personal_email, String work_email) throws InterruptedException {
+		
+	streetAddress.sendKeys(address);
+	addressLine2.sendKeys(address1);
+	city1.sendKeys(city);
+	state1.sendKeys(state);
+	zipCode.sendKeys(zipcode);
+	countryField.sendKeys(country);
+	
+	
+	String[] number=ppnumber.split("-");
+	personalNum1.sendKeys(number[0]);
+	personalNum2.sendKeys(number[1]);
+	personalNum3.sendKeys(number[2]);
+	
+	String[] workNum=wpnumber.split("-");
+	workNum1.sendKeys(number[0]);
+	workNum2.sendKeys(number[1]);
+	workNum3.sendKeys(number[2]);
+	
+	extension1.sendKeys(extention);
+	personalEmail.sendKeys(personal_email);
+	workEmail.sendKeys(work_email);
+	
+		Thread.sleep(1000);
+		
+		
+	}
 
 }
