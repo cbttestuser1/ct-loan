@@ -95,42 +95,42 @@ formatter.match({
   "location": "personalStepInfo.user_navigates_to_the_following_url(String)"
 });
 formatter.result({
-  "duration": 10083399266,
+  "duration": 9112906322,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.enters_First_Name_and_Last_Name()"
 });
 formatter.result({
-  "duration": 1543765119,
+  "duration": 1110125535,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Data_type_String_characters_a_Z()"
 });
 formatter.result({
-  "duration": 1832545265,
+  "duration": 1625782118,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.field_type_text_box()"
 });
 formatter.result({
-  "duration": 100703742,
+  "duration": 60420832,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.accepted_special_characters_apostrophe_hyphen()"
 });
 formatter.result({
-  "duration": 1047873826,
+  "duration": 1019570818,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_selects_the_gender()"
 });
 formatter.result({
-  "duration": 1031970639,
+  "duration": 1058499973,
   "status": "passed"
 });
 formatter.match({
@@ -143,42 +143,42 @@ formatter.match({
   "location": "personalStepInfo.verify_field_input_options_F_M(int)"
 });
 formatter.result({
-  "duration": 48685705,
+  "duration": 46048405,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_enters_Date_of_Birth()"
 });
 formatter.result({
-  "duration": 2521743484,
+  "duration": 2397836959,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Watermark_format_is_MM_DD_YYYY()"
 });
 formatter.result({
-  "duration": 56199830,
+  "duration": 44790361,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.data_type_integer()"
 });
 formatter.result({
-  "duration": 2016322259,
+  "duration": 1852209318,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_enters_SSN()"
 });
 formatter.result({
-  "duration": 1119573548,
+  "duration": 1056954305,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Data_type_integer_only()"
 });
 formatter.result({
-  "duration": 496886068,
+  "duration": 372811599,
   "status": "passed"
 });
 formatter.match({
@@ -191,11 +191,11 @@ formatter.match({
   "location": "personalStepInfo.watermark_format(String)"
 });
 formatter.result({
-  "duration": 2515077193,
+  "duration": 2429781630,
   "status": "passed"
 });
 formatter.after({
-  "duration": 252648,
+  "duration": 205930,
   "status": "passed"
 });
 formatter.scenario({
@@ -280,74 +280,74 @@ formatter.match({
   "location": "personalStepInfo.the_user_enters_the_address_line_one()"
 });
 formatter.result({
-  "duration": 1295074420,
+  "duration": 1212089207,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_address_line_two()"
 });
 formatter.result({
-  "duration": 1107678403,
+  "duration": 1060564334,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enter_city()"
 });
 formatter.result({
-  "duration": 1051487211,
+  "duration": 1025074470,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enter_state()"
 });
 formatter.result({
-  "duration": 996501786,
+  "duration": 1006996874,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_zipcode()"
 });
 formatter.result({
-  "duration": 687448540,
+  "duration": 626741082,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_work_phone()"
 });
 formatter.result({
-  "duration": 779694699,
+  "duration": 708555208,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Country()"
 });
 formatter.result({
-  "duration": 1131712502,
+  "duration": 1084592908,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Extension()"
 });
 formatter.result({
-  "duration": 1029708224,
+  "duration": 1042841784,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Email()"
 });
 formatter.result({
-  "duration": 1290752193,
+  "duration": 1169336559,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Personal_email()"
 });
 formatter.result({
-  "duration": 1299990547,
+  "duration": 1223440161,
   "status": "passed"
 });
 formatter.after({
-  "duration": 42495,
+  "duration": 45866,
   "status": "passed"
 });
 formatter.uri("userContactInfo.feature");
@@ -427,52 +427,127 @@ formatter.step({
   "name": "the user clicks next",
   "keyword": "And "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "contactInfoVerify.user_is_on_Contact_Information_Page()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 69636545,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "contactInfoVerify.user_enters_Work_Phone_number()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 475503805,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 16
+    }
+  ],
+  "location": "contactInfoVerify.verify_the_Size_digits(int)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 305601061,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "contactInfoVerify.user_enters_Extension()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 496526872,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 16
+    }
+  ],
+  "location": "contactInfoVerify.verify_the_Size_digits(int)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 304070793,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "contactInfoVerify.user_enters_Email_work()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 546890115,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 12
+    },
+    {
+      "val": "30",
+      "offset": 15
+    }
+  ],
+  "location": "contactInfoVerify.verify_Size_digits(int,int)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 1370434323,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "contactInfoVerify.user_enters_Personal_email()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 455907774,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 12
+    },
+    {
+      "val": "30",
+      "offset": 15
+    }
+  ],
+  "location": "contactInfoVerify.verify_Size_digits(int,int)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 371104605,
+  "error_message": "org.openqa.selenium.ElementNotVisibleException: element not visible\n  (Session info: chrome\u003d63.0.3239.84)\n  (Driver info: chromedriver\u003d2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e),platform\u003dMac OS X 10.13.1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.8.1\u0027, revision: \u00276e95a6684b\u0027, time: \u00272017-12-01T18:33:54.468Z\u0027\nSystem info: host: \u0027Zeineps-Air.localdomain\u0027, ip: \u0027fe80:0:0:0:10fd:9187:565c:a30d%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.1\u0027, java.version: \u00271.8.0_111\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522932 (4140ab217e1ca1..., userDataDir: /var/folders/vb/jg1mlv61431...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}\nSession ID: b710aaceca37507527af0ca085a4fe47\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\n\tat com.ct.stepDefinitions.contactInfoVerify.verify_Size_digits(contactInfoVerify.java:66)\n\tat ✽.Then Verify Size:10-30 digits(userContactInfo.feature:12)\n",
+  "status": "failed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 27
+    },
+    {
+      "val": "30",
+      "offset": 30
+    }
+  ],
+  "location": "contactInfoVerify.verify_one_more_time_Size_digits(int,int)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
+formatter.match({
+  "location": "contactInfoVerify.the_user_clicks_next()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 44307,
+  "duration": 322961866,
   "status": "passed"
 });
 });
