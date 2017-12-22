@@ -30,4 +30,12 @@ public class GmailHomeAndInboxPages {
 	 @FindBy ( xpath="(//span[@email='training@cybertekschool.com'])[1]")
 	 public WebElement emailTable;
 	 
-}
+	 @FindBy (xpath="//*[@id='yDmH0d']/div[2]/c-wiz/div/div/div[5]/div[2]/c-wiz/div/div[1]/div/div[1]/div[2]/a[2]")
+	 public WebElement gmailLogoAfterSignIn;
+	 
+	 @FindBy (xpath="//*[@id=':3a']/span")
+	 public WebElement ctlEmail;
+	 
+	 @FindBy ( xpath="//*[@id=':gg']")
+	 public WebElement PDFattach;
+	 }
