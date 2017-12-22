@@ -54,7 +54,7 @@ public class Driver {
 	public static void highLightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].setAttribute('style', 'background: #b3daff; border: 2px #0069cc;');", element);
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px red;');", element);
 
 		try {
 			Thread.sleep(10);

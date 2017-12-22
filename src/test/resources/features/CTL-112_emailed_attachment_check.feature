@@ -52,4 +52,11 @@ Scenario: Test Loan Application confirmation email attachment
 	And I add usearname "markjonesctl@gmail.com" and click next button 
 	And I add password "cybertek" and click next button 
 	Then I open email from CT Loan from inbox folder 
-	Then I check if an email recieved with an attachment named CTLoanDev.pdf
+	Then I check if an email recieved with an attachment named "CTLoanDev.pdf"
+	
+	
+	
+	
+	
+	
+	

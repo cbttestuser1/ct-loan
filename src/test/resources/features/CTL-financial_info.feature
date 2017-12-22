@@ -1,5 +1,5 @@
 Feature: Financail Information-Positive Testing 
-@Test2 
+@SmokeTest 
 Scenario: Fill up the form and submit successfully 
 	Given I am on the home page of CT-Loan 
 	Then I add first name  "William" 
