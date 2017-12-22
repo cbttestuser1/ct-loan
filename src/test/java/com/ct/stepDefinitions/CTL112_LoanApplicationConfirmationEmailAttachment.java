@@ -2,6 +2,7 @@ package com.ct.stepDefinitions;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +12,7 @@ import com.ct.pages.GmailHomeAndInboxPages;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Then;
+
 
 public class CTL112_LoanApplicationConfirmationEmailAttachment {
 
@@ -25,27 +27,43 @@ public class CTL112_LoanApplicationConfirmationEmailAttachment {
 	@Then("^I add usearname \"([^\"]*)\" and click next button$")
 	public void i_add_usearname_and_click_next_button(String userName) throws Throwable {
 		wait.until(ExpectedConditions.elementToBeClickable(gmail.emailField));
+		Driver.highLightElement(Driver.driver, gmail.emailField);
 		gmail.emailField.sendKeys(userName);
+		Driver.unHighLightElement(Driver.driver, gmail.emailField);
+		Driver.highLightElement(Driver.driver, gmail.nextButton);
 		gmail.nextButton.click();
+		Driver.unHighLightElement(Driver.driver, gmail.nextButton);
 	}
 
 	@Then("^I add password \"([^\"]*)\" and click next button$")
 	public void i_add_password_and_click_next_button(String password) throws Throwable {
 		wait.until(ExpectedConditions.elementToBeClickable(gmail.passwordField));
+		Driver.highLightElement(Driver.driver, gmail.passwordField);
 		gmail.passwordField.sendKeys(password);
+		Driver.unHighLightElement(Driver.driver, gmail.passwordField);
+		Driver.highLightElement(Driver.driver, gmail.nextButton);
 		gmail.nextButton.click();
+		Driver.unHighLightElement(Driver.driver, gmail.nextButton);
 	}
 
 	@Then("^I open email from CT Loan from inbox folder$")
 	public void i_open_email_from_CT_Loan_from_inbox_folder() throws Throwable {
 		wait.until(ExpectedConditions.elementToBeClickable(gmail.gmailLogoAfterSignIn));
+		Driver.highLightElement(Driver.driver, gmail.gmailLogoAfterSignIn);
 		gmail.gmailLogoAfterSignIn.click();
+		wait.until(ExpectedConditions.elementToBeClickable(gmail.ctlEmail));
 		gmail.ctlEmail.click();
-
 	}
 
 	@Then("^I check if an email recieved with an attachment named CTLoanDev\\.pdf$")
 	public void i_check_if_an_email_recieved_with_an_attachment_named_CTLoanDev_pdf() throws Throwable {
+		wait.until(ExpectedConditions.visibilityOf(gmail.PDFattachment));
+		Assert.assertTrue(gmail.PDFattachment.isDisplayed());
+		String attachmentExpectedName="CTLoanDev.pdf";
+		String attachmentActualName=gmail.PDFattachment.getAttribute("title");
+		Assert.assertTrue(attachmentExpectedName.equals(attachmentActualName));
+		System.out.println("Expected name is - "+ attachmentExpectedName);
+		System.out.println("Actual name is -"+ attachmentActualName);
 
 	}
 
