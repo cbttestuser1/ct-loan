@@ -22,7 +22,6 @@ Scenario:
 	#Positive Scenarios
 	
 	
-	
 	@contact
 Scenario: 
 	Given the user enters the address line one 
