@@ -37,7 +37,9 @@ public class personalStepInfo {
 		Driver.getInstance().switchTo().parentFrame();
 		Driver.getInstance().switchTo().frame(1);
 		homePage.firstName.sendKeys("Adam");
+		Thread.sleep(300);
 		homePage.lastName.sendKeys("Smith");
+		Thread.sleep(300);
 
 	}
 
@@ -45,7 +47,7 @@ public class personalStepInfo {
 	public void verify_Data_type_String_characters_a_Z() throws Throwable {
 		homePage.firstName.clear();
 		homePage.lastName.clear();
-		Thread.sleep(5000);
+		Thread.sleep(900);
 		homePage.firstName.sendKeys(chars);
 
 		if (chars.equals(chars)) {
@@ -78,11 +80,14 @@ public class personalStepInfo {
 	@Then("^Accepted special characters \\(apostrophe, hyphen\\)$")
 	public void accepted_special_characters_apostrophe_hyphen() throws Throwable {
 		homePage.firstName.sendKeys("'" + "-");
+		Thread.sleep(900);
 		homePage.lastName.sendKeys("'" + "-");
+		System.out.println("Spe");
 	}
 
 	@Then("^User selects the gender$")
 	public void user_selects_the_gender() throws Throwable {
+		Thread.sleep(900);
 		homePage.GenderMale.click();
 	}
 
@@ -105,8 +110,10 @@ public class personalStepInfo {
 	@Then("^User enters Date of Birth$")
 	public void user_enters_Date_of_Birth() throws Throwable {
 		homePage.DateOfBirth.click();
+		Thread.sleep(900);
 		Select dateOfBirth = new Select(homePage.selectMonth);
 		dateOfBirth.selectByVisibleText("Apr");
+		Thread.sleep(900);
 
 		dateOfBirth = new Select(homePage.selectYear);
 		dateOfBirth.selectByVisibleText("1990");
@@ -128,6 +135,7 @@ public class personalStepInfo {
 	@Then("^Data type: integer$")
 	public void data_type_integer() throws Throwable {
 		homePage.DateOfBirth.click();
+		Thread.sleep(900);
 		List<WebElement> nomericList = driver
 				.findElements(By.xpath("//div[@id='ui-datepicker-div']/table/tbody/tr/td"));
 
@@ -149,6 +157,7 @@ public class personalStepInfo {
 
 	@Then("^User enters SSN$")
 	public void user_enters_SSN() throws Throwable {
+		Thread.sleep(900);
 		homePage.PersonalFileID.sendKeys("12345678");
 	}
 
@@ -169,11 +178,12 @@ public class personalStepInfo {
 	@Then("^Watermark format \"([^\"]*)\" \\.$")
 	public void watermark_format(String arg1) throws Throwable {
 		homePage.PersonalFileID.clear();
+		Thread.sleep(900);
 		homePage.PersonalFileID.sendKeys("hello world!");
 		homePage.NextButton.click();
 		// homePage.PersonalFileID.sendKeys(arg1);
 		// homePage.NextButton.click();
-
+		Thread.sleep(900);
 		WebElement a = driver.findElement(By.xpath("//div/p[@id='error-Number']"));
 		a.isDisplayed();
 		String ErrorMessage = a.getText();
@@ -198,63 +208,72 @@ public class personalStepInfo {
 
 	@When("^the user enters the address line one$")
 	public void the_user_enters_the_address_line_one() throws Throwable {
+		Thread.sleep(900);
 		contactInfo.streetAddress.sendKeys("7988 Tyson oaks circle");
 	}
 
 	@When("^the user enters address line two$")
 	public void the_user_enters_address_line_two() throws Throwable {
+		Thread.sleep(900);
 	   contactInfo.addressLine2.sendKeys("Vienna Va"); 
 	}
 
 	@When("^the user enter city$")
 	public void the_user_enter_city() throws Throwable {
+		Thread.sleep(900);
 	  contactInfo.City.sendKeys("Vienna");
 	}
 
 	@When("^the user enter state$")
 	public void the_user_enter_state() throws Throwable {
+		Thread.sleep(900);
 		contactInfo.State.sendKeys("VA");
 	   
 	}
 
 	@When("^the user enters zipcode$")
 	public void the_user_enters_zipcode() throws Throwable {
+		Thread.sleep(500);
 		contactInfo.postalZip.sendKeys("221282");
 	}
 
 	@When("^the user enters work phone$")
 	public void the_user_enters_work_phone() throws Throwable {
-		contactInfo.personalPh1.sendKeys("571");
-		
+		Thread.sleep(500);
+		contactInfo.personalPh1.sendKeys("5712901637");
+		System.out.println("Personal phone number has been entered successfully!");
 	}
 	
 	@Given("^the user enters Country$")
 	public void the_user_enters_Country() throws Throwable {
-	   contactInfo.Country2.click();
+	 WebElement country= contactInfo.Country2;
+	 country.click();
+	 Thread.sleep(500);
+	  Select selCountry= new Select(country);
+	  selCountry.selectByVisibleText("Zimbabwe");
+	  System.out.println("Country has been choosen successfully!");
+	   
 	}
 
 
 	@When("^the user enters Extension$")
 	public void the_user_enters_Extension() throws Throwable {
-		
+		Thread.sleep(900);
+		contactInfo.Extension.sendKeys("12345");
 	    
 	}
 
 	@When("^the user enters Email$")
 	public void the_user_enters_Email() throws Throwable {
-	   
+		Thread.sleep(900);
+		contactInfo.workEmail.sendKeys("adam94@gmail.com");
 	}
 
 	@When("^the user enters Personal email$")
 	public void the_user_enters_Personal_email() throws Throwable {
+		Thread.sleep(900);
 		contactInfo.PersonalEmail.sendKeys("aydinbekiroglu@gmail.com");
 	}
 
-	@When("^the user clicks next$")
-	public void the_user_clicks_next() throws Throwable {
-	   
-	}
-
-	
 
 }

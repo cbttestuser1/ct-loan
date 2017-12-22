@@ -35,7 +35,6 @@ Scenario:
 	And the user enters Extension 
 	And the user enters Email 
 	And the user enters Personal email 
-	And the user clicks next 
 	
 	
 	

@@ -21,6 +21,9 @@ public class ContactInfoHomePage {
 			PageFactory.initElements(this.driver, this);
 	 }
 	 
+	 @FindBy(xpath="//*[@id='Section1-li']/h2")
+	 public WebElement contactLogo;
+	 
 	 @FindBy (xpath ="(//input[@type='text'])[6]")
 	 public WebElement streetAddress;
 	 
@@ -48,7 +51,7 @@ public class ContactInfoHomePage {
 	 @FindBy(name="Email1")
 	 public WebElement workEmail;
 	 
-	 @FindBy(className="fmSmtButton next_previous")
+	 @FindBy(xpath="(//*/button[@class='fmSmtButton next_previous'])[3]")
 	 public WebElement nextButton;
 	 
 	 @FindBy(xpath=".//*[@id='Number1-li']/div[1]/span/input")
@@ -57,18 +60,23 @@ public class ContactInfoHomePage {
 	 @FindBy(name="Email")
 	 public WebElement PersonalEmail;
 	 
-	 @FindBy(xpath="//span[@class='flLeft addtwo']/div")
+	 @FindBy(xpath="//*[@id='Address_Country']")
 	 public WebElement Country2;
 	 
-	 @FindBy(xpath="//input[@elname=\"countrycode\"])[1]")
+	 @FindBy(xpath="(//div/span/input[@name='countrycode'])[1]")
 	 public WebElement personalPh1;
 	 
 	
-	 @FindBy(xpath="(//input[@elname='first'])[1]")
+	 @FindBy(xpath="(//div/span/input[@name='countrycode'])[2]")
 	 public WebElement personalPh2;
+	 
+	 @FindBy(xpath="//*[@id='error-Email']")
+	 public WebElement emailErrorMPersonal;
+	 
+	 @FindBy(xpath="//*[@id='error-Email1']")
+	 public WebElement emailErrorMWork;
 	
-	 @FindBy(xpath= "(//input[@elname='second'])[1]")
-	 public WebElement personalPh3;
+	 
 
 	 
 	 
