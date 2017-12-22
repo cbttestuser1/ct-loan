@@ -28,21 +28,14 @@ public class CTL_FinancialInfo {
 
 	@And("^user checks the button for loan application$")
 	public void user_checks_the_button_for_loan_application() throws Throwable {
-		highLightElement(Driver.driver, page.CTLoanYesButton);
 		page.CTLoanYesButton.click();
-		Screen2image.takeScreenShotNewReport();
-		unHighLightElement(Driver.driver, page.CTLoanYesButton);
-		highLightElement(Driver.driver, page.aplicantrsCount);
 		page.aplicantrsCount.sendKeys("2");
-		Screen2image.takeScreenShotNewReport();
-		unHighLightElement(Driver.driver, page.aplicantrsCount);
 	}
 
 	@And("^user enter anual income$")
 	public void user_enter_anual_income() throws Throwable {
 		highLightElement(Driver.driver, page.AnnualIncomeField);
 		page.AnnualIncomeField.sendKeys("10000");
-		Screen2image.takeScreenShotNewReport();
 		unHighLightElement(Driver.driver, page.AnnualIncomeField);
 	}
 
