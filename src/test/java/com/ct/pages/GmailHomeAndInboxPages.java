@@ -40,5 +40,8 @@ public class GmailHomeAndInboxPages {
 	 @FindBy ( xpath ="//*[@alt='Attachments']")
 	 public WebElement PDFattachment;
 	 
+	 @FindBy ( xpath ="//table//table//tr[31]//td[3]")
+	 public WebElement uniqueID;
+	 
 	 
 	 }

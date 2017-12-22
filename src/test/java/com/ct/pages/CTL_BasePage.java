@@ -16,6 +16,9 @@ public class CTL_BasePage {
 	public WebElement successMessage;
 
 	
+	@FindBy(xpath = "//div[contains(text(),'application ID')]")
+	public WebElement applicationID;
+	
 	
 	
 }

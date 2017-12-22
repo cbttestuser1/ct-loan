@@ -20,7 +20,7 @@ public class CTL_FinancialInfo {
 
 	CTL_FinancialInfoPage page= new CTL_FinancialInfoPage();
 	CTL_BasePage basePage= new CTL_BasePage();
-
+	static String myApplicationId;
 	@When("^user is on the last financial info page$")
 	public void user_is_on_the_last_financial_info_page() throws Throwable {
 		
@@ -123,6 +123,8 @@ public class CTL_FinancialInfo {
 		WebDriverWait wait = new WebDriverWait(Driver.getInstance(),5);
 		wait.until(ExpectedConditions.visibilityOf(basePage.successMessage));
 		Assert.assertTrue(basePage.successMessage.getText().equals(successMessage));
+		myApplicationId=basePage.applicationID.getText().substring(28, 33);
+		System.out.println(myApplicationId);
 	}
 	
 }
