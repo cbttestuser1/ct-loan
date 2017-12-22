@@ -22,8 +22,8 @@ public class NavigateToCT_LoanHomePage {
 		JavascriptExecutor jse= (JavascriptExecutor)Driver.getInstance();
 		   jse.executeScript("window.scrollBy(0, 400)");
 		   Thread.sleep(2000);
-		   jse.executeScript("window.scrollBy(0, 0)");
-		  
+		   jse.executeScript("window.scrollBy(0, 0)"); 
+		   Driver.getInstance().findElement(By.xpath("//input[@name='SingleLine']")).sendKeys("hello");
 	}
 
 	@Then("^I should be able to see text CT-Loan and user information boxes$")
