@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ct.pages.CT_CloanHomePage_2;
@@ -74,12 +73,12 @@ public class CT_CloanStepDefs_2 {
 
 	@When("^I amd Enter City as \"([^\"]*)\"$")
 	public void i_amd_Enter_City_as(String city) throws Throwable {
-		page2.city.sendKeys(city);
+		page2.city1.sendKeys(city);
 	}
 
 	@When("^I amd Enter State as \"([^\"]*)\"$")
 	public void i_amd_Enter_State_as(String state) throws Throwable {
-		page2.state.sendKeys(state);
+		page2.state1.sendKeys(state);
 	}
 
 	@When("^I amd Enter Postal / ZIP Code as \"([^\"]*)\"$")
@@ -90,7 +89,7 @@ public class CT_CloanStepDefs_2 {
 	// rESUABLE METHOD FOR SELECTING COUNTRY
 	@When("^I amd Enter Country as \"([^\"]*)\"$")
 	public void i_amd_Enter_Country_as(String country) throws Throwable {
-		page2.country.sendKeys(country);
+		page2.countryField.sendKeys(country);
 
 		/*
 		 * WHO write those line here? why???????????? (RK)
@@ -125,7 +124,7 @@ public class CT_CloanStepDefs_2 {
 
 	@When("^I amd Enter Extenstion as \"([^\"]*)\"$")
 	public void i_amd_Enter_Extenstion_as(String extantion) throws Throwable {
-		page2.extension.sendKeys(extantion);
+		page2.extension1.sendKeys(extantion);
 	}
 
 	@When("^I amd Enter Personal Email as \"([^\"]*)\"$")

@@ -24,7 +24,7 @@ public class CT_CloanStepDefs_3a {
 	public void i_click_on_title_and_select(String titleName) throws Throwable {
 		https://github.com/cbttestuser1/ct-loan.git
 
-		dd = new Select(page_3.title);
+		dd = new Select(page_3.title1);
 		int size = page_3.titleSel.size();
 		for (int i = 0; i < size; i++) {
 
@@ -36,7 +36,7 @@ public class CT_CloanStepDefs_3a {
 	@When("^I click on department select \"([^\"]*)\"$")
 	public void i_click_on_department_select(String depName) throws Throwable {
 
-		dd = new Select(page_3.department);
+		dd = new Select(page_3.department1);
 		int size = page_3.departmentSel.size();
 		for (int i = 0; i < 4; i++) {
 
