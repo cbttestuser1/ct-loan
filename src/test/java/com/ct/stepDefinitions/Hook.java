@@ -22,14 +22,15 @@ public class Hook {
 	
 	@After
 	public void tearDown(Scenario scenario) throws InterruptedException{
-		Screen2image.takeScreenShotNewReport();
+		
 		if (scenario.isFailed()) {
+			Screen2image.takeScreenShotNewReport();
 			final byte[] screenshot = ((TakesScreenshot) 
 					Driver.getInstance()).getScreenshotAs(OutputType.BYTES);
 			
 			scenario.embed(screenshot, "image/png");
 		}
-		//Driver.closeDriver();
+		Driver.closeDriver();
 	}
 	
 }
