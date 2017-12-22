@@ -51,6 +51,25 @@ public class ContactInfoHomePage {
 	 @FindBy(className="fmSmtButton next_previous")
 	 public WebElement nextButton;
 	 
+	 @FindBy(xpath=".//*[@id='Number1-li']/div[1]/span/input")
+	 public WebElement Extension;
+	 
+	 @FindBy(name="Email")
+	 public WebElement PersonalEmail;
+	 
+	 @FindBy(xpath="//span[@class='flLeft addtwo']/div")
+	 public WebElement Country2;
+	 
+	 @FindBy(xpath="//input[@elname=\"countrycode\"])[1]")
+	 public WebElement personalPh1;
+	 
+	
+	 @FindBy(xpath="(//input[@elname='first'])[1]")
+	 public WebElement personalPh2;
+	
+	 @FindBy(xpath= "(//input[@elname='second'])[1]")
+	 public WebElement personalPh3;
+
 	 
 	 
 

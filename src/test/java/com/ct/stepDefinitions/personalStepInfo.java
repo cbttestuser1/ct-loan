@@ -10,14 +10,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ct.pages.CT_HomePage;
+import com.ct.pages.ContactInfoHomePage;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class personalStepInfo {
 	CT_HomePage homePage = new CT_HomePage();
+	ContactInfoHomePage contactInfo= new ContactInfoHomePage();
 	WebDriver driver = Driver.getInstance();
 	String[] chars = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
 			"t", "u", "v", "w", "x", "y", "z" };
@@ -190,6 +193,66 @@ public class personalStepInfo {
 		// homePage.PersonalFileID.sendKeys(arg1);
 		// homePage.NextButton.click();
 
+	}
+
+
+	@When("^the user enters the address line one$")
+	public void the_user_enters_the_address_line_one() throws Throwable {
+		contactInfo.streetAddress.sendKeys("7988 Tyson oaks circle");
+	}
+
+	@When("^the user enters address line two$")
+	public void the_user_enters_address_line_two() throws Throwable {
+	   contactInfo.addressLine2.sendKeys("Vienna Va"); 
+	}
+
+	@When("^the user enter city$")
+	public void the_user_enter_city() throws Throwable {
+	  contactInfo.City.sendKeys("Vienna");
+	}
+
+	@When("^the user enter state$")
+	public void the_user_enter_state() throws Throwable {
+		contactInfo.State.sendKeys("VA");
+	   
+	}
+
+	@When("^the user enters zipcode$")
+	public void the_user_enters_zipcode() throws Throwable {
+		contactInfo.postalZip.sendKeys("221282");
+	}
+
+	@When("^the user enters work phone$")
+	public void the_user_enters_work_phone() throws Throwable {
+		contactInfo.personalPh1.sendKeys("571");
+		
+	}
+	
+	@Given("^the user enters Country$")
+	public void the_user_enters_Country() throws Throwable {
+	   contactInfo.Country2.click();
+	}
+
+
+	@When("^the user enters Extension$")
+	public void the_user_enters_Extension() throws Throwable {
+		
+	    
+	}
+
+	@When("^the user enters Email$")
+	public void the_user_enters_Email() throws Throwable {
+	   
+	}
+
+	@When("^the user enters Personal email$")
+	public void the_user_enters_Personal_email() throws Throwable {
+		contactInfo.PersonalEmail.sendKeys("aydinbekiroglu@gmail.com");
+	}
+
+	@When("^the user clicks next$")
+	public void the_user_clicks_next() throws Throwable {
+	   
 	}
 
 	

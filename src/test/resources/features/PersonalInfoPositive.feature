@@ -22,3 +22,23 @@ Scenario:
 	#Positive Scenarios
 	
 	
+	
+	@contact
+Scenario: 
+	Given the user enters the address line one 
+	And the user enters address line two 
+	And the user enter city 
+	And the user enter state 
+	And the user enters zipcode 
+	And the user enters work phone 
+	And the user enters Country
+	And the user enters Extension 
+	And the user enters Email 
+	And the user enters Personal email 
+	And the user clicks next 
+	
+	
+	
+	
+	
+	
