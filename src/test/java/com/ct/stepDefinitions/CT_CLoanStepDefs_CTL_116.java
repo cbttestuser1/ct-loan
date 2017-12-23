@@ -1,11 +1,13 @@
 package com.ct.stepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.ct.pages.CT_CloanHomePage_4;
 import com.ct.pages.CT_Cloan_FakePerson;
 import com.ct.utilities.Driver;
+import com.ct.utilities.PageUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,16 +32,10 @@ public class CT_CLoanStepDefs_CTL_116 {
 
 	@Then("^I should get an email confirming my application$")
 	public void i_should_get_an_email_confirming_my_application() throws Throwable {
-		// EmailChecker cheker = new EmailChecker();
-
-		String[] loanNumber = driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText().split(" ");
-
-		System.out.println(loanNumber[6].replaceAll(".", ""));
-		for (String string : loanNumber) {
-			System.out.print(string + " ");
-		}
-		// System.out.println(EmailChecker.massageText().concat(str));
-
+		
+		String str = driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText();
+		String content =EmailChecker.massageText();
+		Assert.assertTrue(content.contains(PageUtils.getId(str)));
 	}
 
 }
