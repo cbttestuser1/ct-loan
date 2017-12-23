@@ -102,14 +102,14 @@ public class CT_CloanStepDefsForHappyPath {
 
 	@Given("^the user enters the city name$")
 	public void the_user_enters_the_city_name() throws Throwable {
-	    page2.city.sendKeys("Fairfax");
+	    page2.city1.sendKeys("Fairfax");
 	    
 	}
 
 	@Given("^the user enters the state name$")
 	public void the_user_enters_the_state_name() throws Throwable {
 	    
-		page2.state.sendKeys("VA");
+		page2.state1.sendKeys("VA");
 		
 	}
 
@@ -122,7 +122,7 @@ public class CT_CloanStepDefsForHappyPath {
 	@Given("^the user enters the country name$")
 	public void the_user_enters_the_country_name() throws Throwable {
 	    
-		page2.country.sendKeys("United States");
+		page2.countryField.sendKeys("United States");
 	}
 
 	
@@ -177,7 +177,7 @@ public class CT_CloanStepDefsForHappyPath {
 	@Given("^the user selects the title$")
 	public void the_user_selects_the_title() throws Throwable {
 	    
-	    dd = new Select(page3.title);
+	    dd = new Select(page3.title1);
 	    dd.selectByIndex(1);
 		
 	}
@@ -185,7 +185,7 @@ public class CT_CloanStepDefsForHappyPath {
 	@Given("^the user selects the department$")
 	public void the_user_selects_the_department() throws Throwable {
 	    
-		dd = new Select(page3.department);
+		dd = new Select(page3.department1);
 	    dd.selectByIndex(1);
 	    
 	}
