@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ct.pages.CTL55_HomePage;
-import com.ct.pages.CTeckLoan43ContatInfoHome;
+import com.ct.pages.CTeck_43_46_118HomePage;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
 
@@ -17,7 +17,7 @@ import cucumber.api.java.en.Then;
 public class CTeckLoan46ContactInfoNegative {
 	WebDriver driver = Driver.getInstance();
 
-	CTeckLoan43ContatInfoHome pages = new CTeckLoan43ContatInfoHome();
+	CTeck_43_46_118HomePage pages = new CTeck_43_46_118HomePage();
 	CTContstants url = new CTContstants();
 	CTL55_HomePage page = new CTL55_HomePage();
 	WebDriverWait wait = new WebDriverWait(Driver.getInstance(), 10);

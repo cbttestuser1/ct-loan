@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ct.utilities.Driver;
 
-public class CTeckLoan43ContatInfoHome {
+public class CTeck_43_46_118HomePage {
 
-	public CTeckLoan43ContatInfoHome() {
+	public CTeck_43_46_118HomePage() {
 
 		PageFactory.initElements(Driver.getInstance(), this);
 
@@ -69,10 +69,55 @@ public class CTeckLoan43ContatInfoHome {
 	@FindBy(xpath = "//input[@name='Email1']")
 	public WebElement WorkEmail;
 
-	@FindBy(xpath = "(//button[@class='fmSmtButton next_previous'])[3]")
+	@FindBy(xpath = "//*[@id='formAccess']/div[1]/div[2]/div/button/em")
 	public WebElement NextButton;
 
-	public void clickOnNextButton() {
+	@FindBy(id = "Radio1_1")
+	public WebElement FirstAppQ;
+
+	@FindBy(xpath = "//input[@name='Number2']")
+	public WebElement ApplicationNumber;
+
+	@FindBy(xpath = "//input[@name='SingleLine3']")
+	public WebElement Income;
+
+	@FindBy(xpath = "//select [@name='Dropdown5']")
+	public WebElement SelectDropDown;
+
+	@FindBy(id = "Radio2_2")
+	public WebElement OwnOrRent;
+
+	@FindBy(xpath = "//input[@name='Number3']")
+	public WebElement SpentByMonth;
+
+	@FindBy(xpath = "//input[@name='Number4']")
+	public WebElement Dependents;
+
+	@FindBy(xpath = "//input[@name='Number5']")
+	public WebElement Savings;
+
+	@FindBy(xpath = "//select[@name='Dropdown6']")
+	public WebElement SelectDropDown2;
+
+	@FindBy(id = "DecisionBox")
+	public WebElement Decision;
+
+	@FindBy(xpath = "//input[@name='SingleLine4']")
+	public WebElement FirstMLast;
+
+	@FindBy(id = "Date1-date")
+	public WebElement Date;
+
+	@FindBy(xpath = "//input[@name='SingleLine5']")
+	public WebElement SingleLine;
+
+	@FindBy(xpath = "//button[@elname='submit']")
+	public WebElement SubmitLastPage;
+
+	@FindBy(xpath = "//span[contains(text(),'Your application was successfully submitted!')]")
+	public WebElement confirmationMessage;
+
+	public void cclickOnNextButton() {
 		NextButton.click();
 	}
 
