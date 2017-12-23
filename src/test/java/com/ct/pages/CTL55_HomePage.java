@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -96,6 +97,13 @@ public class CTL55_HomePage {
 	public static void moveToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getInstance();
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public static void moveToElementAction(WebElement element) throws InterruptedException {
+		Actions action = new Actions(Driver.getInstance());
+
+		Thread.sleep(5000);
+		action.moveToElement(element).build().perform();
 	}
 
 }
