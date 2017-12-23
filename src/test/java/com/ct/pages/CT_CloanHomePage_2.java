@@ -109,10 +109,11 @@ public void fillOutTheForm1(String address, String address1, String city, String
 	personalNum2.sendKeys(number[1]);
 	personalNum3.sendKeys(number[2]);
 	
+	// RK - corrected code 
 	String[] workNum=wpnumber.split("-");
-	workNum1.sendKeys(number[0]);
-	workNum2.sendKeys(number[1]);
-	workNum3.sendKeys(number[2]);
+	workNum1.sendKeys(workNum[0]);
+	workNum2.sendKeys(workNum[1]);
+	workNum3.sendKeys(workNum[2]);
 	
 	extension1.sendKeys(extention);
 	personalEmail.sendKeys(personal_email);
