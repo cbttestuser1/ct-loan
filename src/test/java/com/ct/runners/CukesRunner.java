@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/resources/features", 
 //tags = "@SmokeTest", //
-tags = "@CTL_30", 
+tags = "@Mandatory", 
 		glue = "com.ct.stepDefinitions", plugin = { "html:target/cucumber-reports",
 				"json:target/cucumber.json" }, dryRun = false)
 
