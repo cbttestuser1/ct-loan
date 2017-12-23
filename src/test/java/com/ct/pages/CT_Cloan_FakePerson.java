@@ -20,6 +20,262 @@ public class CT_Cloan_FakePerson {
 
 	// for page1 info, random and fake
 	private String firstName;
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public Faker getFk() {
+		return fk;
+	}
+
+	public void setFk(Faker fk) {
+		this.fk = fk;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getPersonalFileID() {
+		return personalFileID;
+	}
+
+	public void setPersonalFileID(String personalFileID) {
+		this.personalFileID = personalFileID;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getAddress1() {
+		return address1;
+	}
+
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getPpnumber() {
+		return ppnumber;
+	}
+
+	public void setPpnumber(String ppnumber) {
+		this.ppnumber = ppnumber;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getWpnumber() {
+		return wpnumber;
+	}
+
+	public void setWpnumber(String wpnumber) {
+		this.wpnumber = wpnumber;
+	}
+
+	public String getExtention() {
+		return extention;
+	}
+
+	public void setExtention(String extention) {
+		this.extention = extention;
+	}
+
+	public String getPersonal_email() {
+		return personal_email;
+	}
+
+	public void setPersonal_email(String personal_email) {
+		this.personal_email = personal_email;
+	}
+
+	public String getWork_email() {
+		return work_email;
+	}
+
+	public void setWork_email(String work_email) {
+		this.work_email = work_email;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getDurationOfEmployement() {
+		return durationOfEmployement;
+	}
+
+	public void setDurationOfEmployement(String durationOfEmployement) {
+		this.durationOfEmployement = durationOfEmployement;
+	}
+
+	public String getPurposeOfloam() {
+		return purposeOfloam;
+	}
+
+	public void setPurposeOfloam(String purposeOfloam) {
+		this.purposeOfloam = purposeOfloam;
+	}
+
+	public String getSupervosir() {
+		return supervosir;
+	}
+
+	public void setSupervosir(String supervosir) {
+		this.supervosir = supervosir;
+	}
+
+	public String getIsItFirstLoan() {
+		return isItFirstLoan;
+	}
+
+	public void setIsItFirstLoan(String isItFirstLoan) {
+		this.isItFirstLoan = isItFirstLoan;
+	}
+
+	public String getAnnualIncome() {
+		return annualIncome;
+	}
+
+	public void setAnnualIncome(String annualIncome) {
+		this.annualIncome = annualIncome;
+	}
+
+	public String getIncomeType() {
+		return incomeType;
+	}
+
+	public void setIncomeType(String incomeType) {
+		this.incomeType = incomeType;
+	}
+
+	public String getRenrtOrOwn() {
+		return renrtOrOwn;
+	}
+
+	public void setRenrtOrOwn(String renrtOrOwn) {
+		this.renrtOrOwn = renrtOrOwn;
+	}
+
+	public String getSpendInMonth() {
+		return spendInMonth;
+	}
+
+	public void setSpendInMonth(String spendInMonth) {
+		this.spendInMonth = spendInMonth;
+	}
+
+	public String getDependancy() {
+		return dependancy;
+	}
+
+	public void setDependancy(String dependancy) {
+		this.dependancy = dependancy;
+	}
+
+	public String getSaving() {
+		return saving;
+	}
+
+	public void setSaving(String saving) {
+		this.saving = saving;
+	}
+
+	public String getLoanTerm() {
+		return loanTerm;
+	}
+
+	public void setLoanTerm(String loanTerm) {
+		this.loanTerm = loanTerm;
+	}
+
+	public String getSinglLine() {
+		return singlLine;
+	}
+
+	public void setSinglLine(String singlLine) {
+		this.singlLine = singlLine;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 	private String lastName;
 	private String dateOfBirth;
 	private String personalFileID;
