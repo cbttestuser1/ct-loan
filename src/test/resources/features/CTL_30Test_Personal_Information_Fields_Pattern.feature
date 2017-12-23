@@ -1,7 +1,7 @@
 Feature: Test Personal Information fields pattern
 #Create and automateTest scenarios for the following fields in order to test fields pattern(acceptable data type):
 #CTL_30 positive test scenario
-@CTL_30 
+@CTL_30
 Scenario: Navigate to Personal Information page
 
 	Given I am on the CT Loan personal information homepage
