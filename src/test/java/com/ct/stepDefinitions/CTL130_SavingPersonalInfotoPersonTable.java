@@ -32,17 +32,22 @@ public class CTL130_SavingPersonalInfotoPersonTable {
 
 	@When("^I submit the form$")
 	public void i_submit_the_form() throws Throwable {
-	     Driver.getInstance().findElement(By.xpath("\"//*[@id='richTxtMsgSpan']/label/span\"")).click();
+		//Thread.sleep(3000);
+	     //Driver.getInstance().findElement(By.xpath("//*[@id='richTxtMsgSpan']/label/span")).click();
 	}
 
 	@Then("^the personal information should be saved in person table \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
 	public void the_personal_information_should_be_saved_in_person_table(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) throws Throwable {
 		DBUtility.establishConnection(DBType.ORACLE);
 		List<String[]> queryResult = DBUtility
-				.runSQLQuery("SELECT FIRST_NAME, MIDDLE_INIT, LAST_NAME,DATE_OF_BIRTH, GENDER, SSN_NR "
-						+ "FROM CTLDEV.PERSON where FIRST_NAME="+arg1+" and LAST_NAME="+arg3);
+				.runSQLQuery("SELECT FIRST_NAME, MIDDLE_INIT, LAST_NAME, DATE_OF_BIRTH, GENDER, SSN_NR "
+						+ "FROM CTLDEV.PERSON where FIRST_NAME='"+arg1+"' and LAST_NAME='"+arg3+"'");
+	
+				
 		DBUtility.closeConnections();
 		String[] record =queryResult.get(0);
+		
+		System.out.println(record);
 		
 		Assert.assertEquals(record[0], arg1);
 		Assert.assertEquals(record[1], arg2);

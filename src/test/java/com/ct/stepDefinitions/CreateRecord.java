@@ -23,10 +23,10 @@ public class CreateRecord {
 		personInfo.MiddleName.sendKeys(middleName);
 		personInfo.LasttName.sendKeys(lastName);
 		((JavascriptExecutor) Driver.getInstance()).executeScript("arguments[0].checked = true;", personInfo.GenderMale);
-		personInfo.DateOfBirth.sendKeys(dob);
+		personInfo.DateOfBirth.sendKeys("01/01/1980");
 		personInfo.PersonalFileID.sendKeys(personId);
-		Driver.getInstance().findElement(By.xpath("(//*[contains(@class,'nextAlign')])[2]")).click();
-
+		Driver.getInstance().findElement(By.cssSelector(".next_previous")).click();
+		
 		infoPage.Address1.sendKeys("1 aaaa");
 		infoPage.Address2.sendKeys("bbb");
 		infoPage.City.sendKeys("McLean");
@@ -38,7 +38,7 @@ public class CreateRecord {
 		infoPage.WorkNum1.sendKeys("2022222225");
 		infoPage.WorkNum2.sendKeys("2022222226");		
 		infoPage.WorkNum3.sendKeys("2022222227");
-		infoPage.Extension.sendKeys("0");
+		infoPage.Extension.sendKeys("11111");
 		infoPage.Email.sendKeys("loanct7@gmail.com");
 		infoPage.WorkEmail.sendKeys("loanct7@gmail.com");
 		Select dropdown = new Select(infoPage.Country);
@@ -59,7 +59,7 @@ public class CreateRecord {
 		
 		finance.firstAppYes.click();
 		finance.applications.sendKeys("0");
-		finance.applications.sendKeys("100000");
+		finance.annualIncome.sendKeys("100000");
 		Select select = new Select(finance.incomeType);
 		select.selectByVisibleText("Yearly");
 		finance.rentHouse.click();
@@ -72,7 +72,7 @@ public class CreateRecord {
 		finance.fullName.sendKeys(firstName+" "+lastName);
 		finance.singleLine.sendKeys("");
 		finance.calender.sendKeys("12/23/2017");
-		//finance.submitButton.click();
+		finance.submitButton.click();
 		
 	}
 
