@@ -18,25 +18,29 @@ import cucumber.api.java.en.When;
 public class CT_CLoanStepDefs_CTL_116 {
 	private WebDriver driver = Driver.getInstance();
 
-
 	@Given("^enter valid personal, contact, employment and financial information$")
 	public void enter_valid_personal_contact_employment_and_financial_information() throws Throwable {
-		CT_Cloan_FakePerson p1 = new CT_Cloan_FakePerson();
-		p1.fillOutAllPersonInfoOn_CT_Cloan();
+		CT_Cloan_FakePerson person = new CT_Cloan_FakePerson();
+		person.fillOutAllPersonInfoOn_CT_Cloan();
 	}
-	
 
 	@When("^I submit the form$")
 	public void i_submit_the_form() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		CT_CloanHomePage_4 p4 = new CT_CloanHomePage_4();
+		p4.submitButton.click();
+		Thread.sleep(5000);
 	}
 
 	@Then("^I should get an email confirming my application$")
 	public void i_should_get_an_email_confirming_my_application() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		EmailChecker cheker = new EmailChecker();
+
+		String host = "pop.gmail.com";// change accordingly
+		String mailStoreType = "pop3";
+		String username = " testemailforcloan@gmail.com";// put your email here
+		String password = "testemail";// Password here
+
+		cheker.check(host, mailStoreType, username, password);
 	}
-	
-	
+
 }

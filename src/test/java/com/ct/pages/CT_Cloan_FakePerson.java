@@ -57,8 +57,8 @@ public class CT_Cloan_FakePerson {
 	public CT_Cloan_FakePerson() {
 		firstName = fk.name().firstName();
 		lastName = fk.name().lastName();
-		dateOfBirth = fk.date().birthday().getMonth() + "/" + fk.date().birthday().getDate() + "/"
-				+ fk.date().birthday().getYear();
+		dateOfBirth = generateMonth() + "/" + generateDate() + "/"
+				+ generateYear();
 		personalFileID = fk.idNumber().ssnValid().replaceAll("-", "");
 
 		// for page2 info, random and fake
@@ -70,7 +70,7 @@ public class CT_Cloan_FakePerson {
 		ppnumber = phoneNumberCorrector(fk.phoneNumber().cellPhone());
 		country = "United States";
 		wpnumber = phoneNumberCorrector(fk.phoneNumber().phoneNumber());
-		extention = "555";
+		extention = "55555";
 		personal_email = "testemailforcloan@gmail.com";
 		work_email = "testemailforcloan@gmail.com";
 
@@ -119,9 +119,8 @@ public class CT_Cloan_FakePerson {
 
 		// fill out page #4
 		CT_CloanHomePage_4 p4 = new CT_CloanHomePage_4();
-		p4.fiiOutTheForm(isItFirstLoan, annualIncome, incomeType, renrtOrOwn, spendInMonth, dependancy, saving, loanTerm, 
-				firstName + " M " + lastName, singlLine, date);
-		
+		p4.fiiOutTheForm(isItFirstLoan, annualIncome, incomeType, renrtOrOwn, spendInMonth, dependancy, saving,
+				loanTerm, firstName + " M " + lastName, singlLine, date);
 
 	}
 
@@ -166,6 +165,30 @@ public class CT_Cloan_FakePerson {
 				"Katherine Hillard", "Hlebush Buharan" };
 		int rnd = new Random().nextInt(titles.length);
 		return titles[rnd];
+	}
+
+	public static int generateYear() {
+
+		Random rd = new Random();
+		int n = rd.nextInt((2002 - 1949) + 1) + 1949;
+		return n;
+
+	}
+	
+	public static int generateMonth() {
+
+		Random rd = new Random();
+		int n = rd.nextInt((12 - 10) + 1) + 10;
+		return n;
+
+	}
+	
+	public static int generateDate() {
+
+		Random rd = new Random();
+		int n = rd.nextInt((31 - 10) + 1) + 10;
+		return n;
+
 	}
 
 }
