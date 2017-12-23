@@ -18,6 +18,7 @@ public class CT_CLoanStepDefs_CTL_116 {
 	public void enter_valid_personal_contact_employment_and_financial_information() throws Throwable {
 		CT_Cloan_FakePerson person = new CT_Cloan_FakePerson();
 		person.fillOutAllPersonInfoOn_CT_Cloan();
+		// comment
 	}
 
 	@When("^I submit the form$")
@@ -29,17 +30,16 @@ public class CT_CLoanStepDefs_CTL_116 {
 
 	@Then("^I should get an email confirming my application$")
 	public void i_should_get_an_email_confirming_my_application() throws Throwable {
-//		EmailChecker cheker = new EmailChecker();
+		// EmailChecker cheker = new EmailChecker();
 
 		String[] loanNumber = driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText().split(" ");
-		
+
 		System.out.println(loanNumber[6].replaceAll(".", ""));
 		for (String string : loanNumber) {
 			System.out.print(string + " ");
 		}
-//		System.out.println(EmailChecker.massageText().concat(str));
-		
-		
+		// System.out.println(EmailChecker.massageText().concat(str));
+
 	}
 
 }
