@@ -49,17 +49,6 @@ public class CTL112_LoanApplicationConfirmationEmailAttachment {
 		gmail.ctlEmail.click();
 	}
 
-//	@Then("^I check if an email recieved with an attachment named CTLoanDev\\.pdf$")
-//	public void i_check_if_an_email_recieved_with_an_attachment_named_CTLoanDev_pdf() throws Throwable {
-//		wait.until(ExpectedConditions.visibilityOf(gmail.PDFattachment));
-//		Assert.assertTrue(gmail.PDFattachment.isDisplayed());
-//		String attachmentExpectedName = "CTLoanDev.pdf";
-//		String attachmentActualName = gmail.PDFattachment.getAttribute("title");
-//		Assert.assertTrue(attachmentExpectedName.equals(attachmentActualName));
-//		System.out.println("Expected name is - " + attachmentExpectedName);
-//		System.out.println("Actual name is -" + attachmentActualName);
-//
-//	}
 	
 	@Then("^I check if an email recieved with an attachment named \"([^\"]*)\"$")
 	public void i_check_if_an_email_recieved_with_an_attachment_named(String attachmentName) throws Throwable {

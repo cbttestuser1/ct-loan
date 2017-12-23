@@ -33,8 +33,7 @@ Scenario: Test Loan Application confirmation email attachment
 	And I select Supervisor 
 	When I click on Next button employment page 
 	Then I have to end up in financial information page. 
-	And user checks the button for loan application 
-	
+	And user checks the button for loan application 	
 	And user enter anual income 
 	And user selects income type 
 	And user checks button about rent/own a house 
@@ -52,7 +51,7 @@ Scenario: Test Loan Application confirmation email attachment
 	And I add usearname "markjonesctl@gmail.com" and click next button 
 	And I add password "cybertek" and click next button 
 	Then I open email from CT Loan from inbox folder 
-	Then I check if an email recieved with an attachment named "CTLoanDev.pdf"
+	Then I check if an email recieved with an attachment named "CTLoanDev.pdf" 
 	
 	
 	
