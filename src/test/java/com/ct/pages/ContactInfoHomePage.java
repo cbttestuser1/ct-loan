@@ -66,7 +66,6 @@ public class ContactInfoHomePage {
 	 @FindBy(xpath="(//div/span/input[@name='countrycode'])[1]")
 	 public WebElement personalPh1;
 	 
-	
 	 @FindBy(xpath="(//div/span/input[@name='countrycode'])[2]")
 	 public WebElement personalPh2;
 	 
@@ -75,10 +74,5 @@ public class ContactInfoHomePage {
 	 
 	 @FindBy(xpath="//*[@id='error-Email1']")
 	 public WebElement emailErrorMWork;
-	
-	 
-
-	 
-	 
 
 }

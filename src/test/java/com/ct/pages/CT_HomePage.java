@@ -19,6 +19,9 @@ public class CT_HomePage {
 	@FindBy(css=".tempHeadContBdr")
 	public WebElement ct_Loan;
 	
+	@FindBy(xpath="//*[@id='error-SingleLine']")
+	public WebElement errorFistName;
+	
 	@FindBy(xpath="//span/input[@name='SingleLine']")
 	public WebElement firstName;
 	

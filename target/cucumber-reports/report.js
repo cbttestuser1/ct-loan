@@ -95,42 +95,42 @@ formatter.match({
   "location": "personalStepInfo.user_navigates_to_the_following_url(String)"
 });
 formatter.result({
-  "duration": 5679041925,
+  "duration": 8023787732,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.enters_First_Name_and_Last_Name()"
 });
 formatter.result({
-  "duration": 1086743359,
+  "duration": 1087219838,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Data_type_String_characters_a_Z()"
 });
 formatter.result({
-  "duration": 1767674082,
+  "duration": 1481676708,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.field_type_text_box()"
 });
 formatter.result({
-  "duration": 96437458,
+  "duration": 85148808,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.accepted_special_characters_apostrophe_hyphen()"
 });
 formatter.result({
-  "duration": 1034124704,
+  "duration": 1042041798,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_selects_the_gender()"
 });
 formatter.result({
-  "duration": 1015605086,
+  "duration": 1024615230,
   "status": "passed"
 });
 formatter.match({
@@ -143,42 +143,42 @@ formatter.match({
   "location": "personalStepInfo.verify_field_input_options_F_M(int)"
 });
 formatter.result({
-  "duration": 43379615,
+  "duration": 42887705,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_enters_Date_of_Birth()"
 });
 formatter.result({
-  "duration": 2375755577,
+  "duration": 2394207690,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Watermark_format_is_MM_DD_YYYY()"
 });
 formatter.result({
-  "duration": 41636329,
+  "duration": 40561079,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.data_type_integer()"
 });
 formatter.result({
-  "duration": 1750453904,
+  "duration": 1782581454,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.user_enters_SSN()"
 });
 formatter.result({
-  "duration": 1042556759,
+  "duration": 1047362206,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.verify_Data_type_integer_only()"
 });
 formatter.result({
-  "duration": 375362332,
+  "duration": 392795680,
   "status": "passed"
 });
 formatter.match({
@@ -191,11 +191,11 @@ formatter.match({
   "location": "personalStepInfo.watermark_format(String)"
 });
 formatter.result({
-  "duration": 2433059882,
+  "duration": 2412843065,
   "status": "passed"
 });
 formatter.after({
-  "duration": 242758,
+  "duration": 152995,
   "status": "passed"
 });
 formatter.scenario({
@@ -280,74 +280,74 @@ formatter.match({
   "location": "personalStepInfo.the_user_enters_the_address_line_one()"
 });
 formatter.result({
-  "duration": 1188904638,
+  "duration": 1210724596,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_address_line_two()"
 });
 formatter.result({
-  "duration": 1060529921,
+  "duration": 1075988026,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enter_city()"
 });
 formatter.result({
-  "duration": 1017754026,
+  "duration": 1025910444,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enter_state()"
 });
 formatter.result({
-  "duration": 985556725,
+  "duration": 984996695,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_zipcode()"
 });
 formatter.result({
-  "duration": 628496877,
+  "duration": 613989066,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_work_phone()"
 });
 formatter.result({
-  "duration": 686084755,
+  "duration": 679117527,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Country()"
 });
 formatter.result({
-  "duration": 1041996664,
+  "duration": 1077986710,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Extension()"
 });
 formatter.result({
-  "duration": 1032521497,
+  "duration": 1024860781,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Email()"
 });
 formatter.result({
-  "duration": 1165283942,
+  "duration": 1152891678,
   "status": "passed"
 });
 formatter.match({
   "location": "personalStepInfo.the_user_enters_Personal_email()"
 });
 formatter.result({
-  "duration": 1210110772,
+  "duration": 1214187781,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32849,
+  "duration": 33562,
   "status": "passed"
 });
 formatter.uri("userContactInfo.feature");
@@ -431,14 +431,14 @@ formatter.match({
   "location": "contactInfoVerify.user_is_on_Contact_Information_Page()"
 });
 formatter.result({
-  "duration": 75280253,
+  "duration": 84354616,
   "status": "passed"
 });
 formatter.match({
   "location": "contactInfoVerify.user_enters_Work_Phone_number()"
 });
 formatter.result({
-  "duration": 474809744,
+  "duration": 480173953,
   "status": "passed"
 });
 formatter.match({
@@ -451,14 +451,14 @@ formatter.match({
   "location": "contactInfoVerify.verify_the_Size_digits(int)"
 });
 formatter.result({
-  "duration": 302996933,
+  "duration": 304231605,
   "status": "passed"
 });
 formatter.match({
   "location": "contactInfoVerify.user_enters_Extension()"
 });
 formatter.result({
-  "duration": 488007884,
+  "duration": 300167153,
   "status": "passed"
 });
 formatter.match({
@@ -471,14 +471,14 @@ formatter.match({
   "location": "contactInfoVerify.verify_the_Size_digits(int)"
 });
 formatter.result({
-  "duration": 304974284,
+  "duration": 302299628,
   "status": "passed"
 });
 formatter.match({
   "location": "contactInfoVerify.user_enters_Email_work()"
 });
 formatter.result({
-  "duration": 523069191,
+  "duration": 570125674,
   "status": "passed"
 });
 formatter.match({
@@ -495,14 +495,14 @@ formatter.match({
   "location": "contactInfoVerify.verify_Size_digits(int,int)"
 });
 formatter.result({
-  "duration": 1377087900,
+  "duration": 1345244577,
   "status": "passed"
 });
 formatter.match({
   "location": "contactInfoVerify.user_enters_Personal_email()"
 });
 formatter.result({
-  "duration": 335689702,
+  "duration": 344277929,
   "status": "passed"
 });
 formatter.match({
@@ -519,7 +519,7 @@ formatter.match({
   "location": "contactInfoVerify.verify_Size_digits(int,int)"
 });
 formatter.result({
-  "duration": 438795527,
+  "duration": 436563891,
   "status": "passed"
 });
 formatter.match({
@@ -536,18 +536,18 @@ formatter.match({
   "location": "contactInfoVerify.verify_one_more_time_Size_digits(int,int)"
 });
 formatter.result({
-  "duration": 305403484,
+  "duration": 303753634,
   "status": "passed"
 });
 formatter.match({
   "location": "contactInfoVerify.the_user_clicks_next()"
 });
 formatter.result({
-  "duration": 378090450,
+  "duration": 368386149,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31398,
+  "duration": 33020,
   "status": "passed"
 });
 formatter.scenario({
@@ -604,46 +604,46 @@ formatter.match({
   "location": "positiveEmpTest.get_the_page_Logo()"
 });
 formatter.result({
-  "duration": 40808197,
+  "duration": 45578361,
   "status": "passed"
 });
 formatter.match({
   "location": "positiveEmpTest.choose_the_Title()"
 });
 formatter.result({
-  "duration": 486803528,
+  "duration": 480441231,
   "status": "passed"
 });
 formatter.match({
   "location": "positiveEmpTest.choose_Department()"
 });
 formatter.result({
-  "duration": 517731754,
+  "duration": 529891508,
   "status": "passed"
 });
 formatter.match({
   "location": "positiveEmpTest.choose_Time_of_Empoyment()"
 });
 formatter.result({
-  "duration": 521624493,
+  "duration": 539267954,
   "status": "passed"
 });
 formatter.match({
   "location": "positiveEmpTest.choose_Loan_Type()"
 });
 formatter.result({
-  "duration": 509295565,
+  "duration": 549834537,
   "status": "passed"
 });
 formatter.match({
   "location": "positiveEmpTest.choose_Supervisor_Contact_Info()"
 });
 formatter.result({
-  "duration": 706474301,
+  "duration": 825241599,
   "status": "passed"
 });
 formatter.after({
-  "duration": 85849,
+  "duration": 69640,
   "status": "passed"
 });
 });

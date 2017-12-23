@@ -51,8 +51,8 @@ public class contactInfoVerify {
 	@Then("^User enters Extension$")
 	public void user_enters_Extension() throws Throwable {
 		Thread.sleep(300);
-		contactInfo.Extension.sendKeys("678910788986");
-		System.out.println("Extension number has been entered!");
+//		contactInfo.Extension.sendKeys("678910788986");
+//		System.out.println("Extension number has been entered!");
 		
 	}
 

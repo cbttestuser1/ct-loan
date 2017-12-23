@@ -47,7 +47,20 @@
        <artifactId>slf4j-log4j12</artifactId>
        <version>1.7.5</version>
    </dependency>
+   <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+
 	</dependencies>
+	
+	<repositories>
+        <repository>
+            <id>oracle</id>
+            <url>http://www.datanucleus.org/downloads/maven2/</url>
+        </repository>
+    </repositories>
 	<build>
 		<plugins>
 			<plugin>

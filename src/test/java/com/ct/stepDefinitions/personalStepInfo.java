@@ -36,7 +36,7 @@ public class personalStepInfo {
 		Driver.getInstance().switchTo().defaultContent();
 		Driver.getInstance().switchTo().parentFrame();
 		Driver.getInstance().switchTo().frame(1);
-		homePage.firstName.sendKeys("Adam");
+		homePage.firstName.sendKeys("Akyl");
 		Thread.sleep(300);
 		homePage.lastName.sendKeys("Smith");
 		Thread.sleep(300);
@@ -45,11 +45,11 @@ public class personalStepInfo {
 
 	@Then("^Verify Data type: String characters a-Z$")
 	public void verify_Data_type_String_characters_a_Z() throws Throwable {
-		homePage.firstName.clear();
+//		homePage.firstName.clear();
 		homePage.lastName.clear();
 		Thread.sleep(900);
-		homePage.firstName.sendKeys(chars);
-
+//		homePage.firstName.sendKeys(chars);
+//
 		if (chars.equals(chars)) {
 			for (int i = 0; i < chars.length; i++) {
 				System.out.print(chars[i].toString());
@@ -60,6 +60,7 @@ public class personalStepInfo {
 		}
 
 		homePage.lastName.sendKeys(chars);
+		
 
 	}
 
@@ -259,7 +260,7 @@ public class personalStepInfo {
 	@When("^the user enters Extension$")
 	public void the_user_enters_Extension() throws Throwable {
 		Thread.sleep(900);
-		contactInfo.Extension.sendKeys("12345");
+		contactInfo.Extension.sendKeys("90571");
 	    
 	}
 
