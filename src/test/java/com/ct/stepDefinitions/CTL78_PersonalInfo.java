@@ -44,11 +44,12 @@ public class CTL78_PersonalInfo {
 	cthome.GenderFemale.click();
 	}
 
-	@And("^User enters Date of Birth$")
-	public void user_enters_Date_of_Birth() throws Throwable {
-	  cthome.DateOfBirth.sendKeys("12/02/1990");
-	    
-	}
+//	@And("^User enters Date of Birth$")
+//	public void user_enters_Date_of_Birth() throws Throwable {
+//	  cthome.DateOfBirth.sendKeys("12/02/1990");
+//	    
+//	} this code is the same in personalStepInfo,
+	//so there was an initilization error from cucumber class so it was uncommanded
 
 	@And("^User enters SSN as (\\d+)$")
 	public void user_enters_SSN_as(int arg1) throws Throwable {
