@@ -312,12 +312,13 @@ public class CT_Cloan_FakePerson {
 	private String singlLine;
 	private String date;
 
+	Random rand = new Random();
 	public CT_Cloan_FakePerson() {
 		firstName = fk.name().firstName();
 		lastName = fk.name().lastName();
 		dateOfBirth = generateMonth() + "/" + generateDate() + "/"
 				+ generateYear();
-		personalFileID = fk.idNumber().ssnValid().replaceAll("-", "");
+		personalFileID = String.valueOf(rand.nextInt(999999999) + 100000000);
 
 		// for page2 info, random and fake
 		address = fk.address().streetAddress();
