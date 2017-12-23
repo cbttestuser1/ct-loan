@@ -1,6 +1,7 @@
 package com.ct.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -77,8 +78,8 @@ public class CT_CloanHomePage_4 {
 
 	// WebElement for 'Income Type' Selector
 	@FindBy(xpath = "//select[@name='Dropdown5']")
-	public  WebElement incomeTypeSelector;
-	private  Select incomeType = new Select(incomeTypeSelector);
+	public   WebElement incomeTypeSelector;
+//	public   Select incomeType = new Select(incomeTypeSelector);
 
 	public  enum IncomeTypeEnum {
 		Biweekly, Monthly, Yearly
@@ -86,7 +87,8 @@ public class CT_CloanHomePage_4 {
 
 	// Method for working with 'Income Type' Selector
 	// selection by value with ENUM
-	public  void selectIncomeTypeByValue(IncomeTypeEnum type) {
+	public   void selectIncomeTypeByValue(IncomeTypeEnum type) {
+		Select incomeType = new Select(incomeTypeSelector);
 		switch (type) {
 		case Biweekly:
 			incomeType.selectByValue("Biweekly");
@@ -195,9 +197,8 @@ public class CT_CloanHomePage_4 {
 	public  WebElement DesiredLoanTermText;
 
 	// WebElement for 'Income Type' Selector
-	@FindBy(css = ".Dropdown6")
-	public  WebElement DesiredLoanTermSelector;
-	private  Select DesiredLoanTerm = new Select(DesiredLoanTermSelector);
+	@FindBy(name = "Dropdown6")
+	public  WebElement DesiredLoanTermSelector;  
 
 	public  enum DesiredLoanType {
 		Months_12, Months_18, Months_24, Months_36,
@@ -206,6 +207,7 @@ public class CT_CloanHomePage_4 {
 	// Method for working with 'Desired Loan Term' Selector
 	// selection by value with ENUM
 	public   void selectDesiredLoanTermByValue(DesiredLoanType type) {
+		Select DesiredLoanTerm = new Select(DesiredLoanTermSelector);
 		switch (type) {
 		case Months_12:
 			DesiredLoanTerm.selectByValue("12 months");
@@ -236,7 +238,7 @@ public class CT_CloanHomePage_4 {
 	@FindBy(xpath = "//li[@id='DecisionBox-li']//label")
 	public   WebElement TermAgreementText;
 
-	@FindBy(css = "DecisionBox")
+	@FindBy(id = "DecisionBox")
 	public   WebElement TermAgreemenCheckBox;
 
 	// Element for ERROR TermAgreement Check
@@ -248,13 +250,50 @@ public class CT_CloanHomePage_4 {
 	 * Input box for 'Single Line"
 	 */
 
-	@FindBy(css = "#SingleLine5")
+	@FindBy(name = "SingleLine5")
 	public   WebElement singleLineInputBox;
 
+	
+	/*
+	 * Date
+	 */
+	
+	@FindBy (xpath = "//input[@id='Date1-date']")
+	public WebElement dateSubmit;
+	
+	@FindBy (css = ".ui-state-default.ui-state-highlight")
+	public WebElement todayDay;
+	
+	/*
+	 * Enter Full name input box
+	 */
+	@FindBy (name = "SingleLine4")
+	public WebElement signatureForLoan;
 	/*
 	 * "Submit" button
 	 */
 
 	@FindBy(css = ".fmSmtButton.submitColor.fmSmtButtom em")
 	public   WebElement submitButton;
+
+	public void fiiOutTheForm(String isItFirstLoan, String annualIncome, String incomeType2, String renrtOrOwn,
+			String spendInMonth, String dependancy, String saving, String loanTerm, String signature, String singlLine, String date) {
+		selectFistCTLoan(isItFirstLoan);
+		annualIncomeIputBox.sendKeys(annualIncome);
+		incomeTypeSelector.sendKeys(incomeType2);
+		selectOwnOrRentHouse(renrtOrOwn);
+		SpendingInMonthInputBox.sendKeys(spendInMonth);
+		DependentsInputBox.sendKeys(dependancy);
+		SavingInputBox.sendKeys(saving);
+		DesiredLoanTermSelector.sendKeys(loanTerm);
+		TermAgreemenCheckBox.click();
+		signatureForLoan.sendKeys(signature);
+		singleLineInputBox.sendKeys(singlLine);
+		dateSubmit.click();
+		Actions action = new Actions(Driver.getInstance());
+		action.click(todayDay).perform();
+//		todayDay.click();
+		
+		
+	}
 }
