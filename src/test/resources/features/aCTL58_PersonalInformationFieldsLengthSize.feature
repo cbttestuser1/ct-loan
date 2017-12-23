@@ -1,6 +1,6 @@
 Feature: Test Personal Information fields Length/size 
 
-@SmokeTest
+
 Scenario: verify with min length 
 	Given I am on the personal information page of CT-Loan 
 	When I enter first name "adhyhyd" 

@@ -10,8 +10,9 @@ import com.google.api.services.gmail.model.Message;
 
 public class TestGmail {
     public static void main(String[] args) throws IOException {
+    	
 		Gmail service = GmailUtility.getGmailService();
-		List<Message> messages = GmailUtility.listMessagesMatchingQuery(service,"me","from:training@cybertekschool.com");
+		List<Message> messages = GmailUtility.listMessagesMatchingQuery(service,"me","from:training@cybertekschool.com subject:loan ");
 		String messageId=messages.get(0).getId();
 		System.out.println(GmailUtility.getMessage(service, "me", messageId));
 		GmailUtility.getAttachments(service,"me",messageId);

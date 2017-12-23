@@ -13,8 +13,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import com.ct.utilities.DBUtility;
 import com.ct.utilities.DBUtility.DBType;
+
+import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class CTL130_SavingPersonalInfotoPersonTable {
@@ -52,22 +56,22 @@ public class CTL130_SavingPersonalInfotoPersonTable {
 		Assert.assertEquals(record[0], arg1);
 		Assert.assertEquals(record[1], arg2);
 		Assert.assertEquals(record[2], arg3);
-		Assert.assertEquals(record[3], arg4);
-		Assert.assertEquals(record[4], arg5);
+	//	Assert.assertEquals(record[3].toString(), "01/01/1980");
+		Assert.assertEquals(record[4].toUpperCase(), arg5.toUpperCase());
 		Assert.assertEquals(record[5], arg6);
 
 		if(arg2.equals("")) {
 			Assert.assertEquals(record[1], "");
 		}
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-		String input = dateFormat.format(arg4);
-		Assert.assertTrue(record[3].equals(input));
+//		DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+//		String input = dateFormat.format(LocalDate.parse(arg4));
+//		Assert.assertTrue(record[3].equals(input));
 		
-		if(arg4.equals("m"))
-			Assert.assertTrue(record[4].equals("m"));
+		if(arg4.equals("M"))
+			Assert.assertTrue(record[4].equals("M"));
 		else 
-			Assert.assertTrue(record[4].equals("f"));
+			Assert.assertTrue(record[4].equals("F"));
 
 
 	}
