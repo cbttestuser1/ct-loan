@@ -164,6 +164,32 @@ public class GmailUtility {
     	      }
     	    }
     	    }
+    
+    public static String getAttachmentName(Gmail service, String userId, String messageId)
+  	      throws IOException {
+    	String filename ="";
+  	    Message message = service.users().messages().get(userId, messageId).execute();
+  	    List<MessagePart> parts = message.getPayload().getParts();
+  	    for (MessagePart part : parts) {
+  	      if (part.getFilename() != null && part.getFilename().length() > 0) {
+  	        filename = part.getFilename();
+  	        
+  	        
+  	        String attId = part.getBody().getAttachmentId();
+  	        MessagePartBody attachPart = service.users().messages().attachments().
+  	            get(userId, messageId, attId).execute();
+
+  	        byte[] fileByteArray = Base64.decodeBase64(attachPart.getData());
+  	        FileOutputStream fileOutFile =
+  	            new FileOutputStream("" + filename);
+  	        fileOutFile.write(fileByteArray);
+  	        fileOutFile.close();
+  	      }
+  	      
+  	      
+  	    }
+  	    return filename;
+  	    }
     	    
 
 }

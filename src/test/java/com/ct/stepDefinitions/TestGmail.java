@@ -12,9 +12,12 @@ public class TestGmail {
     public static void main(String[] args) throws IOException {
     	
 		Gmail service = GmailUtility.getGmailService();
-		List<Message> messages = GmailUtility.listMessagesMatchingQuery(service,"me","from:training@cybertekschool.com subject:loan ");
+		List<Message> messages = GmailUtility.listMessagesMatchingQuery(service,"me","from:training@cybertekschool.com");
 		String messageId=messages.get(0).getId();
-		System.out.println(GmailUtility.getMessage(service, "me", messageId));
-		GmailUtility.getAttachments(service,"me",messageId);
+		//System.out.println(GmailUtility.getMessage(service, "me", messageId));
+		//GmailUtility.getAttachments(service,"me",messageId);
+		System.out.println(GmailUtility.getAttachmentName(service,"me",messageId));
+
+
 	}
 }
