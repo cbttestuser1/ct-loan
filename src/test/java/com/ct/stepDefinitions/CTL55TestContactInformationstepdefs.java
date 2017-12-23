@@ -89,7 +89,7 @@ public class CTL55TestContactInformationstepdefs {
 
 	@Given("^the user click on the next button $")
 	public void the_user_click_on_the_next_button() throws Throwable {
-		homePage.nextButton.click();
+		homePage.nextButton2.click();
 	}
 
 	@Then("^the employment information should be displayed \"([^\"]*)\"$")

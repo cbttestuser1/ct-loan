@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.ct.pages.CTL55_HomePage;
 import com.ct.pages.CTeckLoan43ContatInfoHome;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
@@ -18,6 +19,7 @@ public class CTeckLoan46ContactInfoNegative {
 
 	CTeckLoan43ContatInfoHome pages = new CTeckLoan43ContatInfoHome();
 	CTContstants url = new CTContstants();
+	CTL55_HomePage page = new CTL55_HomePage();
 	WebDriverWait wait = new WebDriverWait(Driver.getInstance(), 10);
 
 	@Given("^user on the homepage of CT-Loan$")
@@ -76,7 +78,9 @@ public class CTeckLoan46ContactInfoNegative {
 
 	@Given("^user should click on Next button$")
 	public void user_should_click_on_Next_button() throws Throwable {
-		pages.clickOnNextButton();
+		page.moveToElementAction(page.nextButton1);
+		page.nextButton1.click();
+
 	}
 
 	@Then("^user need to assert that he is in Employment Information Page$")

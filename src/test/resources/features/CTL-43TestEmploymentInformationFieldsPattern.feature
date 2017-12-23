@@ -10,7 +10,7 @@ Scenario Outline:
 	And  user enters Extension "<#####>" 
 	And  user enters Personal Email "<Personal Email>" 
 	And  user enters Work Email "<Work Email>" 
-	And user should click on Next button 
+    And user should click on Next button 
 	Then user need to assert that he is in Employment Information Page 
 	
 	Examples: 

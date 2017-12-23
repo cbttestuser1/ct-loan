@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.ct.pages.CTL82_HomePage;
 import com.ct.pages.CT_HomePage;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
@@ -17,6 +18,7 @@ public class CTL31StepDefs {
 	CT_HomePage homePage = new CT_HomePage(Driver.getInstance());
 	WebDriverWait wait = new WebDriverWait(Driver.getInstance(), 10);
 	CTContstants url = new CTContstants();
+	CTL82_HomePage page = new CTL82_HomePage();
 
 	@Given("^User is on homepage$")
 	public void user_is_on_homepage() throws Throwable {
@@ -40,6 +42,8 @@ public class CTL31StepDefs {
 	@Given("^user enters date of birth \"([^\"]*)\"$")
 	public void user_enters_Date_of_birth(String dob) throws Throwable {
 		homePage.dateOfBirthField.sendKeys(dob);
+		page.HoverAndClick(homePage.dateOfBirthField, homePage.SSN_Field);
+
 	}
 
 	@Given("^user enters SSN/Personal File ID \"([^\"]*)\"$")
@@ -47,10 +51,10 @@ public class CTL31StepDefs {
 		homePage.SSN_Field.sendKeys(ssn);
 	}
 
-	@Given("^user should click on Next button$")
-	public void user_should_click_on_Next_button() throws Throwable {
-		homePage.clickOnNextButton();
-	}
+	// @Given("^user should click on Next button$")
+	// public void user_should_click_on_Next_button() throws Throwable {
+	// homePage.clickOnNextButton();
+	// }
 
 	@Then("^user need to assert that he is in Contact Information Page$")
 	public void user_need_to_assert_that_he_is_in_Contact_Information_Page() throws Throwable {

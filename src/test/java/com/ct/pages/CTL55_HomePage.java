@@ -66,8 +66,11 @@ public class CTL55_HomePage {
 	@FindBy(xpath = "//input[@name='Email1']")
 	public WebElement workingEmail;
 
+	@FindBy(xpath = "(//div/button[@elname='next'])[1]")
+	public WebElement nextButton1;
+
 	@FindBy(xpath = "(//div/button[@elname='next'])[2]")
-	public WebElement nextButton;
+	public WebElement nextButton2;
 
 	@FindBy(id = "Section2-li")
 	public WebElement employmentInfo;
