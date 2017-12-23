@@ -1,5 +1,5 @@
 Feature: Verify User Information 
-   @cantactInfo
+@cantactInfo 
 Scenario: 
 	Given User is on Contact Information Page 
 	And User enters Work Phone number 
@@ -13,3 +13,12 @@ Scenario:
 	But verify one more time  Size:10-30 digits 
 	And the user clicks next 
 	# Verify Contract TITLE SHOULD BE VISIBLE ON THE TOP OF THE PAGE
+	
+@positiveEmp 
+Scenario: 
+	Given get the page Logo 
+	Then choose the Title
+	Then choose Department 
+	And choose Time of Empoyment 
+	Then choose Loan Type 
+	And choose Supervisor Contact Info

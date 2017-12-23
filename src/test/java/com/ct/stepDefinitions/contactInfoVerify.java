@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.ct.pages.ContactInfoHomePage;
+import com.ct.pages.empInfoPage;
 import com.ct.utilities.Driver;
 
 import cucumber.api.java.en.Given;
@@ -13,6 +14,7 @@ import cucumber.api.java.en.When;
 
 public class contactInfoVerify {
 	ContactInfoHomePage contactInfo = new ContactInfoHomePage();
+	empInfoPage empPage= new empInfoPage();
 	WebDriver driver = Driver.getInstance();
 	final String workPHONE="2401234567";
 
@@ -128,13 +130,13 @@ public class contactInfoVerify {
 		//contactInfo.nextButton.click();
 		Thread.sleep(300);
 //		WebElement pageLogo=driver.findElement(By.xpath("//*[@id='formBodyDiv']//*[@id='Section2-li']/"));
-//		if(pageLogo.isDisplayed()){
-//		System.out.println("Contact page is DONE and application opened the next Step of THE HOME PAGE!"
-//				+ " Which is ==>"+pageLogo.getText());
-//				}else{
-//					System.out.println("DID NOT GET THE PAGE LOGO");
-//					
-//		}
+		if(empPage.EmpInformationSign.isDisplayed()){
+		System.out.println("Contact page is DONE and application opened the next Step of THE HOME PAGE!"
+				+ " Which is ==>"+empPage.EmpInformationSign.getText());
+				}else{
+					System.out.println("DID NOT GET THE PAGE LOGO");
+					
+		}
 	}
 	
 
