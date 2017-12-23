@@ -32,6 +32,14 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.14</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<plugins>
