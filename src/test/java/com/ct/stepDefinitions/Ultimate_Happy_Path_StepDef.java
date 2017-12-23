@@ -1,7 +1,8 @@
 package com.ct.stepDefinitions;
 
-import static org.testng.Assert.assertTrue;
 
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -116,6 +117,6 @@ public class Ultimate_Happy_Path_StepDef {
 	@Then("^CTLoan should contain text loan application ID$")
 	public void ctloan_should_contain_text_loan_application_ID() throws Throwable {
 	    Thread.sleep(3000);
-	    assertTrue(page4.idMessage.isDisplayed());
+	    Assert.assertTrue(page4.idMessage.isDisplayed());
 	}
 }
