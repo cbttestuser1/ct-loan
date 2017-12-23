@@ -1,11 +1,14 @@
 package com.ct.pages;
 
 import java.time.LocalDate;
+import java.util.Hashtable;
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.ct.utilities.Driver;
+import com.ct.utilities.PageUtils;
 import com.github.javafaker.Faker;
 
 import cucumber.api.java.en.Given;
@@ -20,6 +23,7 @@ public class CT_Cloan_FakePerson {
 
 	// for page1 info, random and fake
 	private String firstName;
+
 	public WebDriver getDriver() {
 		return driver;
 	}
@@ -315,8 +319,7 @@ public class CT_Cloan_FakePerson {
 	public CT_Cloan_FakePerson() {
 		firstName = fk.name().firstName();
 		lastName = fk.name().lastName();
-		dateOfBirth = generateMonth() + "/" + generateDate() + "/"
-				+ generateYear();
+		dateOfBirth = generateMonth() + "/" + generateDate() + "/" + generateYear();
 		personalFileID = fk.idNumber().ssnValid().replaceAll("-", "");
 
 		// for page2 info, random and fake
@@ -354,7 +357,7 @@ public class CT_Cloan_FakePerson {
 
 	}
 
-	public void fillOutAllPersonInfoOn_CT_Cloan() throws Throwable {
+	public Hashtable<String, String> fillOutAllPersonInfoOn_CT_Cloan() throws Throwable {
 		// switch to frame
 		driver.switchTo().frame(1);
 
@@ -363,6 +366,7 @@ public class CT_Cloan_FakePerson {
 		p1.fillOutTheForm(firstName, "M", lastName, dateOfBirth, personalFileID);
 		p1.maleBtn.click();
 		p1.nextBtnP1.click();
+
 
 		// fill out page #2
 		CT_CloanHomePage_2 p2 = new CT_CloanHomePage_2();
@@ -379,7 +383,23 @@ public class CT_Cloan_FakePerson {
 		CT_CloanHomePage_4 p4 = new CT_CloanHomePage_4();
 		p4.fiiOutTheForm(isItFirstLoan, annualIncome, incomeType, renrtOrOwn, spendInMonth, dependancy, saving,
 				loanTerm, firstName + " M " + lastName, singlLine, date);
+		p4.submitButton.click();
+		
+		Thread.sleep(2000);
+		String str = driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText();
 
+		String loan_id_str =PageUtils.getId(str);
+		
+		
+		
+		Hashtable<String, String> firstPageData = new Hashtable<>();
+		firstPageData.put("first_name", firstName);
+		firstPageData.put("last_name", lastName);
+		firstPageData.put("middle_init", "M");
+		firstPageData.put("date_of_birth", dateOfBirth);
+		firstPageData.put("personalFileID", personalFileID);
+		firstPageData.put("application_id", loan_id_str);
+		return firstPageData;
 	}
 
 	private String phoneNumberCorrector(String phone) {
@@ -432,7 +452,7 @@ public class CT_Cloan_FakePerson {
 		return n;
 
 	}
-	
+
 	public static int generateMonth() {
 
 		Random rd = new Random();
@@ -440,7 +460,7 @@ public class CT_Cloan_FakePerson {
 		return n;
 
 	}
-	
+
 	public static int generateDate() {
 
 		Random rd = new Random();
