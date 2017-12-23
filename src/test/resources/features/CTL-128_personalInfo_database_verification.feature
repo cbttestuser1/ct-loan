@@ -9,9 +9,9 @@ Scenario Outline: verify the data on person table
 	And personal table should has user's "<MIDDLE_INIT>" middle init 
 	And personal table should has user's "<GENDER>" gender 
 	Then personal table should has user's "<DATE_OF_BIRTH>" date of birth 
-	And gender should be indicated by M and F characters
-	And DOB table must have the date in "dd-MM-yyyy" format
-	When the user does not enter middle name, the field value should be blank
+	And gender should be indicated by M and F characters 
+	When the user does not enter middle name, the field value should be blank 
+	And DOB table must have the date in "dd-MM-yyyy" format 
 	
 	
 	Examples: 

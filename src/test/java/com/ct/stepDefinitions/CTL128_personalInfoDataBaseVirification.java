@@ -1,16 +1,16 @@
 package com.ct.stepDefinitions;
 
-import java.text.DateFormat;
-import java.text.ParseException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import org.junit.Assert;
-
 import com.ct.utilities.DBUtilIty;
 import com.ct.utilities.DBUtilIty.DBType;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -25,6 +25,24 @@ public class CTL128_personalInfoDataBaseVirification {
 	@When("^personal table should contain  \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void personal_table_should_contain_and(String SSN_NR, String FIRST_NAME, String LAST_NAME,
 			String MIDDLE_INIT, String GENDER, String DATE_OF_BIRTH) throws Throwable {
+
+		String SqlQuery = "select * from CTLDEV.PERSON";
+		Connection connect = DBUtilIty.getConnection(DBType.ORACLE);
+		Statement statement = connect.createStatement();
+		ResultSet resultset = statement.executeQuery(SqlQuery);
+		ResultSetMetaData metaData = resultset.getMetaData();
+		List<String> colomnNamesPersonTable = new ArrayList<>();
+		int columns = metaData.getColumnCount();
+		for (int i = 1; i < columns + 1; i++) {
+			System.out.println(metaData.getColumnName(i));
+			colomnNamesPersonTable.add(metaData.getColumnName(i));
+		}
+		Assert.assertTrue(colomnNamesPersonTable.contains(FIRST_NAME));
+		Assert.assertTrue(colomnNamesPersonTable.contains(MIDDLE_INIT));
+		Assert.assertTrue(colomnNamesPersonTable.contains(LAST_NAME));
+		Assert.assertTrue(colomnNamesPersonTable.contains(DATE_OF_BIRTH));
+		Assert.assertTrue(colomnNamesPersonTable.contains(GENDER));
+		Assert.assertTrue(colomnNamesPersonTable.contains(SSN_NR));
 
 		String SqlQuery1 = "select " + SSN_NR + " from CTLDEV.PERSON";
 		List<String[]> results1 = DBUtilIty.runSQLQuery(SqlQuery1);
@@ -44,7 +62,12 @@ public class CTL128_personalInfoDataBaseVirification {
 		String SqlQuery6 = "select " + DATE_OF_BIRTH + " from CTLDEV.PERSON";
 		List<String[]> results6 = DBUtilIty.runSQLQuery(SqlQuery6);
 		Assert.assertTrue(!results6.isEmpty());
-
+		// for (String[] result : results6) {
+		// for (String cell : result) {
+		// System.out.println(cell+"\t");
+		// }
+		// System.out.println();
+		// }
 	}
 
 	@When("^personal table should has user's  \"([^\"]*)\" ssn number$")
@@ -110,19 +133,11 @@ public class CTL128_personalInfoDataBaseVirification {
 			for (String cell : result) {
 				Date date = null;
 				try {
-//				SimpleDateFormat sdf = new SimpleDateFormat(format);
-//				date = sdf.parse(cell);
-//					DateFormat formatter = new SimpleDateFormat(format);
-//					String today = formatter.format(date);
-//					 System.out.println("Today : " + today);
 					SimpleDateFormat sdf = new SimpleDateFormat(format);
 					date = sdf.parse(cell);
-					System.out.println(date + "+++++++++++++");
-					
-					Assert.assertEquals(sdf.format(date), cell);
-				if (!cell.equals(sdf.format(date))) {
+					// Assert.assertEquals(sdf.format(date), cell);
+					if (!cell.equals(sdf.format(date))) {
 						date = null;
-						System.out.println(date + "~~~~~~~~~~~~");
 					}
 				} catch (Exception ex) {
 					ex.printStackTrace();
