@@ -71,8 +71,8 @@ public class CT_Cloan_FakePerson {
 		country = "United States";
 		wpnumber = phoneNumberCorrector(fk.phoneNumber().phoneNumber());
 		extention = "555";
-		personal_email = "bazarypc@gmail.com";
-		work_email = "bazarypc@gmail.com";
+		personal_email = "testemailforcloan@gmail.com";
+		work_email = "testemailforcloan@gmail.com";
 
 		// for page3 info, random and fake
 		title = randomTitleP3();
