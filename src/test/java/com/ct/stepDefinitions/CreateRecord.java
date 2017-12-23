@@ -13,7 +13,7 @@ import com.ct.utilities.Driver;
 
 public class CreateRecord {
 	
-	public void SubmitNewApplication(String firstName, String middleName, String lastName, String gender, String dob, String personId) {
+	public static void SubmitNewApplication(String firstName, String middleName, String lastName, String dob, String gender, String personId) {
 		CT_HomePage_Personal_Information personInfo = new CT_HomePage_Personal_Information();
 		ContactInfoPage infoPage=new ContactInfoPage();
 		CT_59_employmentInfo empInfo=new CT_59_employmentInfo();
@@ -72,7 +72,7 @@ public class CreateRecord {
 		finance.fullName.sendKeys(firstName+" "+lastName);
 		finance.singleLine.sendKeys("");
 		finance.calender.sendKeys("12/23/2017");
-		finance.submitButton.click();
+		//finance.submitButton.click();
 		
 	}
 
