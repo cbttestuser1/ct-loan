@@ -1,7 +1,10 @@
 Feature: Verify personal information 
-@Test128 
-Scenario Outline: verify the data on person table 
+
+Background: 
 	Given I connect to the data table 
+	
+@Test112 	
+Scenario Outline: verify the data on person table 
 	When personal table should contain  "SSN_NR" "FIRST_NAME" "LAST_NAME" "MIDDLE_INIT" "GENDER" and "DATE_OF_BIRTH" 
 	And personal table should has user's  "<SSN_NR>" ssn number 
 	And personal table should has user's "<FIRST_NAME>" first name 
@@ -17,3 +20,9 @@ Scenario Outline: verify the data on person table
 	Examples: 
 		|SSN_NR	  |FIRST_NAME|LAST_NAME|MIDDLE_INIT|GENDER|DATE_OF_BIRTH|
 		|234346980|Mark      |Jones    |Sam        |M     |10/18/1984   |
+		
+		
+Scenario: verify the data on person table 
+	Then verify that "234346980" "Mark" "Jones" "Sam" "M" "18-OCT-1984" "234346980" "20127"
+	|SSN_NR	  |FIRST_NAME|LAST_NAME|MIDDLE_INIT|GENDER|DATE_OF_BIRTH|SSN_NR_1|APPLICATION_ID|
+	|234346980|Mark      |Jones    |Sam        |M     |10/18/1984   |234346980|20127|

@@ -57,7 +57,7 @@ public class Driver {
 		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px red;');", element);
 
 		try {
-			Thread.sleep(10);
+			Thread.sleep(250);
 		} catch (InterruptedException e) {
 
 			System.out.println(e.getMessage());
@@ -68,7 +68,7 @@ public class Driver {
 	public static void unHighLightElement(WebDriver driver, WebElement element) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		Thread.sleep(10);
+		Thread.sleep(100);
 		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", element);
 
 	}

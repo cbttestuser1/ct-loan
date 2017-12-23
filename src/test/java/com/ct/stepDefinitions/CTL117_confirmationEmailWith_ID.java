@@ -19,6 +19,8 @@ public class CTL117_confirmationEmailWith_ID {
 	@Then("^Loan application ID in the email should be the same as system showed after submitting the form$")
 	public void loan_application_ID_in_the_email_should_be_the_same_as_system_showed_after_submitting_the_form() throws Throwable {
 		wait.until(ExpectedConditions.visibilityOf(gmailPage.uniqueID));
+		System.out.println(myApplicationId+"+++++++++++++++++");
+		System.out.println(gmailPage.uniqueID.getText()+"~~~~~~~~~~~~~~~~~~~~");
 		Assert.assertEquals(myApplicationId, gmailPage.uniqueID.getText());
 
 	}

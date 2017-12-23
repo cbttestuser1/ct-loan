@@ -35,7 +35,7 @@ public class CTL112_LoanApplicationConfirmationEmailAttachment {
 		gmail.passwordField.sendKeys(password);
 		Driver.unHighLightElement(Driver.driver, gmail.passwordField);
 		Driver.highLightElement(Driver.driver, gmail.nextButton);
-		wait.until(ExpectedConditions.elementToBeClickable(gmail.passwordField));
+		wait.until(ExpectedConditions.elementToBeClickable(gmail.nextButton));
 		gmail.nextButton.click();
 		Driver.unHighLightElement(Driver.driver, gmail.nextButton);
 	}

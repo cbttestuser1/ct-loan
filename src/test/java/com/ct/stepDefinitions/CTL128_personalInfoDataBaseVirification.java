@@ -14,8 +14,11 @@ import com.ct.utilities.DBUtilIty.DBType;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.assertj.core.api.SoftAssertions;
 
 public class CTL128_personalInfoDataBaseVirification {
+
+	public static SoftAssertions softAssertions = new SoftAssertions();;
 
 	@Given("^I connect to the data table$")
 	public void i_connect_to_the_data_table() throws Throwable {
@@ -33,8 +36,7 @@ public class CTL128_personalInfoDataBaseVirification {
 		ResultSetMetaData metaData = resultset.getMetaData();
 		List<String> colomnNamesPersonTable = new ArrayList<>();
 		int columns = metaData.getColumnCount();
-		for (int i = 1; i < columns + 1; i++) {
-			System.out.println(metaData.getColumnName(i));
+		for (int i = 1; i <= columns; i++) {
 			colomnNamesPersonTable.add(metaData.getColumnName(i));
 		}
 		Assert.assertTrue(colomnNamesPersonTable.contains(FIRST_NAME));
@@ -62,12 +64,7 @@ public class CTL128_personalInfoDataBaseVirification {
 		String SqlQuery6 = "select " + DATE_OF_BIRTH + " from CTLDEV.PERSON";
 		List<String[]> results6 = DBUtilIty.runSQLQuery(SqlQuery6);
 		Assert.assertTrue(!results6.isEmpty());
-		// for (String[] result : results6) {
-		// for (String cell : result) {
-		// System.out.println(cell+"\t");
-		// }
-		// System.out.println();
-		// }
+
 	}
 
 	@When("^personal table should has user's  \"([^\"]*)\" ssn number$")
@@ -135,7 +132,8 @@ public class CTL128_personalInfoDataBaseVirification {
 				try {
 					SimpleDateFormat sdf = new SimpleDateFormat(format);
 					date = sdf.parse(cell);
-					// Assert.assertEquals(sdf.format(date), cell);
+					// softAssertions.assertThat(sdf.format(date)).isEqualTo(date);
+					// Verify.verify(sdf.format(date).equals(date));
 					if (!cell.equals(sdf.format(date))) {
 						date = null;
 					}
@@ -152,4 +150,37 @@ public class CTL128_personalInfoDataBaseVirification {
 		List<String[]> results = DBUtilIty.runSQLQuery(SqlQuery2);
 		Assert.assertTrue(!results.isEmpty());
 	}
+
+	@Then("^verify that \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void verify_that(String SSN_NR, String FIRST_NAME, String LAST_NAME, String MIDDLE_INIT, String GENDER,
+			String DATE_OF_BIRTH, String SSN_NR_1, String APPLICATION_ID) throws Throwable {
+		String[] expectedResult = { SSN_NR, FIRST_NAME, LAST_NAME, MIDDLE_INIT, GENDER, DATE_OF_BIRTH, SSN_NR_1,
+				APPLICATION_ID };
+		String SqlQuery = "select * from CTLDEV.PERSON p join CTLDEV.CORRELATIONS c on p.SSN_NR=c.SSN_NR where APPLICATION_ID=20127";
+		Connection connect = DBUtilIty.getConnection(DBType.ORACLE);
+		Statement statement = connect.createStatement();
+		ResultSet resultset = statement.executeQuery(SqlQuery);
+		ResultSetMetaData metaData = resultset.getMetaData();
+		int columnsCount = metaData.getColumnCount();
+		String[] actualResult = new String[columnsCount];
+		int eachCell = 0;
+		while (resultset.next()) {
+			for (int cell = 1; cell <= columnsCount; cell++) {
+				if (resultset.getString(cell).equals(null)) {
+					resultset.getString(cell).replace(null, "");
+				}
+				actualResult[eachCell] = resultset.getString(cell);
+				eachCell++;
+			}
+		}
+		for (int z = 0; z < expectedResult.length; z++) {
+			if ((expectedResult[z].equals(actualResult[z]))) {
+				System.out.println(expectedResult[z] + " is present");
+			} else {
+				System.out.println(expectedResult[z] + " does not match " + actualResult[z]);
+				continue;
+			}
+		}
+	}
+
 }

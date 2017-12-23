@@ -1,6 +1,6 @@
 Feature: as a User, after submitting the form, I should receive email with 
 
-@Test117 
+@Test112
 Scenario: Test Loan Application confirmation email attachment 
 
 	Given I am on the home page of CT-Loan 
