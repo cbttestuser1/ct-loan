@@ -26,16 +26,18 @@ public class CT_CLoanStepDefs_CTL_116 {
 	@When("^I submit the form$")
 	public void i_submit_the_form() throws Throwable {
 		CT_CloanHomePage_4 p4 = new CT_CloanHomePage_4();
-		p4.submitButton.click();
+		// p4.submitButton.click();
 		Thread.sleep(5000);
 	}
 
 	@Then("^I should get an email confirming my application$")
 	public void i_should_get_an_email_confirming_my_application() throws Throwable {
-		
-		String str = driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText();
-		String content =EmailChecker.massageText();
-		Assert.assertTrue(content.contains(PageUtils.getId(str)));
+
+		String loanNumber = PageUtils.getId(driver.findElement(By.xpath("//*[@id='richTxtMsgSpan']//div[4]")).getText());
+		System.out.println("We got Loan Application Number, it is " + loanNumber);
+		String emailContent = EmailChecker.massageText();
+		Assert.assertTrue(emailContent.contains(loanNumber));
+		System.out.println("Loan Numver " + loanNumber + " and it is contains in email!");
 	}
 
 }
