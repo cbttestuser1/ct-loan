@@ -3,8 +3,6 @@ package com.ct.stepDefinitions;
 
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-
 import com.ct.pages.CTL_30_Personal_Information;
 import com.ct.utilities.CTContstants;
 import com.ct.utilities.Driver;
@@ -14,8 +12,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class CTL_30_Positive {
-
-private static WebDriver driver;
 
 CTL_30_Personal_Information hp=new CTL_30_Personal_Information();
 

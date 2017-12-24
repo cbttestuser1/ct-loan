@@ -1,7 +1,5 @@
 package com.ct.stepDefinitions;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
@@ -33,7 +31,7 @@ public class CTL_33stepDefinition {
 		//verify title
 		//System.out.println(Driver.getInstance().getTitle());
 		String actualTitle=Driver.getInstance().getTitle();
-		String title="CT Loan – Cybertek";
+		String title="CT Loan - Cybertek";
 	    Assert.assertTrue(title.equals(actualTitle));
 	}
 

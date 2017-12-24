@@ -23,7 +23,7 @@ public class CTL_36_Negative_Scenario_2 {
 	@Given("^User submits form with each mandatory fields empty$")
 	public void user_submits_form_with_each_mandatory_fields_empty() throws Throwable {
 		driver.get("http://cybertekschool.com/ctl.qa");
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		new WebDriverWait(driver, 60);
 		driver.switchTo().frame(1);
 		
 		CTL_Personal_Information_Page perInfoPage=new CTL_Personal_Information_Page();

@@ -12,7 +12,6 @@ import com.ct.pages.CTL_Employment_Infor_Mandatory_Fields;
 import com.ct.pages.CTL_Personal_Information_Page;
 import com.ct.utilities.Driver;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,7 +25,7 @@ public class CTL_36_Negative_Scenario {
 	@Given("^User leaves some drop down field empty$")
 	public void user_leaves_some_drop_down_field_empty() throws Throwable {
 		driver.get("http://cybertekschool.com/ctl.qa");
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		new WebDriverWait(driver, 60);
 		driver.switchTo().frame(1);
 		
 		CTL_Personal_Information_Page perInfoPage=new CTL_Personal_Information_Page();
