@@ -332,7 +332,7 @@ public class CT_Cloan_FakePerson {
 
 		dateOfBirth = generateMonth() + "/" + generateDate() + "/"
 				+ generateYear();
-		personalFileID = String.valueOf(rand.nextInt(999999999) + 100000000);
+		personalFileID = String.valueOf(rand.nextInt(99999999) + 100000000);
 
 		// for page2 info, random and fake
 		address = fk.address().streetAddress();
