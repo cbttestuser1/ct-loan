@@ -10,7 +10,7 @@
         "after": [
           {
             "result": {
-              "duration": 152995,
+              "duration": 149855,
               "status": "passed"
             },
             "match": {
@@ -23,7 +23,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8023787732,
+              "duration": 8672539737,
               "status": "passed"
             },
             "line": 5,
@@ -41,7 +41,7 @@
           },
           {
             "result": {
-              "duration": 1087219838,
+              "duration": 1136592670,
               "status": "passed"
             },
             "line": 6,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 1481676708,
+              "duration": 1303727976,
               "status": "passed"
             },
             "line": 7,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 85148808,
+              "duration": 59484041,
               "status": "passed"
             },
             "line": 8,
@@ -77,7 +77,7 @@
           },
           {
             "result": {
-              "duration": 1042041798,
+              "duration": 1028771243,
               "status": "passed"
             },
             "line": 9,
@@ -89,7 +89,7 @@
           },
           {
             "result": {
-              "duration": 1024615230,
+              "duration": 1024469947,
               "status": "passed"
             },
             "line": 10,
@@ -101,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 42887705,
+              "duration": 44861919,
               "status": "passed"
             },
             "line": 11,
@@ -119,7 +119,7 @@
           },
           {
             "result": {
-              "duration": 2394207690,
+              "duration": 2373415201,
               "status": "passed"
             },
             "line": 12,
@@ -131,7 +131,7 @@
           },
           {
             "result": {
-              "duration": 40561079,
+              "duration": 40954404,
               "status": "passed"
             },
             "line": 13,
@@ -143,7 +143,7 @@
           },
           {
             "result": {
-              "duration": 1782581454,
+              "duration": 1742935843,
               "status": "passed"
             },
             "line": 14,
@@ -155,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 1047362206,
+              "duration": 1072190421,
               "status": "passed"
             },
             "line": 15,
@@ -167,7 +167,7 @@
           },
           {
             "result": {
-              "duration": 392795680,
+              "duration": 406451813,
               "status": "passed"
             },
             "line": 16,
@@ -179,7 +179,7 @@
           },
           {
             "result": {
-              "duration": 2412843065,
+              "duration": 2430784505,
               "status": "passed"
             },
             "line": 17,
@@ -219,7 +219,7 @@
         "after": [
           {
             "result": {
-              "duration": 33562,
+              "duration": 98091,
               "status": "passed"
             },
             "match": {
@@ -232,7 +232,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1210724596,
+              "duration": 1285122119,
               "status": "passed"
             },
             "line": 27,
@@ -244,7 +244,7 @@
           },
           {
             "result": {
-              "duration": 1075988026,
+              "duration": 1072506280,
               "status": "passed"
             },
             "line": 28,
@@ -256,7 +256,7 @@
           },
           {
             "result": {
-              "duration": 1025910444,
+              "duration": 1029797146,
               "status": "passed"
             },
             "line": 29,
@@ -268,7 +268,7 @@
           },
           {
             "result": {
-              "duration": 984996695,
+              "duration": 988470248,
               "status": "passed"
             },
             "line": 30,
@@ -280,7 +280,7 @@
           },
           {
             "result": {
-              "duration": 613989066,
+              "duration": 622752507,
               "status": "passed"
             },
             "line": 31,
@@ -292,7 +292,7 @@
           },
           {
             "result": {
-              "duration": 679117527,
+              "duration": 680424820,
               "status": "passed"
             },
             "line": 32,
@@ -304,7 +304,7 @@
           },
           {
             "result": {
-              "duration": 1077986710,
+              "duration": 1052931025,
               "status": "passed"
             },
             "line": 33,
@@ -316,7 +316,7 @@
           },
           {
             "result": {
-              "duration": 1024860781,
+              "duration": 1018357251,
               "status": "passed"
             },
             "line": 34,
@@ -328,7 +328,7 @@
           },
           {
             "result": {
-              "duration": 1152891678,
+              "duration": 1156590821,
               "status": "passed"
             },
             "line": 35,
@@ -340,7 +340,7 @@
           },
           {
             "result": {
-              "duration": 1214187781,
+              "duration": 1219636845,
               "status": "passed"
             },
             "line": 36,
@@ -357,32 +357,16 @@
             "name": "@contact"
           }
         ]
-      }
-    ],
-    "name": "Positive test",
-    "description": "",
-    "id": "positive-test",
-    "keyword": "Feature",
-    "uri": "PersonalInfoPositive.feature",
-    "tags": [
+      },
       {
-        "line": 1,
-        "name": "@positiveInfoTest"
-      }
-    ]
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "line": 3,
+        "line": 39,
         "name": "",
         "description": "",
-        "id": "verify-user-information;",
+        "id": "positive-test;",
         "after": [
           {
             "result": {
-              "duration": 33020,
+              "duration": 75147,
               "status": "passed"
             },
             "match": {
@@ -395,10 +379,10 @@
         "steps": [
           {
             "result": {
-              "duration": 84354616,
+              "duration": 65954333,
               "status": "passed"
             },
-            "line": 4,
+            "line": 40,
             "name": "User is on Contact Information Page",
             "match": {
               "location": "contactInfoVerify.user_is_on_Contact_Information_Page()"
@@ -407,10 +391,10 @@
           },
           {
             "result": {
-              "duration": 480173953,
+              "duration": 513561462,
               "status": "passed"
             },
-            "line": 5,
+            "line": 41,
             "name": "User enters Work Phone number",
             "match": {
               "location": "contactInfoVerify.user_enters_Work_Phone_number()"
@@ -419,10 +403,10 @@
           },
           {
             "result": {
-              "duration": 304231605,
+              "duration": 301253486,
               "status": "passed"
             },
-            "line": 6,
+            "line": 42,
             "name": "Verify the Size:10 digits",
             "match": {
               "arguments": [
@@ -437,10 +421,10 @@
           },
           {
             "result": {
-              "duration": 300167153,
+              "duration": 305219737,
               "status": "passed"
             },
-            "line": 7,
+            "line": 43,
             "name": "User enters Extension",
             "match": {
               "location": "contactInfoVerify.user_enters_Extension()"
@@ -449,10 +433,10 @@
           },
           {
             "result": {
-              "duration": 302299628,
+              "duration": 303267150,
               "status": "passed"
             },
-            "line": 8,
+            "line": 44,
             "name": "Verify the Size:5 digits",
             "match": {
               "arguments": [
@@ -467,10 +451,10 @@
           },
           {
             "result": {
-              "duration": 570125674,
+              "duration": 604468530,
               "status": "passed"
             },
-            "line": 9,
+            "line": 45,
             "name": "User enters Email (work)",
             "match": {
               "location": "contactInfoVerify.user_enters_Email_work()"
@@ -479,10 +463,10 @@
           },
           {
             "result": {
-              "duration": 1345244577,
+              "duration": 1429011818,
               "status": "passed"
             },
-            "line": 10,
+            "line": 46,
             "name": "Verify Size:10-30 digits",
             "match": {
               "arguments": [
@@ -501,10 +485,10 @@
           },
           {
             "result": {
-              "duration": 344277929,
+              "duration": 337184726,
               "status": "passed"
             },
-            "line": 11,
+            "line": 47,
             "name": "User enters Personal (email)",
             "match": {
               "location": "contactInfoVerify.user_enters_Personal_email()"
@@ -513,10 +497,10 @@
           },
           {
             "result": {
-              "duration": 436563891,
+              "duration": 443992325,
               "status": "passed"
             },
-            "line": 12,
+            "line": 48,
             "name": "Verify Size:10-30 digits",
             "match": {
               "arguments": [
@@ -535,10 +519,10 @@
           },
           {
             "result": {
-              "duration": 303753634,
+              "duration": 302112280,
               "status": "passed"
             },
-            "line": 13,
+            "line": 49,
             "name": "verify one more time  Size:10-30 digits",
             "match": {
               "arguments": [
@@ -557,10 +541,10 @@
           },
           {
             "result": {
-              "duration": 368386149,
+              "duration": 375262763,
               "status": "passed"
             },
-            "line": 14,
+            "line": 50,
             "name": "the user clicks next",
             "match": {
               "location": "contactInfoVerify.the_user_clicks_next()"
@@ -570,7 +554,7 @@
         ],
         "tags": [
           {
-            "line": 2,
+            "line": 38,
             "name": "@cantactInfo"
           }
         ]
@@ -578,18 +562,18 @@
       {
         "comments": [
           {
-            "line": 15,
+            "line": 51,
             "value": "# Verify Contract TITLE SHOULD BE VISIBLE ON THE TOP OF THE PAGE"
           }
         ],
-        "line": 18,
+        "line": 54,
         "name": "",
         "description": "",
-        "id": "verify-user-information;",
+        "id": "positive-test;",
         "after": [
           {
             "result": {
-              "duration": 69640,
+              "duration": 48799,
               "status": "passed"
             },
             "match": {
@@ -602,10 +586,10 @@
         "steps": [
           {
             "result": {
-              "duration": 45578361,
+              "duration": 51172428,
               "status": "passed"
             },
-            "line": 19,
+            "line": 55,
             "name": "get the page Logo",
             "match": {
               "location": "positiveEmpTest.get_the_page_Logo()"
@@ -614,10 +598,10 @@
           },
           {
             "result": {
-              "duration": 480441231,
+              "duration": 515035684,
               "status": "passed"
             },
-            "line": 20,
+            "line": 56,
             "name": "choose the Title",
             "match": {
               "location": "positiveEmpTest.choose_the_Title()"
@@ -626,10 +610,10 @@
           },
           {
             "result": {
-              "duration": 529891508,
+              "duration": 560495725,
               "status": "passed"
             },
-            "line": 21,
+            "line": 57,
             "name": "choose Department",
             "match": {
               "location": "positiveEmpTest.choose_Department()"
@@ -638,10 +622,10 @@
           },
           {
             "result": {
-              "duration": 539267954,
+              "duration": 542941447,
               "status": "passed"
             },
-            "line": 22,
+            "line": 58,
             "name": "choose Time of Empoyment",
             "match": {
               "location": "positiveEmpTest.choose_Time_of_Empoyment()"
@@ -650,10 +634,10 @@
           },
           {
             "result": {
-              "duration": 549834537,
+              "duration": 557870722,
               "status": "passed"
             },
-            "line": 23,
+            "line": 59,
             "name": "choose Loan Type",
             "match": {
               "location": "positiveEmpTest.choose_Loan_Type()"
@@ -662,10 +646,10 @@
           },
           {
             "result": {
-              "duration": 825241599,
+              "duration": 827061915,
               "status": "passed"
             },
-            "line": 24,
+            "line": 60,
             "name": "choose Supervisor Contact Info",
             "match": {
               "location": "positiveEmpTest.choose_Supervisor_Contact_Info()"
@@ -675,16 +659,298 @@
         ],
         "tags": [
           {
-            "line": 17,
+            "line": 53,
             "name": "@positiveEmp"
+          }
+        ]
+      },
+      {
+        "line": 63,
+        "name": "Positive",
+        "description": "",
+        "id": "positive-test;positive",
+        "after": [
+          {
+            "result": {
+              "duration": 62313,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5161651,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "The user should be in financial information page",
+            "match": {
+              "location": "FinancialCTL.the_user_should_be_in_financial_information_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 609632207,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "The user should choose Ct Loan \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 32
+                }
+              ],
+              "location": "FinancialCTL.the_user_should_choose_Ct_Loan(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 635815142,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "The user should fill annual income",
+            "match": {
+              "location": "FinancialCTL.the_user_should_fill_annual_income()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 986959950,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "The user should choose income type",
+            "match": {
+              "location": "FinancialCTL.the_user_should_choose_income_type()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 612779990,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "The user should choose house own or rent",
+            "match": {
+              "location": "FinancialCTL.the_user_should_choose_house_own_or_rent()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 606116550,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "The user should fill spent in one month",
+            "match": {
+              "location": "FinancialCTL.the_user_should_fill_spent_in_one_month()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 575688456,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "The user should fill number of dependents",
+            "match": {
+              "location": "FinancialCTL.the_user_should_fill_number_of_dependents()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 614521881,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "The user should fill savings",
+            "match": {
+              "location": "FinancialCTL.the_user_should_fill_savings()"
+            },
+            "keyword": "But "
+          },
+          {
+            "result": {
+              "duration": 1002306338,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "The user choose the desired loan term",
+            "match": {
+              "location": "FinancialCTL.the_user_choose_the_desired_loan_term()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 605257317,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "The user should check confirm box",
+            "match": {
+              "location": "FinancialCTL.the_user_should_check_confirm_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 676288990,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "The user should enter full name to submit application",
+            "match": {
+              "location": "FinancialCTL.the_user_should_enter_full_name_to_submit_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 747773253,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "the user should type date",
+            "match": {
+              "location": "FinancialCTL.the_user_should_type_date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 660086032,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "the user should click submit on finanpage",
+            "match": {
+              "location": "FinancialCTL.the_user_should_click_submit_on_finanpage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 505324250,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "assert thank you message is displayed",
+            "match": {
+              "location": "FinancialCTL.assert_thank_you_message_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 62,
+            "name": "@financialInfoPos"
+          }
+        ]
+      },
+      {
+        "line": 80,
+        "name": "Confirm Email",
+        "description": "",
+        "id": "positive-test;confirm-email",
+        "after": [
+          {
+            "result": {
+              "duration": 52005,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19033304,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I am on the CT Loan application",
+            "match": {
+              "location": "EmailConfirmation.i_am_on_the_CT_Loan_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 32358,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "enter valid personal, contact, employment and financial information",
+            "match": {
+              "location": "EmailConfirmation.enter_valid_personal_contact_employment_and_financial_information()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31507,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "I submit the form",
+            "match": {
+              "location": "EmailConfirmation.i_submit_the_form()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5791530139,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "I should get an email with an attachment",
+            "match": {
+              "location": "EmailConfirmation.i_should_get_an_email_with_an_attachment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 79,
+            "name": "@confirmation"
           }
         ]
       }
     ],
-    "name": "Verify User Information",
+    "name": "Positive test",
     "description": "",
-    "id": "verify-user-information",
+    "id": "positive-test",
     "keyword": "Feature",
-    "uri": "userContactInfo.feature"
+    "uri": "CTLoanPositive.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@positiveInfoTest"
+      }
+    ]
   }
 ]

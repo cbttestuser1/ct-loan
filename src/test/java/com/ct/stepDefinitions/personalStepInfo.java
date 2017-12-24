@@ -36,7 +36,7 @@ public class personalStepInfo {
 		Driver.getInstance().switchTo().defaultContent();
 		Driver.getInstance().switchTo().parentFrame();
 		Driver.getInstance().switchTo().frame(1);
-		homePage.firstName.sendKeys("Akyl");
+		homePage.firstName.sendKeys("Akylaykouio");
 		Thread.sleep(300);
 		homePage.lastName.sendKeys("Smith");
 		Thread.sleep(300);

@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)   
 @CucumberOptions(
 		features = "./src/test/resources/features/", 
-        tags = "@positiveInfoTest,@contact, @cantactInfo, @positiveEmp", 
+        tags = "@positiveInfoTest,@contact, @cantactInfo, @positiveEmp,"
+        		+ "@financialInfoPos, @confirmation", 
         glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
         dryRun = false
