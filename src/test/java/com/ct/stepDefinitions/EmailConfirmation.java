@@ -45,6 +45,26 @@ public class EmailConfirmation {
 		Thread.sleep(3000);
 		gmail.password.sendKeys("muratbekova22");
 		gmail.sinInButton.click();
+		
+		WebElement CTemail=gmail.CTLoan;
+		if(CTemail.isDisplayed()){
+		CTemail.click();
+		System.out.println("Openning the email from CT Loan");
+		}else{
+			System.out.println("There is no email from CT Loan");
+			
+			
+			WebElement pdfFile= gmail.pdf;
+			if(pdfFile.isDisplayed()){
+				pdfFile.click();
+				System.out.println("Oppening a PDF File from CT Loan");
+			}else{
+				System.out.println("NO PDF File from CT Loan");
+			}
+			
+		}
+		
+		
 	}
 
 }

@@ -105,5 +105,6 @@ public class FinancialCTL {
 	    public void assert_thank_you_message_is_displayed() throws Throwable {
 	    	Thread.sleep(500);
 	        System.out.println("last step");
+	        
 	    }
 }

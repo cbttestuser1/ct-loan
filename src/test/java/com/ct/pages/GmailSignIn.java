@@ -26,5 +26,11 @@ public class GmailSignIn {
 	
 	@FindBy(id="passwordNext")
 	public WebElement sinInButton;
+	
+	@FindBy(xpath="//*[@email='training@cybertekschool.com']")
+	public WebElement CTLoan;
+	
+	@FindBy(xpath="//*[@class='aSH']")
+	public WebElement pdf;
 
 }

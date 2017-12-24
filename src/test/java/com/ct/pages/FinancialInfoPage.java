@@ -11,11 +11,15 @@ public class FinancialInfoPage {
             PageFactory.initElements(Driver.getInstance(), this);
        }
         
+      @FindBy(xpath = "//h2[.='Financial Information']")
+		public WebElement financialInformationTitle;
+    
       @FindBy(id="Radio1_1")
       public WebElement firstAppYes;
       
-      @FindBy(xpath="//*[@id='Radio1_2']")
+      @FindBy(css="input#Radio1_2.radioBtnType")
       public WebElement firstAppNo;
+      
       //change locator from xpath to css
       @FindBy(xpath="//input[@name='SingleLine3']")
       public WebElement annualIncome;
@@ -57,6 +61,5 @@ public class FinancialInfoPage {
       
       @FindBy(xpath="//button[@class='fmSmtButton submitColor fmSmtButtom']")
       public WebElement submit;
-      
         
 }

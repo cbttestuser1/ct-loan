@@ -36,7 +36,7 @@ public class personalStepInfo {
 		Driver.getInstance().switchTo().defaultContent();
 		Driver.getInstance().switchTo().parentFrame();
 		Driver.getInstance().switchTo().frame(1);
-		homePage.firstName.sendKeys("Akylaykouio");
+		homePage.firstName.sendKeys("Alimbekov");
 		Thread.sleep(300);
 		homePage.lastName.sendKeys("Smith");
 		Thread.sleep(300);
@@ -267,13 +267,13 @@ public class personalStepInfo {
 	@When("^the user enters Email$")
 	public void the_user_enters_Email() throws Throwable {
 		Thread.sleep(900);
-		contactInfo.workEmail.sendKeys("adam94@gmail.com");
+		contactInfo.workEmail.sendKeys("muratbekovazeinep@gmail.com");
 	}
 
 	@When("^the user enters Personal email$")
 	public void the_user_enters_Personal_email() throws Throwable {
 		Thread.sleep(900);
-		contactInfo.PersonalEmail.sendKeys("aydinbekiroglu@gmail.com");
+		contactInfo.PersonalEmail.sendKeys("muratbekovazeinep@gmail.com");
 	}
 
 
