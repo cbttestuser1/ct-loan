@@ -41,7 +41,7 @@ public class ExcelUtils {
 			String cellData = cell.toString();
 			return cellData;
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			return "";
 		}
 	}

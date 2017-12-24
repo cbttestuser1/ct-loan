@@ -1,6 +1,6 @@
 Feature: Saving personal info to person table
 
-@NewTest	
+@Regression
 Scenario Outline: Verifying personal information on database
 	Given I am on the CT Loan application
 	And enter valid personal, contact, employment and financial information by sending "<fName>" "<mName>" "<lName>" "<dob>" "<gender>" "<personalId>"

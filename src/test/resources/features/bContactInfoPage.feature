@@ -9,7 +9,7 @@ Feature: whole flow
 #    And I enter personal file id "0" 
 #    And I click the next button 
 #    Then I should be able to see contact information page 
-@SmokeTest
+
 Scenario Outline: testing inside length/size limit 
     Given currently on CTLoan contacts page 
     And user enters the contact information: 

@@ -1,6 +1,6 @@
 Feature: Navigating to CT-Loan employment page 
 
-@SmokeTest
+
 Scenario: Choosing from the dropdown menues 
 	Given I am on the home page of CT-Loan employment page 
 	When I am choosing Title as a QA 

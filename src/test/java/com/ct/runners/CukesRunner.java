@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/features/", tags = "@NewTest", glue = "com.ct.stepDefinitions", plugin = {
+@CucumberOptions(features = "./src/test/resources/features/", tags = "@Smoke", glue = "com.ct.stepDefinitions", plugin = {
 		"html:target/cucumber-reports", "json:target/cucumber.json" }, dryRun = false)
 
 public class CukesRunner {

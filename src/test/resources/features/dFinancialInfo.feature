@@ -1,6 +1,6 @@
 Feature: Test Financial Information fields 
 
-@SmokeTest 
+ 
 Scenario: Happy Path 
 	Given I am on the financial information page of CT-Loan 
 	When I select first application "Yes" 

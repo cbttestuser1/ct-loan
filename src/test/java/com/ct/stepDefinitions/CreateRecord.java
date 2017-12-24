@@ -10,21 +10,40 @@ import com.ct.pages.ContactInfoPage;
 import com.ct.pages.FinancialInfoPage;
 import com.ct.utilities.Driver;
 
+import static com.ct.utilities.Driver.*;
 
 public class CreateRecord {
 	
-	public static void SubmitNewApplication(String firstName, String middleName, String lastName, String dob, String gender, String personId) {
+	public static void SubmitNewApplication(String firstName, String middleName, String lastName, String dob, String gender, String personId) throws InterruptedException {
 		CT_HomePage_Personal_Information personInfo = new CT_HomePage_Personal_Information();
 		ContactInfoPage infoPage=new ContactInfoPage();
 		CT_59_employmentInfo empInfo=new CT_59_employmentInfo();
 		FinancialInfoPage  finance=new FinancialInfoPage();
 		
+		highLightElement(Driver.getInstance(),personInfo.FirstName);
 		personInfo.FirstName.sendKeys(firstName);
+		unHighLightElement(Driver.getInstance(),personInfo.FirstName);
+
+		highLightElement(Driver.getInstance(),personInfo.MiddleName);
 		personInfo.MiddleName.sendKeys(middleName);
+		unHighLightElement(Driver.getInstance(),personInfo.MiddleName);
+
+		highLightElement(Driver.getInstance(),personInfo.LasttName);
 		personInfo.LasttName.sendKeys(lastName);
+		unHighLightElement(Driver.getInstance(),personInfo.LasttName);
+
+		highLightElement(Driver.getInstance(),personInfo.GenderMale);
 		((JavascriptExecutor) Driver.getInstance()).executeScript("arguments[0].checked = true;", personInfo.GenderMale);
+		unHighLightElement(Driver.getInstance(),personInfo.GenderMale);
+
+		highLightElement(Driver.getInstance(),personInfo.DateOfBirth);
 		personInfo.DateOfBirth.sendKeys("01/01/1980");
-		personInfo.PersonalFileID.sendKeys(personId);
+		unHighLightElement(Driver.getInstance(),personInfo.DateOfBirth);
+
+		highLightElement(Driver.getInstance(),personInfo.PersonalFileID);
+		personInfo.PersonalFileID.sendKeys(personId.replaceAll("-", ""));
+		unHighLightElement(Driver.getInstance(),personInfo.PersonalFileID);
+
 		Driver.getInstance().findElement(By.cssSelector(".next_previous")).click();
 		
 		infoPage.Address1.sendKeys("1 aaaa");
