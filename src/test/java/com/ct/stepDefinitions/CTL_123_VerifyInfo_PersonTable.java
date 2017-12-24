@@ -53,7 +53,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 
 		while (resultset.next()) {
 			if (resultset.getString("SSN_NR").equals(expected_SSN)) {
-				System.out.println(expected_SSN + " exists");
+				System.out.println(expected_SSN + "data found in table");
 				break;
 			}
 		}
@@ -70,7 +70,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 
 		while (resultset.next()) {
 			if (resultset.getString("FIRST_NAME").equals(expected_FirstName)) {
-				System.out.println(expected_FirstName + " exists");
+				System.out.println(expected_FirstName + " data found in table");
 				break;
 			}
 		}
@@ -87,7 +87,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 
 		while (resultset.next()) {
 			if (resultset.getString("LAST_NAME").equals(expected_LastName)) {
-				System.out.println(expected_LastName + " exists");
+				System.out.println(expected_LastName + " data found in table");
 				break;
 			}
 		}
@@ -111,7 +111,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 					continue;
 				}
 				if (resultset.getString(cell).contains(expected_MiddleName)) {
-					System.out.println(expected_MiddleName + " exists");
+					System.out.println(expected_MiddleName + " data found in table");
 					break;
 				}
 
@@ -130,7 +130,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 
 		while (resultset.next()) {
 			if (resultset.getString("GENDER").equals(expected_Gander)) {
-				System.out.println(expected_Gander + " exists");
+				System.out.println(expected_Gander + " data found in table");
 				break;
 			}
 		}
@@ -146,7 +146,7 @@ public class CTL_123_VerifyInfo_PersonTable {
 		for (String[] result : dateResult) {
 			for (String cell : result) {
 				if (cell.contains(expected_dateOfBirth)) {
-					System.out.println(expected_dateOfBirth + " exists");
+					System.out.println(expected_dateOfBirth + " data found in table");
 					break;
 				} else {
 					continue;
