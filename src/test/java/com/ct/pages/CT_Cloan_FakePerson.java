@@ -14,9 +14,18 @@ import com.github.javafaker.Faker;
 import cucumber.api.java.en.Given;
 
 public class CT_Cloan_FakePerson {
+	
 	/*
-	 * change
+	 * Constructor
 	 */
+	public static Hashtable<String, String > actualData=new Hashtable<>();
+	 
+		
+	
+	  
+	 
+	// * change
+	 //*//
 	private WebDriver driver = Driver.getInstance();
 
 	Faker fk = new Faker();
@@ -359,7 +368,7 @@ public class CT_Cloan_FakePerson {
 		date = ""; // TODO finish create today day String.
 
 	}
-
+	
 	public Hashtable<String, String> fillOutAllPersonInfoOn_CT_Cloan() throws Throwable {
 		// switch to frame
 		driver.switchTo().frame(1);
@@ -395,14 +404,15 @@ public class CT_Cloan_FakePerson {
 		
 		
 		
-		Hashtable<String, String> firstPageData = new Hashtable<>();
-		firstPageData.put("first_name", firstName);
-		firstPageData.put("last_name", lastName);
-		firstPageData.put("middle_init", "M");
-		firstPageData.put("date_of_birth", dateOfBirth);
-		firstPageData.put("personalFileID", personalFileID);
-		firstPageData.put("application_id", loan_id_str);
-		return firstPageData;
+		
+		actualData.put("FIRST_NAME", firstName);
+		actualData.put("LAST_NAME", lastName);
+		actualData.put("MIDDLE_INIT", "M");
+		actualData.put("GENDER", "M");
+		actualData.put("DATE_OF_BIRTH", dateOfBirth);
+		actualData.put("SSN_NR", personalFileID);
+		actualData.put("APPLICATION_ID", loan_id_str);
+		return actualData;
 	}
 
 	private String phoneNumberCorrector(String phone) {
