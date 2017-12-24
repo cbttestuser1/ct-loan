@@ -32,7 +32,7 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
@@ -48,8 +48,21 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.6</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jpedal</groupId>
+			<artifactId>OpenViewerFX</artifactId>
+			<version>7.12.28</version>
+		</dependency>
 		
-		
+
 	</dependencies>
 
 	<repositories>
