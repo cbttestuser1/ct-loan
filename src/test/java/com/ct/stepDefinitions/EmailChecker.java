@@ -1,8 +1,13 @@
 package com.ct.stepDefinitions;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 import javax.mail.*;
+import javax.mail.internet.MimeBodyPart;
+
+import org.apache.commons.lang3.StringUtils;
 
 public class EmailChecker {
 
@@ -17,6 +22,78 @@ public class EmailChecker {
 	private static Message[] messages;
 	private static Folder emailFolder;
 	private static Store store;
+
+	public static String downloadAttachment() throws MessagingException {
+
+		String saveDirectory = "./attachments";
+		String fileName = "";
+		
+		getConnection();
+		try {
+			for (int i = 0; i < messages.length; i++) {
+				Message message = messages[i];
+				Address[] fromAddress = message.getFrom();
+				String from = fromAddress[0].toString();
+				String subject = message.getSubject();
+				String sentDate = message.getSentDate().toString();
+
+				String contentType = message.getContentType();
+				String messageContent = "";
+
+				// store attachment file name, separated by comma
+				String attachFiles = "";
+
+				if (contentType.contains("multipart")) {
+					// content may contain attachments
+					Multipart multiPart = (Multipart) message.getContent();
+					int numberOfParts = multiPart.getCount();
+					for (int partCount = 0; partCount < numberOfParts; partCount++) {
+						MimeBodyPart part = (MimeBodyPart) multiPart.getBodyPart(partCount);
+						if (Part.ATTACHMENT.equalsIgnoreCase(part.getDisposition())) {
+							// this part is attachment
+							fileName = part.getFileName();
+							System.out.println("Email has attatchment is " + fileName);
+							attachFiles += fileName + ", ";
+							part.saveFile(saveDirectory + File.separator + fileName);
+						} else {
+							// this part may be the message content
+							messageContent = part.getContent().toString();
+						}
+					}
+
+					if (attachFiles.length() > 1) {
+						attachFiles = attachFiles.substring(0, attachFiles.length() - 2);
+					}
+				} else if (contentType.contains("text/plain") || contentType.contains("text/html")) {
+					Object content = message.getContent();
+					if (content != null) {
+						messageContent = content.toString();
+					}
+				}
+
+				// print out details of each message
+				System.out.println("Message #" + (i + 1) + ":");
+				System.out.println("\t From: " + from);
+				System.out.println("\t Subject: " + subject);
+				System.out.println("\t Sent Date: " + sentDate);
+				System.out.println("\t Message: " + messageContent);
+				System.out.println("\t Attachments: " + attachFiles);
+			}
+
+		} catch (NoSuchProviderException ex) {
+			System.out.println("No provider for pop3.");
+			ex.printStackTrace();
+		} catch (MessagingException ex) {
+			System.out.println("Could not connect to the message store");
+			ex.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		
+		closeConnection();
+		
+		return fileName;
+	}
 
 	public static void getConnection() {
 		try {
@@ -73,10 +150,10 @@ public class EmailChecker {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void closeConnection() throws MessagingException{
-		 emailFolder.close(false);
-					 store.close();
+
+	public static void closeConnection() throws MessagingException {
+		emailFolder.close(false);
+		store.close();
 	}
 
 	public static String massageText() throws IOException, MessagingException {
@@ -97,6 +174,7 @@ public class EmailChecker {
 			// message.getAllRecipients().toString());
 			// System.out.println("Received Date:" + message.getReceivedDate());
 			System.out.println("Text: " + bp.getContent().toString());
+
 			body = bp.getContent().toString();
 		}
 		closeConnection();
