@@ -123,7 +123,7 @@ public class CTL_FinancialInfo {
 		wait.until(ExpectedConditions.visibilityOf(basePage.successMessage));
 		Assert.assertTrue(basePage.successMessage.getText().equals(successMessage));
 		myApplicationId=basePage.applicationID.getText().substring(28, 33);
-		
+		Thread.sleep(3000);
 	}
 	
 }
