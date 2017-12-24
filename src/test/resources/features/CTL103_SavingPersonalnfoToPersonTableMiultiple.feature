@@ -1,6 +1,6 @@
-Feature: Saving personal info to person table
+Feature: Saving personal info to person table multiple entry
 
-@Smoke
+@Sprint3a
 Scenario: Verifying personal information on database
 	Given I am on the CT Loan application
 	And enter valid personal, contact, employment and financial information from Excel

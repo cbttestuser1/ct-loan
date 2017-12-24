@@ -91,8 +91,8 @@ public class Sprint3Steps {
 	public void the_personal_information_should_be_saved_in_person_table() throws Throwable {
 		DBUtility.establishConnection(DBType.ORACLE);
 		ExcelUtils.openExcelFile("./src/test/resources/TestData/CT Loan Test Data.xlsx", "Person Data");
-		int maxRow=47; //ExcelUtils.getUsedRowsCount();
-		for(int i=46;i<=maxRow;i++) {
+		int maxRow=3; //ExcelUtils.getUsedRowsCount();
+		for(int i=3;i<=maxRow;i++) {
 			String firstName=ExcelUtils.getCellData(i, 0);	
 			String middleName="";
 			middleName=ExcelUtils.getCellData(i, 1);	
@@ -100,22 +100,23 @@ public class Sprint3Steps {
 			String gender=ExcelUtils.getCellData(i, 3);	
 			String dob=ExcelUtils.getCellData(i, 4);	
 			String personId=ExcelUtils.getCellData(i, 5);	
-		
+			personId=personId.replaceAll("-", "");
+			
 			CreateRecord.SubmitNewApplication(firstName, middleName, lastName, dob, gender, personId);
 			
 			List<String[]> queryResult = DBUtility
 					.runSQLQuery("SELECT FIRST_NAME, MIDDLE_INIT, LAST_NAME, DATE_OF_BIRTH, GENDER, SSN_NR "
-							+ "FROM CTLDEV.PERSON where FIRST_NAME='"+firstName+"' and LAST_NAME='"+lastName+"'");
+							+ "FROM CTLDEV.PERSON where SSN_NR='"+personId+"'"); //FIRST_NAME='"+firstName+"' and LAST_NAME='"+lastName+"'");
 					
 			DBUtility.closeConnections();
 			String[] record =queryResult.get(0);
-						
+					
 			Assert.assertEquals(record[0], firstName);
 			Assert.assertEquals(record[1], middleName);
 			Assert.assertEquals(record[2], lastName);
 			Assert.assertEquals(record[3].toString().substring(0, 10), "1980-01-01");
 			Assert.assertEquals(record[4].toUpperCase(), gender.toUpperCase());
-			personId=personId.replaceAll("-", "");
+			
 			Assert.assertEquals(record[5], personId);
 
 			if(middleName.equals("")) {
