@@ -10,7 +10,6 @@ import java.util.Hashtable;
 
 import org.openqa.selenium.WebDriver;
 
-import com.ct.pages.CTL_127_DataBase_Page;
 import com.ct.pages.CT_CloanHomePage_4;
 import com.ct.pages.CT_CloanJDBCProject;
 import com.ct.pages.CT_Cloan_FakePerson;
