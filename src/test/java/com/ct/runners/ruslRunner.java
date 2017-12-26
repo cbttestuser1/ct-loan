@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/resources/features/", tags = "@Ruslan", glue = "com.ct.stepDefinitions", plugin = {
-		"html:target/cucumber-reports", "json:target/cucumber.json" }, dryRun = false)
+		"html:target/cucumber-reports", "json:target/cucumber.json" }, dryRun = true)
 
 public class ruslRunner {
 

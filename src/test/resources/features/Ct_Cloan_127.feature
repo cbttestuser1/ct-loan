@@ -6,5 +6,4 @@ Scenario:
 #	And enter valid personal,contact,employment and financial information 
 #	When I submit the application form 
 #	Then I should get an Application ID confirming my application
-	And enter valid personal, contact, employment and financial information
-   	Then verify information from DataBase
+

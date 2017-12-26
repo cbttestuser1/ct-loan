@@ -51,9 +51,9 @@ public class CT_CLoanStepDefs_CTL_116 {
 	@Then("^I should get person information by ssn via rest get endpoint$")
 	public void i_should_get_person_information_by_ssn_via_rest_get_endpoint() throws Throwable {
 		System.out.println("Entered Data true GUI is:");
-		System.out.println(person.getFirstName() + " " + person.getLastName() + " M " + person.getDateOfBirth() + " " + person.getPersonalFileID() +
-				" " + person.getPpnumber() + " " + person.getWpnumber());
-		
+		System.out.println(person.getFirstName() + " " + person.getLastName() + " M " + person.getDateOfBirth() + " "
+				+ person.getPersonalFileID() + " " + person.getPpnumber() + " " + person.getWpnumber());
+
 		System.out.println("\n Got personal information true WebService is: ");
 		URL url = new URL(
 				"http://ec2-54-244-62-153.us-west-2.compute.amazonaws.com:443/person/" + person.getPersonalFileID());
@@ -62,33 +62,32 @@ public class CT_CLoanStepDefs_CTL_116 {
 		System.out.println("\n WebService Responce is: ");
 		System.out.println(text);
 		JsonPath path = new JsonPath(text);
-		
+
 		System.out.println("\n Comparing Data from entering true GUI with Data from WebService: ");
-		
+
 		System.out.println("First Name is the same? " + path.getString("firstName").equals(person.getFirstName()));
 		Assert.assertTrue(path.getString("firstName").equals(person.getFirstName()));
-		
+
 		System.out.println("Last Name is the same? " + path.getString("lastName").equals(person.getLastName()));
 		Assert.assertTrue(path.getString("lastName").equals(person.getLastName()));
-		
+
 		System.out.println("Middle Name is the same? " + path.getString("middleInit").equals("M"));
 		Assert.assertTrue(path.getString("middleInit").equals("M"));
-		
+
 		System.out.println("GENDER is the same? " + path.getString("gender").equals("M"));
 		Assert.assertTrue(path.getString("gender").equals("M"));
-		
+
 		System.out.println("DOB is the same? " + path.getString("dob").equals(person.getDateOfBirth()));
-//		Assert.assertTrue(path.getString("dob").equals("M"));
-		
-		
+		// Assert.assertTrue(path.getString("dob").equals("M"));
+
 		System.out.println("SSN is the same? " + path.getString("ssn").equals(person.getPersonalFileID()));
 		Assert.assertTrue(path.getString("ssn").equals(person.getPersonalFileID()));
-		
+
 		System.out.println("Cell is the same? " + path.getString("cellPhone").equals(person.getPpnumber()));
-//		Assert.assertTrue(path.getString("ssn").equals(person.getPpnumber()));
-		
+		// Assert.assertTrue(path.getString("ssn").equals(person.getPpnumber()));
+
 		System.out.println("Work Number is the same? " + path.getString("workPhone").equals(person.getWpnumber()));
-//		Assert.assertTrue(path.getString("workPhone").equals(person.getWpnumber()));
+		// Assert.assertTrue(path.getString("workPhone").equals(person.getWpnumber()));
 	}
 
 }

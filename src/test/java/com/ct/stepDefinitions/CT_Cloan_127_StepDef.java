@@ -1,6 +1,6 @@
 package com.ct.stepDefinitions;
 
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +18,6 @@ import com.ct.utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import net.bytebuddy.dynamic.scaffold.FieldRegistry;
 
 public class CT_Cloan_127_StepDef {
 
@@ -68,21 +67,20 @@ public class CT_Cloan_127_StepDef {
 		connection = DriverManager.getConnection(url, name, password);
 		statement = connection.createStatement();
 		result = statement.executeQuery(oracleQuery + appId);
-		while(result.next()){
-		Hashtable<String, String> firstPageExpected = new Hashtable<>();
-		firstPageExpected.put("FIRST_NAME", result.getString("FIRST_NAME"));
-		firstPageExpected.put("LAST_NAME", result.getString("LAST_NAME"));
-		firstPageExpected.put("MIDDLE_INIT", result.getString("MIDDLE_INIT"));
-		firstPageExpected.put("DATE_OF_BIRTH", result.getString("TO_CHAR(P.DATE_OF_BIRTH,'MM/DD/YYYY')"));
-		firstPageExpected.put("GENDER", result.getString("GENDER"));
-		firstPageExpected.put("APPLICATION_ID", appId);
-		firstPageExpected.put("SSN_NR", result.getString("SSN_NR"));
-		System.out.println(firstPageExpected);
-		System.out.println(CT_Cloan_FakePerson.actualData);
-		System.out.println((firstPageExpected.equals(CT_Cloan_FakePerson.actualData)));
+		while (result.next()) {
+			Hashtable<String, String> firstPageExpected = new Hashtable<>();
+			firstPageExpected.put("FIRST_NAME", result.getString("FIRST_NAME"));
+			firstPageExpected.put("LAST_NAME", result.getString("LAST_NAME"));
+			firstPageExpected.put("MIDDLE_INIT", result.getString("MIDDLE_INIT"));
+			firstPageExpected.put("DATE_OF_BIRTH", result.getString("TO_CHAR(P.DATE_OF_BIRTH,'MM/DD/YYYY')"));
+			firstPageExpected.put("GENDER", result.getString("GENDER"));
+			firstPageExpected.put("APPLICATION_ID", appId);
+			firstPageExpected.put("SSN_NR", result.getString("SSN_NR"));
+			System.out.println(firstPageExpected);
+			System.out.println(CT_Cloan_FakePerson.actualData);
+			System.out.println((firstPageExpected.equals(CT_Cloan_FakePerson.actualData)));
 		}
-		
-		
+
 	}
 
 }
