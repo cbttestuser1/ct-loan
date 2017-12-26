@@ -1,4 +1,4 @@
-@page1 
+@SmokeTest @page1 
 Feature:  In order to apply to CT loan User will enter personal information in this page 
 
 Scenario Outline: User will enter personal information 

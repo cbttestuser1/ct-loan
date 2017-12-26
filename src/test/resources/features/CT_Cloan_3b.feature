@@ -1,3 +1,4 @@
+@SmokeTest
 Feature:  Create and automateTest scenarios for the following fields in order to test dropdown fields content for page 3; 
 
 

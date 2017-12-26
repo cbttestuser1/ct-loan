@@ -1,5 +1,5 @@
-@Ruslan 
-Feature: Loan Application confirmation email 
+@SmokeTest @Ruslan @Cloan_Spring-3
+Feature: CLT-113, CTL-116, Loan Application confirmation email 
 	
 	Background:
 	Given I am on the home page of CT-Loan home page 
@@ -7,7 +7,7 @@ Feature: Loan Application confirmation email
 	When I submit the form 
 	
 @CTL-116
-Scenario: 
+Scenario: Loan Application confirmation email
 	
 	Then I should get an email confirming my application
 	

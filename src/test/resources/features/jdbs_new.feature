@@ -1,4 +1,4 @@
-@CTL-124
+@SmokeTest @CTL-124
 Feature: After submitting user should have loan application ID in DataBase
 Scenario Outline: User will enter personal information 
 	Given as User is on CTLoan home page 

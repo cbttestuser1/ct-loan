@@ -1,5 +1,5 @@
-@Bibek1
-Feature: Currently gender fields labels are Male and Female. These label should be changed to F and M respectively;
+@SmokeTest @Bibek1 @Cloan_Spring-3
+Feature: CTL-121, Currently gender fields labels are Male and Female. These label should be changed to F and M respectively;
 
 
 Background:

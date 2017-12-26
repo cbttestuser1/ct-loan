@@ -1,3 +1,4 @@
+@SmokeTest
 Feature: Automation the steps on CTL application page 3 - Employment Information 
 
 Background: All this steps are same for all scenarios on this feature file 

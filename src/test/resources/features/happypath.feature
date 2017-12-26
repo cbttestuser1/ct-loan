@@ -1,3 +1,4 @@
+@SmokeTest 
 @happypath
 Feature: Happy Path
 

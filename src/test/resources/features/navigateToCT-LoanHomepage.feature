@@ -1,3 +1,4 @@
+@SmokeTest @SmokeTest
 Feature: navigate to CT-Loan home page
 
   @SmokeTest

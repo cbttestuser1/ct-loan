@@ -1,5 +1,5 @@
-@CTL-140 
-Feature: Testing WebService Get Person by SSN 
+@SmokeTest @CTL-140 @Cloan_Spring-3
+Feature: CTL-140, Testing WebService Get Person by SSN 
 
 Scenario:
 For this scenario verify person information entered via UI to the information obtained by the rest endpoint 
