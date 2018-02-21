@@ -1,5 +1,5 @@
 Feature: Employment Information Mandatory Fields Left Blank
-
+@Demo
 Scenario: User leaves some mandatory field empty 
 
 Given User leaves some drop down field empty 

@@ -1,5 +1,6 @@
 Feature: Test Personal Information mandatory fields 
 
+
 @CTL_33
 Scenario:
 Create and automateTest scenarios for the following fields in order to test mandatory/optional fields: 
