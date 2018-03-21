@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
         tags = "@SmokeTest", 
         glue = "com.ct.stepDefinitions", 
         plugin = {"html:target/cucumber-reports", "json:target/cucumber.json" }, 
-        dryRun = false
+        dryRun = true
         )
 
 public class CukesRunner {
