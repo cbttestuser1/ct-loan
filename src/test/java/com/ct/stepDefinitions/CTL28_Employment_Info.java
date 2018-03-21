@@ -28,8 +28,8 @@ public class CTL28_Employment_Info {
 		unHighLightElement(Driver.driver, empInfo.department);
 	}
 
-	@Then("^I select Duration of Employment$")
-	public void i_select_Duration_of_Employment() throws Throwable {
+	@Then("^I (\\w+) Duration of Employment$")
+	public void i_select_Duration_of_Employment(String arg) throws Throwable {
 		highLightElement(Driver.driver, empInfo.durationOfElement);
 		empInfo.durationOfElemForIndex.get(2).click();
 		unHighLightElement(Driver.driver, empInfo.durationOfElement);
