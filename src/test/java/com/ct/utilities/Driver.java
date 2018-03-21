@@ -1,6 +1,8 @@
 package com.ct.utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -12,7 +14,7 @@ import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
 
 public class Driver {
-	private static WebDriver driver;
+	public static WebDriver driver;
 
 	public static WebDriver getInstance() {
 		String browser = System.getProperty("browser");
@@ -46,6 +48,27 @@ public class Driver {
 			driver.quit();
 			driver = null;
 		}
+
+	}
+	public static void highLightElement(WebDriver driver, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px red;');", element);
+
+		try {
+			Thread.sleep(250);
+		} catch (InterruptedException e) {
+
+			System.out.println(e.getMessage());
+		}
+
+		
+	}
+	public static void unHighLightElement(WebDriver driver, WebElement element) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		Thread.sleep(100);
+		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", element);
 
 	}
 

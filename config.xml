@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreport>
+	<configuration>
+		<theme>standart</theme>
+		<encoding>UTF-8</encoding>
+		<prtocol>https</prtocol>
+				<documentTitle>Automation Report</documentTitle>
+				<reportName>Automation Report</reportName>
+				<testViewCharLocation>top</testViewCharLocation>
+				<script>
+  		<![CDATA[
+  		   	$(document).ready(function(){
+  		
+  			});
+  		]]>
+				</script>
+				<style>
+<![CDATA[
+
+
+]]>
+				</style>
+	</configuration>
+</extentreport>
