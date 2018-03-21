@@ -19,7 +19,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "./src/test/resources/features/", tags = {
 		"@Test112" }, glue = "com.ct.stepDefinitions", plugin = { "html:target/cucumber-reports",
 				"json:target/cucumber.json",
-				"com.cucumber.listener.ExtentCucumberFormatter:output/report.html" }, monochrome = true, dryRun = false)
+				"com.cucumber.listener.ExtentCucumberFormatter:output/report.html" }, monochrome = true, dryRun = true)
 
 public class CukesRunner {
 	@AfterClass
